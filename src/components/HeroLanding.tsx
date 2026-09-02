@@ -48,9 +48,9 @@ export const HeroLanding: React.FC = () => {
           size="lg"
         />
 
-        {/* Refined Royal Country Name: Elegant, Balanced & Noble with Canva Cyrillic Display Font */}
+        {/* Refined Royal Country Name: Elegant, Balanced & Noble with 100% Mongolian Cyrillic Support */}
         <div className="mt-4 mb-1.5">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-playfair tracking-[0.14em] sm:tracking-[0.18em] text-[#FFF5DF] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-royal tracking-[0.14em] sm:tracking-[0.18em] text-[#FFF5DF] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
             {data.crest.customTitle || 'SAPPHIRE COUNTRY'}
           </h1>
         </div>
