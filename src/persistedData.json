@@ -1,0 +1,338 @@
+{
+  "crest": {
+    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22bgGrad%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231F4E79%22%20stop-opacity%3D%220.8%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230C1421%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22goldGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFF0CA%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23C9A85C%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238A6B29%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22royalGlow%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%226%22%20result%3D%22blur%22%2F%3E%0A%20%20%20%20%20%20%3CfeComposite%20in%3D%22SourceGraphic%22%20in2%3D%22blur%22%20operator%3D%22over%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%22230%22%20fill%3D%22url(%23bgGrad)%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%22215%22%20fill%3D%22none%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%221.5%22%20stroke-dasharray%3D%226%2C4%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M150%20140%20C150%20280%20250%20360%20250%20390%20C250%20360%20350%20280%20350%20140%20Z%22%20fill%3D%22%23142B4A%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%223.5%22%20filter%3D%22url(%23royalGlow)%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22250%2C180%20295%2C225%20250%2C315%20205%2C225%22%20fill%3D%22%232A75D3%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22250%2C180%20250%2C315%20205%2C225%22%20fill%3D%22%231F4E79%22%20opacity%3D%220.8%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M190%20130%20L205%2085%20L225%20115%20L250%2075%20L275%20115%20L295%2085%20L310%20130%20Z%22%20fill%3D%22url(%23goldGrad)%22%20stroke%3D%22%238A6B29%22%20stroke-width%3D%221.5%22%20filter%3D%22url(%23royalGlow)%22%2F%3E%0A%3C%2Fsvg%3E",
+    "scale": 1.0,
+    "offsetX": 0,
+    "offsetY": 0,
+    "glowIntensity": "imperial",
+    "customTitle": "SAPPHIRE COUNTRY",
+    "customSubtitle": "COUNTRY OF SAPPHIRE"
+  },
+  "overview": {
+    "officialNameMongolian": "Саффир улс (Индранил Эзэнт Гүрэн)",
+    "officialNameEnglish": "The Imperial Sapphire Realm",
+    "capitalCity": "Селестин Цайз Хот (Celestine Citadel)",
+    "reignPeriod": "Эртний Саффирын Эрин 1424 оноос эдүгээ хүртэл",
+    "motto": "Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, шударга ёс, хүч чадал оршино.",
+    "stateSymbol": "Мөнхийн Саффир Сүлд ба Алтан Титэм",
+    "population": "12.4 сая эрхэм иргэд",
+    "territoryArea": "1,850,000 хавтгай дөрвөлжин км",
+    "monarch": "Эрхэм Дээдэс Хаан / Хатан",
+    "monarchTitle": "ТӨРИЙН ТЭРГҮҮН, ХААН ШИРЭЭНИЙ ЭЗЭН",
+    "monarchQuote": "Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, төрийн эрх үеэс үед өвлөгдөнө.",
+    "monarchImage": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20550%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231F4E79%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23142B4A%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230C1421%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gold%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFF0CA%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23C9A85C%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238A6B29%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22550%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22220%22%20r%3D%2285%22%20fill%3D%22%23FFF0CA%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M140%20180%20C140%20100%20260%20100%20260%20180%20C260%20220%20240%20270%20200%20270%20C160%20270%20140%20220%20140%20180%20Z%22%20fill%3D%22%230C1421%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M150%20150%20L170%2090%20L190%20130%20L200%2080%20L210%20130%20L230%2090%20L250%20150%20Z%22%20fill%3D%22url(%23gold)%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M100%20450%20C100%20310%20300%20310%20300%20450%20Z%22%20fill%3D%22%23142B4A%22%20stroke%3D%22url(%23gold)%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E"
+  },
+  "royalTitles": [
+    {
+      "id": "title-01",
+      "number": "01",
+      "mongolianTitle": "Хаан",
+      "englishTitle": "King / Emperor",
+      "description": "Улсын тэргүүн, хаант төрийн бүх дээд эрх мэдлийг баригч эрхэм дээдэс.",
+      "rankCategory": "monarch",
+      "holder": "Хаан ширээний эзэн",
+      "iconName": "Crown"
+    },
+    {
+      "id": "title-02",
+      "number": "02",
+      "mongolianTitle": "Хатан хаан",
+      "englishTitle": "Queen / Empress",
+      "description": "Хааны гэргий эсвэл хаан ширээг бие даан эзэмшигч эмэгтэй удирдагч.",
+      "rankCategory": "monarch",
+      "holder": "Хатан ширээний эзэн",
+      "iconName": "Sparkles"
+    },
+    {
+      "id": "title-03",
+      "number": "03",
+      "mongolianTitle": "Эх Хатан",
+      "englishTitle": "Queen Mother / Dowager Empress",
+      "description": "Өмнөх хааны хатан бөгөөд одоогийн хааны эх. Ордны дотоод ёс жаяг, гэр бүлийн асуудлыг хянана.",
+      "rankCategory": "dowager",
+      "holder": "Ордны дээд хүндэтгэлт эх",
+      "iconName": "HeartHandshake"
+    },
+    {
+      "id": "title-04",
+      "number": "04",
+      "mongolianTitle": "Титэм залгамжлах хунтайж",
+      "englishTitle": "Crown Prince",
+      "description": "Хаан ширээг шууд залгамжлахаар албан ёсоор тодорсон ууган эсвэл сонгогдсон ханхүү.",
+      "rankCategory": "heir",
+      "holder": "Саффирын титэм залгамжлагч",
+      "iconName": "Shield"
+    },
+    {
+      "id": "title-05",
+      "number": "05",
+      "mongolianTitle": "Титэм залгамжлах гүнж",
+      "englishTitle": "Crown Princess",
+      "description": "Титэм залгамжлагч ханхүүгийн гэргий эсвэл хаан ширээ залгамжлах гүнж.",
+      "rankCategory": "heir",
+      "holder": "Титэм залгамжлагч гүнж",
+      "iconName": "Award"
+    },
+    {
+      "id": "title-06",
+      "number": "06",
+      "mongolianTitle": "Ханхүү",
+      "englishTitle": "Prince",
+      "description": "Хааны удмын хүү, эзэнт гүрний тулгуур.",
+      "rankCategory": "prince",
+      "holder": "Хаан угсааны ханхүүгийн хэргэм",
+      "iconName": "Flame"
+    },
+    {
+      "id": "title-07",
+      "number": "07",
+      "mongolianTitle": "Гүнж",
+      "englishTitle": "Princess",
+      "description": "Хаан болон хатан хааны охин.",
+      "rankCategory": "princess",
+      "holder": "Хаан угсааны гүнжийн хэргэм",
+      "iconName": "Sun"
+    }
+  ],
+  "courtRanks": [
+    {
+      "id": "court-08",
+      "number": "08",
+      "mongolianTitle": "Их Канцлер",
+      "englishTitle": "Lord Grand Chancellor",
+      "informalTitle": "Хааны баруун гар",
+      "summary": "Хааны дэргэдэх хамгийн өндөр албан тушаалтнуудын нэг бөгөөд төрийн өдөр тутмын үйл ажиллагааг зохицуулна.",
+      "duties": [
+        "Хааны нэрийн өмнөөс төрийн байгууллагуудтай харилцах, хаанд зөвлөгөө өгөх, хааны зарлиг болон шийдвэрийн хэрэгжилтийг удирдах үүрэгтэй.",
+        "Төрийн хүлээн авалт, ёслол, титэм залах болон бусад төрийн хэмжээний арга хэмжээг зохион байгуулна.",
+        "Хааны зөвшөөрлөөс гадна ордны дотоод үйл ажиллагаа, баяр ёслолын тодорхой асуудлаар шийдвэр гаргах эрхтэй."
+      ],
+      "currentHolder": "Төрийн Дээд Канцлер",
+      "badgeSymbol": "Scroll"
+    },
+    {
+      "id": "court-09",
+      "number": "09",
+      "mongolianTitle": "Хааны Дээд Зөвлөх",
+      "englishTitle": "Lord High Counselor",
+      "informalTitle": "Төрийн Бодлогын Батлан Даагч",
+      "summary": "Хаанд улс төр, төрийн бодлого болон улс орны асуудлаар зөвлөгөө өгнө.",
+      "duties": [
+        "Хаанд улс төр, төрийн бодлого болон улс орны стратегийн асуудлаар нарийвчилсан дүн шинжилгээ, зөвлөгөө өгөх.",
+        "Хааны зарлиг, бичиг баримт, төрийн гадаад дотоод харилцааг хариуцах.",
+        "Хааны уулзалт, хуваарь болон төрийн албан харилцааг өндөр түвшинд зохицуулах."
+      ],
+      "currentHolder": "Бодлогын Тэргүүн Зөвлөх",
+      "badgeSymbol": "BookOpen"
+    },
+    {
+      "id": "court-10",
+      "number": "10",
+      "mongolianTitle": "Ордны Зарлагч",
+      "englishTitle": "Court Herald",
+      "informalTitle": "Хааны Зарлигийн Дуу Хоолой",
+      "summary": "Төрийн ордноос гарсан албан ёсны шийдвэр, хариу болон мэдэгдлийг иргэдэд зарлана.",
+      "duties": [
+        "Баяр ёслолын зарлал хийх, эзэнт гүрний баярын ёслолыг нээж тунхаглах.",
+        "Ордны хурлын цагийг мэдээлэх, хурлын сэдвүүдийг нэгтгэн бэлтгэж Их Канцлерт хүргүүлэх үүрэгтэй.",
+        "Төрийн шийдвэр, язгууртны цол олгох тунхаглалыг нийтэд дуурсгах."
+      ],
+      "currentHolder": "Төрийн Зарлагч Магистр",
+      "badgeSymbol": "Megaphone"
+    }
+  ],
+  "nobilityHierarchy": [
+    { "id": "nob-11", "number": "11", "mongolianTitle": "Их Гүн", "englishTitle": "Grand Duke", "category": "high", "rankLevel": 1, "description": "Дээд язгууртны тэргүүн эрэмбэ, өргөн уудам нутаг дэвсгэр, цэргийн бүрэн эрх эзэмшигч." },
+    { "id": "nob-12", "number": "12", "mongolianTitle": "Их Гүнгийн ахайтан", "englishTitle": "Grand Duchess", "category": "high", "rankLevel": 1, "description": "Их гүнтний гэргий эсвэл өөрийн эрхээр Их гүнт улсыг эзэмшигч хатагтай." },
+    { "id": "nob-13", "number": "13", "mongolianTitle": "Вант Гүн", "englishTitle": "Sovereign Duke", "category": "high", "rankLevel": 2, "description": "Хаант улсын дотор бие даасан засаглал бүхий бүс нутгийг захирагч." },
+    { "id": "nob-14", "number": "14", "mongolianTitle": "Вант Гүнгийн ахайтан", "englishTitle": "Sovereign Duchess", "category": "high", "rankLevel": 2, "description": "Вант гүнтний гэргий, бүс нутгийн дээд хатагтай." },
+    { "id": "nob-15", "number": "15", "mongolianTitle": "Гүн", "englishTitle": "Duke", "category": "high", "rankLevel": 3, "description": "Түүхт томоохон гүнт нутгийн эзэн, эзэн хааны итгэлт ноён." },
+    { "id": "nob-16", "number": "16", "mongolianTitle": "Гүнгийн ахайтан", "englishTitle": "Duchess", "category": "high", "rankLevel": 3, "description": "Гүнтний гэргий, ордны өндөр нөлөө бүхий язгууртан." },
+    { "id": "nob-17", "number": "17", "mongolianTitle": "Маркиз", "englishTitle": "Marquess", "category": "middle", "rankLevel": 4, "description": "Хил хязгаарын чухал бүс нутаг болон бэхлэлт бүхий газар нутгийн захирагч." },
+    { "id": "nob-18", "number": "18", "mongolianTitle": "Маркизын ахайтан", "englishTitle": "Marchioness", "category": "middle", "rankLevel": 4, "description": "Маркизийн гэргий, хил орчмын язгууртны төлөөлөл." },
+    { "id": "nob-19", "number": "19", "mongolianTitle": "Эрхэм Гүн", "englishTitle": "Count", "category": "middle", "rankLevel": 5, "description": "Хот мужийн засаг захиргаа, эдийн засгийн төвийг удирдагч." },
+    { "id": "nob-20", "number": "20", "mongolianTitle": "Эрхэм Гүнгийн ахайтан", "englishTitle": "Countess", "category": "middle", "rankLevel": 5, "description": "Эрхэм гүнгийн хатан, соёл гэгээрлийг ивээн тэтгэгч." },
+    { "id": "nob-21", "number": "21", "mongolianTitle": "Виконт", "englishTitle": "Viscount", "category": "middle", "rankLevel": 6, "description": "Гүн болон Маркизын дэд захирагч, бүсийн шүүн таслах эрх бүхий ноён." },
+    { "id": "nob-22", "number": "22", "mongolianTitle": "Виконтын ахайтан", "englishTitle": "Viscountess", "category": "middle", "rankLevel": 6, "description": "Виконтын гэргий, орон нутгийн дээд язгууртан." },
+    { "id": "nob-23", "number": "23", "mongolianTitle": "Барон", "englishTitle": "Baron", "category": "middle", "rankLevel": 7, "description": "Эдлэн газар, цайз бүхий язгууртны үндсэн түвшний цолтон." },
+    { "id": "nob-24", "number": "24", "mongolianTitle": "Бароны ахайтан", "englishTitle": "Baroness", "category": "middle", "rankLevel": 7, "description": "Бароны гэргий, эдлэнгийн удирдагч хатагтай." },
+    { "id": "nob-25", "number": "25", "mongolianTitle": "Ихэс Ноён", "englishTitle": "Lord", "category": "noble", "rankLevel": 8, "description": "Эзэнт гүрний хүндэт язгууртан ноён." },
+    { "id": "nob-26", "number": "26", "mongolianTitle": "Ихэс Хатагтай", "englishTitle": "Lady", "category": "noble", "rankLevel": 8, "description": "Ордны хүндэт язгууртан хатагтай." },
+    { "id": "nob-27", "number": "27", "mongolianTitle": "Цолгүй язгууртан", "englishTitle": "Untitled Noble", "category": "noble", "rankLevel": 9, "description": "Язгууртан овог, гэр бүлээс гаралтай боловч тусгай цол эзэмшдэггүй язгууртан иргэд." },
+    { "id": "nob-28", "number": "28", "mongolianTitle": "Хүлэг Баатар", "englishTitle": "Knight", "category": "title", "rankLevel": 10, "description": "Эзэн хаанд үнэнчээр зүтгэж, эх орныхоо төлөө байгуулсан гавьяаг үнэлэн олгосон цэргийн дээд эрхэм цол." },
+    { "id": "nob-29", "number": "29", "mongolianTitle": "Хатагтай Баатар", "englishTitle": "Dame", "category": "title", "rankLevel": 10, "description": "Эзэнт гүрний төлөө гарамгай гавьяа байгуулсан эмэгтэй баатарт олгох эрхэм хүндэт цол." },
+    { "id": "nob-30", "number": "30", "mongolianTitle": "Баронет", "englishTitle": "Baronet", "category": "title", "rankLevel": 11, "description": "Удам дамжин өвлөгдөх хүлэг баатрын хэргэм бүхий язгууртан." },
+    { "id": "nob-31", "number": "31", "mongolianTitle": "Баронетын ахайтан", "englishTitle": "Baronetess", "category": "title", "rankLevel": 11, "description": "Баронетын гэргий, хүндэт эзэмшигч хатагтай." }
+  ],
+  "regions": [
+    {
+      "id": "region-celestine",
+      "name": "Селестин Төв Бүс",
+      "englishName": "Celestine Crown Region",
+      "geographicPosition": "Төв Эх Газар",
+      "rulingFamily": "Хааны Титмийн Их Овог",
+      "climateAndNature": "Зөөлөн уур амьсгалтай, нарлаг уудам хөндий, саффир болор нуурууд.",
+      "prominentBuildings": [
+        "Селестин Эзэн Хааны Цайз (Imperial Palace)",
+        "Төрийн Дээд Канцлерын Ордон",
+        "Саффирын Тэнгэрлэг Их Сүм (Cathedral of Azure Light)",
+        "Үндэсний Их Эрдэм Шинжилгээний Академи"
+      ],
+      "naturalFeatures": [
+        "Индранил Нуур (Sapphire Lake)",
+        "Алтан Сүлдний Уулс",
+        "Хөх Сэвшээний Хөндий"
+      ],
+      "coreProducts": [
+        "Эзэн хааны шилмэл саффир эрдэнийн шигтгээ",
+        "Хааны зоорийн хувийн усан үзмийн дарс",
+        "Алтан утаст хилэн даавуу"
+      ],
+      "nobleEstates": [
+        "Хааны шууд эзэмшил 12 том цэцэрлэгт эдлэн",
+        "Их Канцлерын хувийн харш"
+      ]
+    },
+    {
+      "id": "region-valdor",
+      "name": "Валдор Уулын Бүс",
+      "englishName": "Valdor Mountain Highlands",
+      "geographicPosition": "Хойд Бүс",
+      "rulingFamily": "Монтакью Их Гүнгийн Удам (Montaque)",
+      "climateAndNature": "Сэрүүн, мөнх цаст оргилууд, шилмүүст ой, байгалийн баялаг уурхай.",
+      "prominentBuildings": [
+        "Валдор Мөнх Цэвдгийн Цайз",
+        "Эрдэнийн Гүн Хайлуулах Үйлдвэр"
+      ],
+      "naturalFeatures": [
+        "Цагаан Барсын Хавцал",
+        "Мөсөн Оргил Уулс"
+      ],
+      "coreProducts": [
+        "Өндөр зэрэглэлийн ган, дамаск илд",
+        "Болор саффирын түүхий эд",
+        "Ангийн үнэт арьс"
+      ],
+      "nobleEstates": [
+        "Монтакью Их гүнгийн Валдор цайз",
+        "Төмөр Хүлэг Баатруудын бэлтгэлийн талбай"
+      ]
+    },
+    {
+      "id": "region-aurelia",
+      "name": "Аурелиа Эргийн Бүс",
+      "englishName": "Aurelia Coastal Haven",
+      "geographicPosition": "Өмнөд Бүс",
+      "rulingFamily": "Агрише Вант Гүнгийн Овог (Agriche)",
+      "climateAndNature": "Дулаан далайн эргийн уур амьсгал, далайн боомтууд, зөөлөн салхи.",
+      "prominentBuildings": [
+        "Аурелиа Олон Улсын Худалдааны Боомт",
+        "Цэнхэр Сувдан Гэрэлт Цамхаг"
+      ],
+      "naturalFeatures": [
+        "Номин Далайн Булан",
+        "Шүрэн Эргийн Хаднууд"
+      ],
+      "coreProducts": [
+        "Далайн сувд ба сувдан эдлэл",
+        "Ховор халуун орны жимс, амтлагч",
+        "Усан онгоцны мод, дарвуулт завь"
+      ],
+      "nobleEstates": [
+        "Агрише гэр бүлийн усан эргийн зуны ордон",
+        "Аурелиа худалдааны биржийн төв харш"
+      ]
+    }
+  ],
+  "landValues": [
+    {
+      "id": "land-01",
+      "regionId": "region-celestine",
+      "regionName": "Селестин Нийслэл Хот",
+      "zoneTitle": "Төвийн Нэгдүгээр Зэрэглэлийн Бүс (Zone A)",
+      "pricePerHa": "2,500,000 Саффир зоос",
+      "pricePerHaNumeric": 2500000,
+      "pricePerKm2": "6,250,000,000 Саффир зоос",
+      "pricePerKm2Numeric": 6250000000,
+      "economicNotes": "Хааны ордон болон төрийн дээд байгууллагууд байрладаг эзэнт гүрний хамгийн үнэ цэнтэй байршил."
+    },
+    {
+      "id": "land-02",
+      "regionId": "region-celestine",
+      "regionName": "Селестин Хөндий",
+      "zoneTitle": "Ногоон Эдлэнгийн Бүс (Zone B)",
+      "pricePerHa": "850,000 Саффир зоос",
+      "pricePerHaNumeric": 850000,
+      "pricePerKm2": "2,125,000,000 Саффир зоос",
+      "pricePerKm2Numeric": 2125000000,
+      "economicNotes": "Дээд язгууртнуудын хувийн харш, цэцэрлэгт хүрээлэн, морин тойруулга бүхий тансаг эдлэнгүүд."
+    },
+    {
+      "id": "land-03",
+      "regionId": "region-valdor",
+      "regionName": "Валдор Уулын Бүс",
+      "zoneTitle": "Уурхай, Үйлдвэрлэлийн Бүс (Zone C)",
+      "pricePerHa": "450,000 Саффир зоос",
+      "pricePerHaNumeric": 450000,
+      "pricePerKm2": "1,125,000,000 Саффир зоос",
+      "pricePerKm2Numeric": 1125000000,
+      "economicNotes": "Эрдэнийн чулуу олборлолт, төмөрлөг хайлуулах үйлдвэрлэл, батлан хамгаалах суурь түшиц газар."
+    },
+    {
+      "id": "land-04",
+      "regionId": "region-aurelia",
+      "regionName": "Аурелиа Эргийн Бүс",
+      "zoneTitle": "Худалдаа, Далайн Боомтын Бүс (Zone D)",
+      "pricePerHa": "1,200,000 Саффир зоос",
+      "pricePerHaNumeric": 1200000,
+      "pricePerKm2": "3,000,000,000 Саффир зоос",
+      "pricePerKm2Numeric": 3000000000,
+      "economicNotes": "Далайн худалдаа, гадаад харилцаа, зочид буудал, усан онгоцны үйлдвэрлэл төвлөрсөн бүс нутаг."
+    }
+  ],
+  "customSections": [
+    {
+      "id": "sec-decrees",
+      "titleMongolian": "ЭЗЭНТ ГҮРНИЙ ХААНЫ ЗАРЛИГ БА ТҮҮХЭН ШИЙДВЭРҮҮД",
+      "titleEnglish": "IMPERIAL DECREES & HISTORICAL EDICTS",
+      "description": "Саффир улсын хууль цааз, төрийн тулгуур зарлигууд болон эзэн хааны соёрхолууд.",
+      "items": [
+        {
+          "id": "item-dec-01",
+          "title": "Саффирын Их Титэм залах тунхаг",
+          "subtitle": "Хаан ширээний залгамжлалын дээд хууль",
+          "content": "Эзэнт гүрний анхдугаар он тоололд зарлигласан Саффирын их титмийн өв залгамжлал нь цусан төрөл болон эзэн хааны итгэмжлэлийг үндэслэн тунхаглагдана.",
+          "tag": "Imperial Edict",
+          "dateOrEra": "Эрин Үе I - Он 01"
+        },
+        {
+          "id": "item-dec-02",
+          "title": "Язгууртны Эдлэн Газрын Дархан Цааз",
+          "subtitle": "Газар эзэмшлийн дээд эрхийн зарлиг",
+          "content": "Язгууртны цол олгогдсон эрхмүүдийн эдлэн газар нь хааны тамгаар баталгаажин, гэр бүлийн хүрээнд өвлөгдөх дархан эрхээр хамгаалагдана.",
+          "tag": "Nobility Law",
+          "dateOrEra": "Эрин Үе II - Он 114"
+        },
+        {
+          "id": "item-dec-03",
+          "title": "Индранил Эрдэнийн Хамгаалалтын Зарлиг",
+          "subtitle": "Улсын эрдэнэсийн сангийн тогтоол",
+          "content": "Бүх дээд зэрэглэлийн саффир чулууг эзэнт гүрний төрийн сан, хааны титэмд зориулан ангилан бүртгэх ёстой.",
+          "tag": "Crown Asset",
+          "dateOrEra": "Эрин Үе III - Он 380"
+        }
+      ]
+    }
+  ],
+  "navigation": [
+    { "id": "nav-hero", "labelMongolian": "Эхлэл", "labelEnglish": "Imperial Crest", "targetId": "hero", "isVisible": true },
+    { "id": "nav-overview", "labelMongolian": "Төрийн Дээд Мэдээлэл", "labelEnglish": "State Dossier", "targetId": "overview", "isVisible": true },
+    { "id": "nav-royal", "labelMongolian": "Хааны Гэр Бүл", "labelEnglish": "Royal Titles", "targetId": "royal-family", "isVisible": true },
+    { "id": "nav-court", "labelMongolian": "Ордны Дээд Алба", "labelEnglish": "High Court", "targetId": "court-ranks", "isVisible": true },
+    { "id": "nav-nobility", "labelMongolian": "Язгууртны Эрэмбэ", "labelEnglish": "Nobility Rank", "targetId": "nobility", "isVisible": true },
+    { "id": "nav-regions", "labelMongolian": "Бүс Нутгууд", "labelEnglish": "Realm Regions", "targetId": "regions", "isVisible": true },
+    { "id": "nav-map", "labelMongolian": "Газрын Зураг", "labelEnglish": "Realm Map", "targetId": "realm-map", "isVisible": true },
+    { "id": "nav-economy", "labelMongolian": "Эдлэн Газар", "labelEnglish": "Land Economy", "targetId": "economy", "isVisible": true },
+    { "id": "nav-chronicles", "labelMongolian": "Хааны Зарлиг", "labelEnglish": "Chronicles", "targetId": "chronicles", "isVisible": true }
+  ]
+}

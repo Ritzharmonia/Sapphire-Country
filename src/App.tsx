@@ -1,6 +1,5 @@
 import React from 'react';
-import { KingdomProvider, useKingdom } from './context/KingdomContext';
-import { AdminBar } from './components/AdminBar';
+import { KingdomProvider } from './context/KingdomContext';
 import { HeaderNav } from './components/HeaderNav';
 import { HeroLanding } from './components/HeroLanding';
 import { CountryOverview } from './components/CountryOverview';
@@ -13,14 +12,8 @@ import { RealmMap } from './components/RealmMap';
 import { RoyalChronicles } from './components/RoyalChronicles';
 import { RoyalFooter } from './components/RoyalFooter';
 import { RoyalDynamicBackground } from './components/ui/RoyalDynamicBackground';
-import { ImageManagerModal } from './components/modals/ImageManagerModal';
-import { ExportImportModal } from './components/modals/ExportImportModal';
-import { SectionManagerModal } from './components/modals/SectionManagerModal';
-import { AdminLoginModal } from './components/modals/AdminLoginModal';
 
 const KingdomAppContent: React.FC = () => {
-  const { isEditMode } = useKingdom();
-
   return (
     <div className="min-h-screen bg-[#0C1421] text-[#D9DEE5] selection:bg-[#C9A85C]/30 selection:text-[#FFF0CA] font-serif antialiased relative overflow-x-hidden">
       {/* Dynamic Animated Royal Celestial & Shimmering Gold Background */}
@@ -32,15 +25,12 @@ const KingdomAppContent: React.FC = () => {
       <div className="fixed top-0 left-0 w-12 sm:w-16 h-12 sm:h-16 border-l-2 border-t-2 border-[#C9A85C] opacity-20 pointer-events-none z-30" />
       <div className="fixed bottom-0 right-0 w-12 sm:w-16 h-12 sm:h-16 border-r-2 border-b-2 border-[#C9A85C] opacity-20 pointer-events-none z-30" />
 
-      {/* Admin Toolbar in Edit Mode */}
-      <AdminBar />
-
       {/* Main Royal Navigation */}
       <HeaderNav />
 
       {/* Main Content Sections */}
       <main className="relative z-10 space-y-4">
-        {/* 1. Hero Landing & Editable Crest */}
+        {/* 1. Hero Landing & Official Crest */}
         <HeroLanding />
 
         {/* 2. Country Overview & 5 Core Properties */}
@@ -55,7 +45,7 @@ const KingdomAppContent: React.FC = () => {
         {/* 5. Nobility Hierarchy (11-31) */}
         <NobilityHierarchy />
 
-        {/* 6. Regions of Sapphire (5 Key Regions) */}
+        {/* 6. Regions of Sapphire (Key Regions) */}
         <RegionsSection />
 
         {/* 7. Land Value & Imperial Economy Calculator */}
@@ -70,12 +60,6 @@ const KingdomAppContent: React.FC = () => {
 
       {/* Royal Footer */}
       <RoyalFooter />
-
-      {/* Global Modals */}
-      <ImageManagerModal />
-      <ExportImportModal />
-      <SectionManagerModal />
-      <AdminLoginModal />
     </div>
   );
 };

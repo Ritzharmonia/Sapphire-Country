@@ -50,22 +50,14 @@ export const HeroLanding: React.FC = () => {
 
         {/* Refined Royal Country Name: Elegant, Balanced & Noble */}
         <div className="mt-4 mb-1.5">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal font-marcellus tracking-[0.18em] sm:tracking-[0.22em] text-[#FFF5DF] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
-            <EditableText
-              value={data.crest.customTitle || 'SAPPHIRE COUNTRY'}
-              onSave={(val) => updateField('crest.customTitle', val)}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-normal font-marcellus tracking-[0.18em] sm:tracking-[0.22em] text-[#FFF5DF]"
-            />
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-marcellus tracking-[0.18em] sm:tracking-[0.22em] text-[#FFF5DF] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+            {data.crest.customTitle || 'SAPPHIRE COUNTRY'}
           </h1>
         </div>
 
         {/* Supporting Royal Text: COUNTRY OF SAPPHIRE */}
-        <div className="text-sm sm:text-base md:text-lg font-cormorant italic tracking-[0.3em] uppercase text-[#E8C87A]/90 mb-3 font-semibold">
-          <EditableText
-            value={data.crest.customSubtitle || 'COUNTRY OF SAPPHIRE'}
-            onSave={(val) => updateField('crest.customSubtitle', val)}
-            className="text-sm sm:text-base md:text-lg font-cormorant italic tracking-[0.3em] uppercase text-[#E8C87A]/90 font-semibold"
-          />
+        <div className="text-xs sm:text-sm md:text-base font-cormorant italic tracking-[0.3em] uppercase text-[#E8C87A]/90 mb-3 font-semibold">
+          {data.crest.customSubtitle || 'COUNTRY OF SAPPHIRE'}
         </div>
 
         {/* Symmetrical Heraldic Ornament */}

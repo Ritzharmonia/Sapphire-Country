@@ -4,18 +4,15 @@ import {
   Shield, 
   Award, 
   Sparkles, 
-  PlusCircle, 
-  Trash2, 
   Filter 
 } from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
-import { EditableText } from './ui/EditableText';
 import { OrnateFrame } from './ui/OrnateFrame';
 import { SectionHeading } from './ui/SectionHeading';
-import { NobilityCategory, NobilityItem } from '../types';
+import { NobilityCategory } from '../types';
 
 export const NobilityHierarchy: React.FC = () => {
-  const { data, updateNobilityItem, addNobilityItem, deleteNobilityItem, isEditMode } = useKingdom();
+  const { data } = useKingdom();
   const [activeCategory, setActiveCategory] = useState<NobilityCategory | 'all'>('all');
 
   const categories: { key: NobilityCategory | 'all'; labelMongolian: string; labelEnglish: string; count: number }[] = [
@@ -29,21 +26,6 @@ export const NobilityHierarchy: React.FC = () => {
   const filteredItems = activeCategory === 'all'
     ? data.nobilityHierarchy
     : data.nobilityHierarchy.filter((item) => item.category === activeCategory);
-
-  const handleAddNewNobility = (cat: NobilityCategory) => {
-    const nextNum = String(data.nobilityHierarchy.length + 11).padStart(2, '0');
-    const newItem: NobilityItem = {
-      id: `nob-${Date.now()}`,
-      number: nextNum,
-      mongolianTitle: 'Шинэ Язгууртны Цол',
-      englishTitle: 'New Noble Title',
-      category: cat,
-      rankLevel: 5,
-      description: 'Энэхүү язгууртны эрэмбэ, гарал үүсэл, эдлэх эрхийн тодорхойлолт.',
-      exampleFamilies: ['Язгууртны эрэмбэ']
-    };
-    addNobilityItem(newItem);
-  };
 
   const getCategoryBadge = (category: NobilityCategory) => {
     switch (category) {
@@ -106,27 +88,11 @@ export const NobilityHierarchy: React.FC = () => {
         ))}
       </div>
 
-      {/* Admin Action Button */}
-      {isEditMode && (
-        <div className="mb-6 flex justify-end gap-2">
-          <button
-            type="button"
-            onClick={() => handleAddNewNobility(activeCategory === 'all' ? 'high' : activeCategory)}
-            className="flex items-center gap-2 px-4 py-2 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C] rounded font-royal text-xs tracking-wider shadow-lg transition-all transform hover:scale-105"
-          >
-            <PlusCircle className="w-4 h-4 text-[#C9A85C]" />
-            <span>+ Язгууртны Цол Нэмэх (Add Noble Rank)</span>
-          </button>
-        </div>
-      )}
+
 
       {/* Nobility Cards Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredItems.map((item) => {
-          const familiesText = item.exampleFamilies && item.exampleFamilies.length > 0 
-            ? item.exampleFamilies.join(', ')
-            : 'Язгууртны зэрэг';
-
           return (
             <OrnateFrame
               key={item.id}
@@ -139,81 +105,28 @@ export const NobilityHierarchy: React.FC = () => {
                 <div className="flex items-center justify-between border-b border-[#C9A85C]/20 pb-2.5 mb-3">
                   <div className="flex items-center gap-2">
                     <span className="font-mono text-xs font-bold text-[#E8C87A] px-2 py-0.5 rounded bg-[#0C1421] border border-[#C9A85C]/40">
-                      <EditableText
-                        value={item.number}
-                        onSave={(val) => updateNobilityItem(item.id, { number: val })}
-                        label="№"
-                      />
+                      {item.number}
                     </span>
                     {getCategoryBadge(item.category)}
                   </div>
-
-                  {isEditMode && (
-                    <button
-                      type="button"
-                      onClick={() => {
-                        if (window.confirm(`"${item.mongolianTitle}" язгууртны цолыг устгах уу?`)) {
-                          deleteNobilityItem(item.id);
-                        }
-                      }}
-                      className="p-1 hover:bg-red-950 text-red-400 hover:text-red-200 rounded transition-colors"
-                      title="Устгах"
-                    >
-                      <Trash2 className="w-3.5 h-3.5" />
-                    </button>
-                  )}
                 </div>
 
-                {/* Title & Rank */}
+                {/* Title & Rank (Refined font size) */}
                 <div className="mb-3">
-                  <h4 className="font-royal text-base sm:text-lg font-bold text-[#FFF0CA] mb-0.5">
-                    <EditableText
-                      value={item.mongolianTitle}
-                      onSave={(val) => updateNobilityItem(item.id, { mongolianTitle: val })}
-                      label="Цол хэргэмийн нэр"
-                      className="font-royal text-base sm:text-lg font-bold text-[#FFF0CA]"
-                    />
+                  <h4 className="font-royal text-sm sm:text-base font-bold text-[#FFF0CA] mb-0.5">
+                    {item.mongolianTitle}
                   </h4>
                   <div className="font-serif italic text-xs text-[#D9DEE5]/80">
-                    <EditableText
-                      value={item.englishTitle}
-                      onSave={(val) => updateNobilityItem(item.id, { englishTitle: val })}
-                      label="English Title"
-                      className="font-serif italic text-xs text-[#D9DEE5]/80"
-                    />
+                    {item.englishTitle}
                   </div>
                 </div>
 
                 {/* Description */}
                 {item.description && (
-                  <p className="text-xs text-[#D9DEE5]/75 leading-relaxed font-sans bg-[#0C1421]/50 p-2.5 rounded border border-[#1F4E79]/30 mb-3">
-                    <EditableText
-                      value={item.description}
-                      onSave={(val) => updateNobilityItem(item.id, { description: val })}
-                      multiline
-                      label="Тайлбар"
-                      className="text-xs text-[#D9DEE5]/75 leading-relaxed font-sans"
-                    />
+                  <p className="text-xs text-[#D9DEE5]/75 leading-relaxed font-sans bg-[#0C1421]/50 p-2.5 rounded border border-[#1F4E79]/30">
+                    {item.description}
                   </p>
                 )}
-              </div>
-
-              {/* Lower Right / Title Dignity & Classification - 100% Fully Editable */}
-              <div className="pt-2.5 border-t border-[#C9A85C]/20 flex items-center justify-between text-[11px] gap-2">
-                <span className="text-[#C9A85C] font-serif uppercase tracking-wider text-[10px] shrink-0">
-                  Хэргэмийн Төлөв:
-                </span>
-                <div className="text-[#D9DEE5]/90 font-mono text-right truncate">
-                  <EditableText
-                    value={familiesText}
-                    onSave={(val) => {
-                      const list = val.split(',').map(s => s.trim()).filter(Boolean);
-                      updateNobilityItem(item.id, { exampleFamilies: list });
-                    }}
-                    label="Хэргэмийн төлөв / Зэрэг"
-                    className="text-[#FFF0CA] font-mono text-xs"
-                  />
-                </div>
               </div>
             </OrnateFrame>
           );

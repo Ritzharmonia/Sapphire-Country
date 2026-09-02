@@ -2,22 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { 
   Crown, 
   Menu, 
-  X, 
-  Sparkles, 
-  Edit3, 
-  Eye, 
-  FileJson, 
-  Compass, 
-  Layers,
-  Lock,
-  Unlock,
-  ShieldCheck
+  X
 } from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
-import { EditableText } from './ui/EditableText';
 
 export const HeaderNav: React.FC = () => {
-  const { data, isEditMode, toggleEditMode, updateField, openModal, setShowAdminLoginModal } = useKingdom();
+  const { data } = useKingdom();
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -104,43 +94,13 @@ export const HeaderNav: React.FC = () => {
           </div>
         </div>
 
-        {/* Right side controls */}
+        {/* Right side controls: Official Royal Status Badge & Mobile Menu */}
         <div className="flex items-center gap-2 sm:gap-3">
-          {/* Administrator / Visitor Toggle Button with PIN Lock */}
-          <button
-            type="button"
-            onClick={toggleEditMode}
-            className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-royal tracking-wider transition-all duration-200 shadow-md ${
-              isEditMode
-                ? 'bg-gradient-to-r from-[#C9A85C] to-[#E8C87A] text-[#0C1421] font-bold border border-[#FFF0CA]'
-                : 'bg-[#142B4A]/80 hover:bg-[#1F4E79] text-[#FFF0CA] border border-[#C9A85C]/40'
-            }`}
-            title={isEditMode ? 'Засварлах горимоос гарах / Түгжих (Exit & Lock Admin Mode)' : 'Админ нэвтрэх (Admin Login with PIN)'}
-          >
-            {isEditMode ? (
-              <>
-                <Unlock className="w-3.5 h-3.5 text-[#0C1421]" />
-                <span className="hidden sm:inline">Админ горим (Түгжих)</span>
-              </>
-            ) : (
-              <>
-                <Lock className="w-3.5 h-3.5 text-[#C9A85C]" />
-                <span className="hidden sm:inline">Админ нэвтрэх</span>
-              </>
-            )}
-          </button>
-
-          {/* Quick JSON Backup Button ONLY in Edit Mode */}
-          {isEditMode && (
-            <button
-              type="button"
-              onClick={() => openModal('export_import')}
-              className="p-1.5 bg-[#142B4A]/60 hover:bg-[#1F4E79] text-[#C9A85C] rounded border border-[#C9A85C]/30 text-xs hidden sm:flex items-center justify-center transition-all"
-              title="JSON Архив Татах / Хуулах"
-            >
-              <FileJson className="w-4 h-4" />
-            </button>
-          )}
+          {/* Official Royal Seal Badge */}
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C1421] border border-[#C9A85C]/40 text-[#E8C87A] text-[11px] font-mono tracking-wider shadow-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A85C] animate-pulse" />
+            <span className="font-royal text-[11px] tracking-widest text-[#FFF0CA]">OFFICIAL ARCHIVE</span>
+          </div>
 
           {/* Mobile hamburger menu toggle */}
           <button
@@ -177,30 +137,10 @@ export const HeaderNav: React.FC = () => {
                 </button>
               ))}
 
-            <div className="border-t border-[#C9A85C]/30 my-2 pt-3 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  toggleEditMode();
-                }}
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#C9A85C] text-[#0C1421] font-bold rounded text-xs font-royal tracking-wider"
-              >
-                {isEditMode ? <Eye className="w-4 h-4" /> : <Crown className="w-4 h-4" />}
-                <span>{isEditMode ? 'Үзэгчийн Горим (Visitor Mode)' : 'Эзэн Хааны Засварлах Горим (Admin Mode)'}</span>
-              </button>
-
-              <button
-                type="button"
-                onClick={() => {
-                  setMobileMenuOpen(false);
-                  openModal('export_import');
-                }}
-                className="w-full flex items-center justify-center gap-2 py-2 bg-[#142B4A] text-[#FFF0CA] border border-[#C9A85C]/40 rounded text-xs font-serif tracking-wider"
-              >
-                <FileJson className="w-4 h-4 text-[#C9A85C]" />
-                <span>JSON Архив Татах / Хуулах</span>
-              </button>
+            <div className="border-t border-[#C9A85C]/30 my-2 pt-3 flex items-center justify-center">
+              <span className="text-[11px] font-mono tracking-widest text-[#C9A85C]">
+                ✦ SAPPHIRE IMPERIAL ARCHIVE · SEALED ✦
+              </span>
             </div>
           </div>
         </div>

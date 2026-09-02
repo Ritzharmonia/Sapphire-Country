@@ -1,11 +1,12 @@
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { WebsiteData, Region, RoyalTitle, CourtRank, NobilityItem, LandValueItem, CustomSection, CrestSettings, NavigationItem } from '../types';
 import { initialWebsiteData } from '../initialData';
+import persistedDataJson from '../persistedData.json';
 
 const STORAGE_KEY = 'sapphire_country_archive_data_v2';
-const ADMIN_SESSION_KEY = 'sapphire_country_admin_session_auth';
-const ADMIN_PIN_KEY = 'sapphire_country_admin_pin_code';
-const DEFAULT_PIN = '1234';
+const DEFAULT_PIN = 'Indranil777';
+
+const persistedData = persistedDataJson as unknown as WebsiteData;
 
 interface ActiveModalState {
   type: 'image' | 'region' | 'export_import' | 'section' | 'title' | 'court' | 'nobility' | 'land' | 'admin_login' | null;
@@ -83,35 +84,72 @@ export const KingdomProvider: React.FC<{ children: ReactNode }> = ({ children })
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Ensure all required fields exist
+        // Ensure all required fields exist and retain all customizations
         return {
           ...initialWebsiteData,
+          ...persistedData,
           ...parsed,
-          overview: { ...initialWebsiteData.overview, ...(parsed.overview || {}) },
-          crest: { ...initialWebsiteData.crest, ...(parsed.crest || {}) }
+          overview: { 
+            ...initialWebsiteData.overview, 
+            ...(persistedData?.overview || {}), 
+            ...(parsed.overview || {}) 
+          },
+          crest: { 
+            ...initialWebsiteData.crest, 
+            ...(persistedData?.crest || {}), 
+            ...(parsed.crest || {}) 
+          }
         };
       }
     } catch (e) {
       console.warn('Failed to parse saved sapphire archive data:', e);
     }
-    return initialWebsiteData;
+    return (persistedData as WebsiteData) || initialWebsiteData;
   });
 
-  // Edit Mode is strictly FALSE for all viewers unless authenticated with Admin PIN in this browser session
-  const [isEditMode, setIsEditModeState] = useState<boolean>(() => {
-    try {
-      const sessionAuth = sessionStorage.getItem(ADMIN_SESSION_KEY);
-      return sessionAuth === 'authenticated';
-    } catch {
-      return false;
-    }
-  });
+  // Edit Mode is strictly and permanently FALSE across all environments (Read-Only Official Archive)
+  const isEditMode = false;
+  const setIsEditModeState = (_val: boolean) => {};
 
   const [showAdminLoginModal, setShowAdminLoginModal] = useState<boolean>(false);
   const [activeModal, setActiveModal] = useState<ActiveModalState>({ type: null });
   const [hasUnsavedChanges, setHasUnsavedChanges] = useState(false);
 
-  // Auto-save data changes
+  // Auto-sync client data to backend on mount to permanently persist official images and customizations
+  useEffect(() => {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      const payload = saved ? JSON.parse(saved) : data;
+      fetch('/api/sync-final', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
+        .then((res) => res.json())
+        .then((result) => {
+          if (result?.data) {
+            setData((prev) => ({
+              ...prev,
+              crest: {
+                ...prev.crest,
+                imageUrl: result.data.crest?.imageUrl || prev.crest.imageUrl
+              },
+              overview: {
+                ...prev.overview,
+                monarchImage: result.data.overview?.monarchImage || prev.overview.monarchImage
+              }
+            }));
+          }
+        })
+        .catch((err) => {
+          console.log('[Lock] Background sync response:', err);
+        });
+    } catch (e) {
+      console.error('Failed to run initial background sync:', e);
+    }
+  }, []);
+
+  // Auto-save data changes to localStorage as secondary backup
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
@@ -121,60 +159,22 @@ export const KingdomProvider: React.FC<{ children: ReactNode }> = ({ children })
     }
   }, [data]);
 
-  const loginAdmin = (pin: string): boolean => {
-    try {
-      const storedPin = localStorage.getItem(ADMIN_PIN_KEY) || DEFAULT_PIN;
-      if (pin.trim() === storedPin.trim() || pin.trim() === '1234') {
-        setIsEditModeState(true);
-        sessionStorage.setItem(ADMIN_SESSION_KEY, 'authenticated');
-        setShowAdminLoginModal(false);
-        return true;
-      }
-    } catch (e) {
-      console.error(e);
-    }
+  const loginAdmin = (_pin: string): boolean => {
     return false;
   };
 
-  const logoutAdmin = () => {
-    setIsEditModeState(false);
-    try {
-      sessionStorage.removeItem(ADMIN_SESSION_KEY);
-    } catch {}
-  };
+  const logoutAdmin = () => {};
 
-  const changeAdminPin = (oldPin: string, newPin: string): boolean => {
-    const storedPin = localStorage.getItem(ADMIN_PIN_KEY) || DEFAULT_PIN;
-    if (oldPin === storedPin || oldPin === '1234') {
-      localStorage.setItem(ADMIN_PIN_KEY, newPin);
-      return true;
-    }
+  const changeAdminPin = (_oldPin: string, _newPin: string): boolean => {
     return false;
   };
 
-  const setIsEditMode = (val: boolean) => {
-    if (val) {
-      setShowAdminLoginModal(true);
-    } else {
-      logoutAdmin();
-    }
-  };
+  const setIsEditMode = (_val: boolean) => {};
 
-  const toggleEditMode = () => {
-    if (isEditMode) {
-      logoutAdmin();
-    } else {
-      setShowAdminLoginModal(true);
-    }
-  };
+  const toggleEditMode = () => {};
 
-  const openModal = (type: ActiveModalState['type'], targetId?: string, extraProps?: any) => {
-    // If attempting to open administrative modals while locked, prompt for PIN first
-    if (!isEditMode && type !== null && type !== 'admin_login') {
-      setShowAdminLoginModal(true);
-      return;
-    }
-    setActiveModal({ type, targetId, extraProps });
+  const openModal = (_type: ActiveModalState['type'], _targetId?: string, _extraProps?: any) => {
+    // All modals permanently disabled for official locked archive
   };
 
   const closeModal = () => {
@@ -411,11 +411,7 @@ export const KingdomProvider: React.FC<{ children: ReactNode }> = ({ children })
   };
 
   const resetToDefaults = () => {
-    if (!isEditMode) return;
-    if (window.confirm('Бүх өөрчлөлтийг устгаж анхны эзэнт гүрний архивын өгөгдлийг сэргээх үү? (Reset all content to original imperial defaults?)')) {
-      setData(initialWebsiteData);
-      localStorage.removeItem(STORAGE_KEY);
-    }
+    // Resetting is disabled permanently on the official locked archive
   };
 
   return (

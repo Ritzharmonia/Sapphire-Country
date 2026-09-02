@@ -8,40 +8,17 @@ import {
   BookOpen, 
   Flag, 
   Scroll,
-  UploadCloud,
-  ImageIcon,
   Award
 } from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
-import { EditableText } from './ui/EditableText';
 import { OrnateFrame } from './ui/OrnateFrame';
 import { SectionHeading } from './ui/SectionHeading';
-import { DEFAULT_MONARCH_IMAGE, DEFAULT_ROYAL_CREST } from '../initialData';
+import { EditableText } from './ui/EditableText';
+import { DEFAULT_MONARCH_IMAGE } from '../initialData';
 
 export const CountryOverview: React.FC = () => {
-  const { data, updateField, isEditMode, openModal } = useKingdom();
+  const { data, updateField } = useKingdom();
   const { overview } = data;
-
-  const handleMonarchImageEdit = () => {
-    if (!isEditMode) return;
-    openModal('image', 'monarch-portrait', {
-      currentUrl: overview.monarchImage || DEFAULT_MONARCH_IMAGE,
-      scale: overview.monarchScale || 1,
-      offsetX: overview.monarchOffsetX || 0,
-      offsetY: overview.monarchOffsetY || 0,
-      title: 'ТӨРИЙН ТЭРГҮҮНИЙ ХӨРӨГ ЗУРАГ (MONARCH PORTRAIT)'
-    });
-  };
-
-  const handleCrestEdit = () => {
-    openModal('image', 'national-crest', {
-      currentUrl: data.crest.imageUrl || DEFAULT_ROYAL_CREST,
-      scale: data.crest.scale || 1,
-      offsetX: data.crest.offsetX || 0,
-      offsetY: data.crest.offsetY || 0,
-      title: 'УЛСЫН ТӨРИЙН СҮЛД (ROYAL CREST)'
-    });
-  };
 
   return (
     <section id="overview" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
@@ -50,22 +27,17 @@ export const CountryOverview: React.FC = () => {
         titleMongolian="ТӨРИЙН ЕРӨНХИЙ ТОЙМ"
         titleEnglish="COUNTRY OF SAPPHIRE"
         subtitle="Саффир улсын төрийн байгууламж, албан ёсны нэршил, харьяалал, төрийн тэргүүн болон дээд бэлгэдлийн албан ёсны архив."
-        onUpdateTitleMongolian={(val) => updateField('overview.officialNameMongolian', val)}
-        onUpdateTitleEnglish={(val) => updateField('overview.officialNameEnglish', val)}
       />
 
-      {/* Grand Sovereign Monarch Feature Card with Royal Portrait */}
+      {/* Grand Sovereign Monarch Feature Card with Locked Royal Portrait */}
       <div className="mb-10">
         <OrnateFrame variant="gold" glow padding="p-6 sm:p-8" className="bg-gradient-to-r from-[#0C1421] via-[#142B4A]/80 to-[#0C1421]">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-center">
             
-            {/* Left: Royal Monarch Portrait Frame */}
+            {/* Left: Royal Monarch Portrait Frame - Officially Locked */}
             <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
               <div 
-                onClick={handleMonarchImageEdit}
-                className={`relative group w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden bg-gradient-to-b from-[#1F4E79] to-[#0C1421] border-2 border-[#C9A85C] shadow-[0_0_40px_rgba(31,78,121,0.6)] transition-all duration-300 ${
-                  isEditMode ? 'cursor-pointer hover:scale-105 hover:border-[#E8C87A]' : 'cursor-default'
-                }`}
+                className="relative w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden bg-gradient-to-b from-[#1F4E79] to-[#0C1421] border-2 border-[#C9A85C] shadow-[0_0_40px_rgba(31,78,121,0.6)] cursor-default"
               >
                 {/* Filigree Corner Accents */}
                 <div className="absolute top-1.5 left-1.5 w-4 h-4 border-t-2 border-l-2 border-[#C9A85C] z-10" />
@@ -83,28 +55,7 @@ export const CountryOverview: React.FC = () => {
                   }}
                   className="w-full h-full object-cover transition-transform duration-300 drop-shadow-[0_8px_16px_rgba(0,0,0,0.9)]"
                 />
-
-                {/* Hover / Edit Overlay ONLY in Edit Mode */}
-                {isEditMode && (
-                  <div className="absolute inset-0 bg-[#0C1421]/80 backdrop-blur-[2px] opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center p-3 text-center z-20">
-                    <UploadCloud className="w-8 h-8 text-[#C9A85C] mb-1.5 animate-bounce" />
-                    <span className="text-xs font-bold text-[#FFF0CA] font-royal">Хөрөг зураг солих ✎</span>
-                    <span className="text-[10px] text-[#D9DEE5]/80 font-sans mt-0.5">(Upload / Change Monarch Portrait)</span>
-                  </div>
-                )}
               </div>
-
-              {/* Upload Portrait Action Button ONLY in Edit Mode */}
-              {isEditMode && (
-                <button
-                  type="button"
-                  onClick={handleMonarchImageEdit}
-                  className="mt-3 px-3.5 py-1.5 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C]/60 rounded-full font-serif text-xs flex items-center gap-1.5 shadow transition-all hover:scale-105"
-                >
-                  <ImageIcon className="w-3.5 h-3.5 text-[#C9A85C]" />
-                  <span>Зураг оруулах (Monarch Picture) ✎</span>
-                </button>
-              )}
             </div>
 
             {/* Right: Royal Monarch Information & Reign Dossier */}
@@ -118,41 +69,25 @@ export const CountryOverview: React.FC = () => {
                 </span>
               </div>
 
-              {/* Monarch Full Name */}
+              {/* Monarch Full Name (Refined slightly smaller font size) */}
               <div>
                 <span className="text-xs uppercase font-serif tracking-wider text-[#C9A85C] block mb-1">
                   Төрийн Тэргүүний Нэршил / Хаан Хэргэм:
                 </span>
-                <h3 className="text-2xl sm:text-3xl lg:text-4xl font-royal font-extrabold text-[#FFF0CA] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
-                  <EditableText
-                    value={overview.monarch || 'Эрхэм Дээдэс Хаан / Хатан'}
-                    onSave={(val) => updateField('overview.monarch', val)}
-                    label="Төрийн тэргүүний нэр"
-                    className="text-2xl sm:text-3xl lg:text-4xl font-royal font-extrabold text-[#FFF0CA]"
-                  />
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-royal font-bold text-[#FFF0CA] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                  {overview.monarch || 'Эрхэм Дээдэс Хаан / Хатан'}
                 </h3>
               </div>
 
               {/* Monarch Official Reign Title */}
-              <div className="text-sm font-serif uppercase tracking-[0.2em] text-[#D9DEE5]/90">
-                <EditableText
-                  value={overview.monarchTitle || 'ТӨРИЙН ТЭРГҮҮН, ХААН ШИРЭЭНИЙ ЭЗЭН'}
-                  onSave={(val) => updateField('overview.monarchTitle', val)}
-                  label="Хааны албан ёсны цол гуншин"
-                  className="text-sm font-serif uppercase tracking-[0.2em] text-[#D9DEE5]/90 font-semibold"
-                />
+              <div className="text-xs sm:text-sm font-serif uppercase tracking-[0.2em] text-[#D9DEE5]/90 font-medium">
+                {overview.monarchTitle || 'ТӨРИЙН ТЭРГҮҮН, ХААН ШИРЭЭНИЙ ЭЗЭН'}
               </div>
 
               {/* Imperial Proclamation / Quote */}
               <div className="p-4 rounded-xl bg-[#0C1421]/70 border border-[#C9A85C]/30 relative text-xs sm:text-sm text-[#D9DEE5]/90 font-serif italic leading-relaxed">
                 <span className="text-[#C9A85C] text-lg font-royal mr-1">“</span>
-                <EditableText
-                  value={overview.monarchQuote || 'Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, төрийн эрх үеэс үед өвлөгдөнө.'}
-                  onSave={(val) => updateField('overview.monarchQuote', val)}
-                  multiline
-                  label="Хааны зарлиг / Үг"
-                  className="text-xs sm:text-sm text-[#D9DEE5]/90 font-serif italic leading-relaxed"
-                />
+                {overview.monarchQuote || 'Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, төрийн эрх үеэс үед өвлөгдөнө.'}
                 <span className="text-[#C9A85C] text-lg font-royal ml-1">”</span>
               </div>
 
@@ -271,24 +206,14 @@ export const CountryOverview: React.FC = () => {
                     </div>
                     <div>
                       <div className="text-xs uppercase font-serif tracking-wider text-[#E8C87A] font-bold">Төрийн тэргүүн / Monarch</div>
-                      <div className="text-lg sm:text-xl font-royal font-extrabold text-[#FFF0CA]">
-                        <EditableText
-                          value={overview.monarch}
-                          onSave={(val) => updateField('overview.monarch', val)}
-                          label="Төрийн тэргүүн"
-                          className="font-royal font-extrabold text-[#FFF0CA]"
-                        />
+                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA]">
+                        {overview.monarch || 'Эрхэм Дээдэс Хаан / Хатан'}
                       </div>
                     </div>
                   </div>
-                  <button
-                    type="button"
-                    onClick={handleMonarchImageEdit}
-                    className="text-xs font-mono uppercase text-[#E8C87A] hover:text-[#FFF0CA] bg-[#0C1421]/90 px-2.5 py-1 rounded border border-[#C9A85C]/40 self-start sm:self-auto ml-11 sm:ml-0 flex items-center gap-1 transition-colors"
-                  >
-                    <ImageIcon className="w-3 h-3 text-[#C9A85C]" />
-                    <span>Зураг засах</span>
-                  </button>
+                  <div className="text-xs font-mono uppercase text-[#E8C87A]/80 pl-11 sm:pl-0">
+                    Reigning Sovereign
+                  </div>
                 </div>
 
                 {/* 5. Төрийн бэлгэдэл */}
@@ -393,16 +318,8 @@ export const CountryOverview: React.FC = () => {
                 </div>
               </div>
               <div>
-                <div className="flex items-center justify-between mb-1">
+                <div className="mb-1">
                   <span className="text-xs text-[#C9A85C] uppercase font-serif block">Төрийн сүлдний тайлбар:</span>
-                  <button
-                    type="button"
-                    onClick={handleCrestEdit}
-                    className="text-[10px] text-[#E8C87A] hover:underline font-serif flex items-center gap-1"
-                  >
-                    <UploadCloud className="w-3 h-3 text-[#C9A85C]" />
-                    <span>Сүлд солих ✎</span>
-                  </button>
                 </div>
                 <p className="text-xs text-[#D9DEE5]/75 font-sans leading-relaxed">
                   <EditableText
