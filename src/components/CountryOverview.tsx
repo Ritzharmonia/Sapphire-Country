@@ -37,7 +37,7 @@ export const CountryOverview: React.FC = () => {
             {/* Left: Royal Monarch Portrait Frame - Officially Locked */}
             <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
               <div 
-                className="relative w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden bg-gradient-to-b from-[#1F4E79] to-[#0C1421] border-2 border-[#C9A85C] shadow-[0_0_40px_rgba(31,78,121,0.6)] cursor-default"
+                className="relative w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden bg-[#0C1421] border-2 border-[#C9A85C]/80 shadow-[0_12px_36px_rgba(0,0,0,0.85),0_0_15px_rgba(201,168,92,0.18)] cursor-default"
               >
                 {/* Filigree Corner Accents */}
                 <div className="absolute top-1.5 left-1.5 w-4 h-4 border-t-2 border-l-2 border-[#C9A85C] z-10" />
@@ -45,27 +45,30 @@ export const CountryOverview: React.FC = () => {
                 <div className="absolute bottom-1.5 left-1.5 w-4 h-4 border-b-2 border-l-2 border-[#C9A85C] z-10" />
                 <div className="absolute bottom-1.5 right-1.5 w-4 h-4 border-b-2 border-r-2 border-[#C9A85C] z-10" />
 
-                {/* Monarch Portrait Image */}
+                {/* Monarch Portrait Image - Original artwork remains 100% visible and crisp */}
                 <img
                   src={overview.monarchImage || DEFAULT_MONARCH_IMAGE}
-                  alt="Reigning Sovereign Monarch"
+                  alt="Monarch"
                   referrerPolicy="no-referrer"
                   style={{
                     transform: `scale(${overview.monarchScale || 1}) translate(${overview.monarchOffsetX || 0}px, ${overview.monarchOffsetY || 0}px)`
                   }}
                   className="w-full h-full object-cover transition-transform duration-300 drop-shadow-[0_8px_16px_rgba(0,0,0,0.9)]"
                 />
+
+                {/* Soft perimeter shadow matching dark edges seamlessly to the background without tinting the subject */}
+                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#C9A85C]/25 pointer-events-none z-10 shadow-[inset_0_0_14px_rgba(12,20,33,0.65)]" />
               </div>
             </div>
 
             {/* Right: Royal Monarch Information & Reign Dossier */}
             <div className="md:col-span-7 lg:col-span-8 flex flex-col justify-center space-y-4">
               
-              {/* Sovereign Badge */}
+              {/* Monarch Badge */}
               <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded bg-[#0C1421] border border-[#C9A85C]/60 shadow">
                 <Crown className="w-4 h-4 text-[#E8C87A]" />
                 <span className="text-[11px] font-mono uppercase tracking-widest text-[#E8C87A] font-bold">
-                  REIGNING SOVEREIGN · ТӨРИЙН ДЭЭД ЭЗЭН
+                  MONARCH · ТӨРИЙН ТЭРГҮҮН
                 </span>
               </div>
 
@@ -211,8 +214,8 @@ export const CountryOverview: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="text-xs font-mono uppercase text-[#E8C87A]/80 pl-11 sm:pl-0">
-                    Reigning Sovereign
+                  <div className="text-xs font-mono uppercase text-[#E8C87A]/80 pl-11 sm:pl-0 font-semibold tracking-wider">
+                    Monarch
                   </div>
                 </div>
 
@@ -220,7 +223,7 @@ export const CountryOverview: React.FC = () => {
                 <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#C9A85C]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#C9A85C]/40 flex items-center justify-center shrink-0">
-                      <Gem className="w-4 h-4 text-[#2A75D3]" />
+                      <Gem className="w-4 h-4 text-[#5B8AC4]" />
                     </div>
                     <div>
                       <div className="text-xs uppercase font-serif tracking-wider text-[#C9A85C]">Төрийн бэлгэдэл (State Symbol)</div>
@@ -241,7 +244,7 @@ export const CountryOverview: React.FC = () => {
                       </div>
                     </div>
                   </div>
-                  <div className="text-xs text-[#2A75D3] font-mono sm:text-right pl-11 sm:pl-0 font-bold">
+                  <div className="text-xs text-[#5B8AC4] font-mono sm:text-right pl-11 sm:pl-0 font-bold">
                     Sapphire Gemstone
                   </div>
                 </div>
@@ -282,7 +285,7 @@ export const CountryOverview: React.FC = () => {
                 <span className="text-xs text-[#C9A85C] uppercase font-serif block">Үүсгэн байгуулагдсан эрин:</span>
                 <div className="font-serif italic text-[#D9DEE5]/90">
                   <EditableText
-                    value={overview.foundingEra || 'Эртний Саффирын Эрин Үе (Imperial Ancient Era)'}
+                    value={overview.foundingEra || 'Саффир улс'}
                     onSave={(val) => updateField('overview.foundingEra', val)}
                   />
                 </div>

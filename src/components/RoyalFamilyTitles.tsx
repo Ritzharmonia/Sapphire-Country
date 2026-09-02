@@ -24,9 +24,9 @@ export const RoyalFamilyTitles: React.FC = () => {
     switch (iconName) {
       case 'Crown': return <Crown className="w-5 h-5 text-[#E8C87A]" />;
       case 'Shield': return <Shield className="w-5 h-5 text-[#C9A85C]" />;
-      case 'Sparkles': return <Sparkles className="w-5 h-5 text-[#2A75D3]" />;
+      case 'Sparkles': return <Sparkles className="w-5 h-5 text-[#5B8AC4]" />;
       case 'Award': return <Award className="w-5 h-5 text-[#C9A85C]" />;
-      case 'Gem': return <Gem className="w-5 h-5 text-[#2A75D3]" />;
+      case 'Gem': return <Gem className="w-5 h-5 text-[#5B8AC4]" />;
       case 'Compass': return <Compass className="w-5 h-5 text-[#D9DEE5]" />;
       case 'Sun': return <Sun className="w-5 h-5 text-[#E8C87A]" />;
       default: return <Crown className="w-5 h-5 text-[#C9A85C]" />;

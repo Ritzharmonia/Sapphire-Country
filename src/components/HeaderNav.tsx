@@ -58,7 +58,7 @@ export const HeaderNav: React.FC = () => {
           <div className="flex items-center gap-2">
             <span className="ornament hidden sm:inline">✧</span>
             <div className="flex flex-col">
-              <span className="font-marcellus text-sm sm:text-base font-normal tracking-[0.18em] text-[#FFF0CA] group-hover:text-[#E8C87A] transition-colors leading-tight">
+              <span className="font-playfair text-sm sm:text-base font-bold tracking-[0.14em] text-[#FFF0CA] group-hover:text-[#E8C87A] transition-colors leading-tight">
                 {data.crest?.customTitle || 'SAPPHIRE COUNTRY'}
               </span>
               <span className="font-cormorant text-[11px] text-[#D9DEE5]/80 tracking-widest uppercase italic">

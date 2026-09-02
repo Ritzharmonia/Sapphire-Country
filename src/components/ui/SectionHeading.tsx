@@ -39,26 +39,26 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         </div>
       )}
 
-      {/* Primary Mongolian Title */}
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-royal tracking-wide text-[#FFF0CA] mb-2 drop-shadow">
+      {/* Primary Mongolian Title with Canva Cyrillic Display Font */}
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold font-royal tracking-[0.03em] text-[#FFF0CA] mb-2.5 drop-shadow-[0_3px_14px_rgba(0,0,0,0.9)]">
         {onUpdateTitleMongolian ? (
           <EditableText
             value={titleMongolian}
             onSave={onUpdateTitleMongolian}
-            className="text-2xl sm:text-3xl md:text-4xl font-bold font-royal tracking-wide text-[#FFF0CA]"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold font-royal tracking-[0.03em] text-[#FFF0CA]"
           />
         ) : (
           titleMongolian
         )}
       </h2>
 
-      {/* English Royal Title */}
-      <div className="text-sm sm:text-base font-serif italic tracking-widest uppercase text-[#D9DEE5]/80 mb-3">
+      {/* English Royal Subtitle in Elegant Cormorant Garamond */}
+      <div className="text-xs sm:text-sm font-cormorant font-semibold italic tracking-[0.24em] uppercase text-[#E8C87A]/90 mb-3">
         {onUpdateTitleEnglish ? (
           <EditableText
             value={titleEnglish}
             onSave={onUpdateTitleEnglish}
-            className="text-sm sm:text-base font-serif italic tracking-widest uppercase text-[#D9DEE5]/80"
+            className="text-xs sm:text-sm font-cormorant font-semibold italic tracking-[0.24em] uppercase text-[#E8C87A]/90"
           />
         ) : (
           titleEnglish

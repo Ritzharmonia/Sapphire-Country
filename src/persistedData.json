@@ -1,87 +1,98 @@
 {
   "crest": {
-    "imageUrl": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3CradialGradient%20id%3D%22bgGrad%22%20cx%3D%2250%25%22%20cy%3D%2250%25%22%20r%3D%2250%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231F4E79%22%20stop-opacity%3D%220.8%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230C1421%22%20stop-opacity%3D%220.95%22%2F%3E%0A%20%20%20%20%3C%2FradialGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22goldGrad%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFF0CA%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23C9A85C%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238A6B29%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3Cfilter%20id%3D%22royalGlow%22%20x%3D%22-20%25%22%20y%3D%22-20%25%22%20width%3D%22140%25%22%20height%3D%22140%25%22%3E%0A%20%20%20%20%20%20%3CfeGaussianBlur%20stdDeviation%3D%226%22%20result%3D%22blur%22%2F%3E%0A%20%20%20%20%20%20%3CfeComposite%20in%3D%22SourceGraphic%22%20in2%3D%22blur%22%20operator%3D%22over%22%2F%3E%0A%20%20%20%20%3C%2Ffilter%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%22230%22%20fill%3D%22url(%23bgGrad)%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%224%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22250%22%20cy%3D%22250%22%20r%3D%22215%22%20fill%3D%22none%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%221.5%22%20stroke-dasharray%3D%226%2C4%22%20opacity%3D%220.7%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M150%20140%20C150%20280%20250%20360%20250%20390%20C250%20360%20350%20280%20350%20140%20Z%22%20fill%3D%22%23142B4A%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%223.5%22%20filter%3D%22url(%23royalGlow)%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22250%2C180%20295%2C225%20250%2C315%20205%2C225%22%20fill%3D%22%232A75D3%22%20stroke%3D%22url(%23goldGrad)%22%20stroke-width%3D%222%22%2F%3E%0A%20%20%3Cpolygon%20points%3D%22250%2C180%20250%2C315%20205%2C225%22%20fill%3D%22%231F4E79%22%20opacity%3D%220.8%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M190%20130%20L205%2085%20L225%20115%20L250%2075%20L275%20115%20L295%2085%20L310%20130%20Z%22%20fill%3D%22url(%23goldGrad)%22%20stroke%3D%22%238A6B29%22%20stroke-width%3D%221.5%22%20filter%3D%22url(%23royalGlow)%22%2F%3E%0A%3C%2Fsvg%3E",
-    "scale": 1.0,
+    "imageUrl": "/official-royal-crest.png",
+    "scale": 1.05,
     "offsetX": 0,
-    "offsetY": 0,
+    "offsetY": -2,
     "glowIntensity": "imperial",
     "customTitle": "SAPPHIRE COUNTRY",
     "customSubtitle": "COUNTRY OF SAPPHIRE"
   },
   "overview": {
-    "officialNameMongolian": "Саффир улс (Индранил Эзэнт Гүрэн)",
-    "officialNameEnglish": "The Imperial Sapphire Realm",
-    "capitalCity": "Селестин Цайз Хот (Celestine Citadel)",
-    "reignPeriod": "Эртний Саффирын Эрин 1424 оноос эдүгээ хүртэл",
-    "motto": "Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, шударга ёс, хүч чадал оршино.",
+    "officialNameMongolian": "ТӨРИЙН ЕРӨНХИЙ",
+    "officialNameEnglish": "Country of Sapphire",
+    "jurisdiction": "Skill Faith ZGRP",
+    "monarch": "Libertia Von Montaque",
+    "monarchTitle": "ТӨРИЙН ДЭЭД ТЭРГҮҮН",
+    "monarchImage": "/official-monarch-portrait.png",
+    "monarchScale": 1.05,
+    "monarchOffsetX": 0,
+    "monarchOffsetY": 2,
+    "monarchQuote": "Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, төрийн эрх үеэс үед өвлөгдөнө.",
+    "stateSymbolMongolian": "Индранил чулуу",
+    "stateSymbolEnglish": "Blue Sapphire",
+    "motto": "Сүр жавхлан, Итгэл үнэмшил, Мөнхийн Индранил",
+    "foundingEra": "Саффир улс",
+    "capitalCity": "Селестин (Celestine Capital)",
+    "nationalAnthemTitle": "Индранил Титмийн Сүлд Дуулал",
+    "nationalAnthemExcerpt": "Мөнхийн гэрэл гэгээ дор эзэнт гүрэн мандан бадарч, Индранил улсын алдар нэр үеийн үед цуурайтна.",
+    "crestDescription": "Хааны сүлд нь төрийн тусгаар тогтнол, дээд язгуур, индранил эрдэнийн мөнхийн бат бэх чанарыг бэлгэдэнэ.",
+    "bannerImage": "",
+    "reignPeriod": "Саффир улс 1424 оноос эдүгээ хүртэл",
     "stateSymbol": "Мөнхийн Саффир Сүлд ба Алтан Титэм",
     "population": "12.4 сая эрхэм иргэд",
-    "territoryArea": "1,850,000 хавтгай дөрвөлжин км",
-    "monarch": "Эрхэм Дээдэс Хаан / Хатан",
-    "monarchTitle": "ТӨРИЙН ТЭРГҮҮН, ХААН ШИРЭЭНИЙ ЭЗЭН",
-    "monarchQuote": "Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, төрийн эрх үеэс үед өвлөгдөнө.",
-    "monarchImage": "data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20400%20550%22%20width%3D%22100%25%22%20height%3D%22100%25%22%3E%0A%20%20%3Cdefs%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22bg%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%231F4E79%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23142B4A%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%230C1421%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%20%20%3ClinearGradient%20id%3D%22gold%22%20x1%3D%220%25%22%20y1%3D%220%25%22%20x2%3D%22100%25%22%20y2%3D%22100%25%22%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%220%25%22%20stop-color%3D%22%23FFF0CA%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%2250%25%22%20stop-color%3D%22%23C9A85C%22%2F%3E%0A%20%20%20%20%20%20%3Cstop%20offset%3D%22100%25%22%20stop-color%3D%22%238A6B29%22%2F%3E%0A%20%20%20%20%3C%2FlinearGradient%3E%0A%20%20%3C%2Fdefs%3E%0A%20%20%3Crect%20width%3D%22400%22%20height%3D%22550%22%20fill%3D%22url(%23bg)%22%2F%3E%0A%20%20%3Ccircle%20cx%3D%22200%22%20cy%3D%22220%22%20r%3D%2285%22%20fill%3D%22%23FFF0CA%22%20opacity%3D%220.85%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M140%20180%20C140%20100%20260%20100%20260%20180%20C260%20220%20240%20270%20200%20270%20C160%20270%20140%20220%20140%20180%20Z%22%20fill%3D%22%230C1421%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M150%20150%20L170%2090%20L190%20130%20L200%2080%20L210%20130%20L230%2090%20L250%20150%20Z%22%20fill%3D%22url(%23gold)%22%2F%3E%0A%20%20%3Cpath%20d%3D%22M100%20450%20C100%20310%20300%20310%20300%20450%20Z%22%20fill%3D%22%23142B4A%22%20stroke%3D%22url(%23gold)%22%20stroke-width%3D%222%22%2F%3E%0A%3C%2Fsvg%3E"
+    "territoryArea": "1,850,000 хавтгай дөрвөлжин км"
   },
   "royalTitles": [
     {
       "id": "title-01",
       "number": "01",
-      "mongolianTitle": "Хаан",
-      "englishTitle": "King / Emperor",
-      "description": "Улсын тэргүүн, хаант төрийн бүх дээд эрх мэдлийг баригч эрхэм дээдэс.",
+      "mongolianTitle": "Эрхэм Дээдэс, Төрийн тэргүүн",
+      "englishTitle": "His/Her Majesty the Monarch",
+      "description": "Хаан ширээг өөрийн эрхээр эзэмшиж буй хаан болон хатан хааны ерөнхий нэршил.",
       "rankCategory": "monarch",
-      "holder": "Хаан ширээний эзэн",
+      "holder": "Libertia Von Montaque",
       "iconName": "Crown"
     },
     {
       "id": "title-02",
       "number": "02",
-      "mongolianTitle": "Хатан хаан",
-      "englishTitle": "Queen / Empress",
-      "description": "Хааны гэргий эсвэл хаан ширээг бие даан эзэмшигч эмэгтэй удирдагч.",
-      "rankCategory": "monarch",
-      "holder": "Хатан ширээний эзэн",
-      "iconName": "Sparkles"
+      "mongolianTitle": "Эрхэм Дээдэс, Хаан",
+      "englishTitle": "His Majesty the King",
+      "description": "Саффир улсын төрийн тэргүүн бөгөөд хаан ширээний дээд хэргэм.",
+      "rankCategory": "sovereign",
+      "holder": "Хаан Ширээний Тэргүүн Хэргэм",
+      "iconName": "Shield"
     },
     {
       "id": "title-03",
       "number": "03",
-      "mongolianTitle": "Эх Хатан",
-      "englishTitle": "Queen Mother / Dowager Empress",
-      "description": "Өмнөх хааны хатан бөгөөд одоогийн хааны эх. Ордны дотоод ёс жаяг, гэр бүлийн асуудлыг хянана.",
-      "rankCategory": "dowager",
-      "holder": "Ордны дээд хүндэтгэлт эх",
-      "iconName": "HeartHandshake"
+      "mongolianTitle": "Эрхэм Дээдэс, Хатан",
+      "englishTitle": "Her Majesty the Queen",
+      "description": "Хааны гэргий болон хаан ширээг өөрийн эрхээр эзэмшигч хатан гэсэн хоёр хэлбэртэй байна.",
+      "rankCategory": "consort",
+      "holder": "Хааны гэргий",
+      "iconName": "Sparkles"
     },
     {
       "id": "title-04",
       "number": "04",
-      "mongolianTitle": "Титэм залгамжлах хунтайж",
+      "mongolianTitle": "Титэмт Ханхүү",
       "englishTitle": "Crown Prince",
-      "description": "Хаан ширээг шууд залгамжлахаар албан ёсоор тодорсон ууган эсвэл сонгогдсон ханхүү.",
-      "rankCategory": "heir",
-      "holder": "Саффирын титэм залгамжлагч",
-      "iconName": "Shield"
+      "description": "Хаан ширээг залгамжлах албан ёсны эрэгтэй өв залгамжлагч.",
+      "rankCategory": "prince",
+      "holder": "Хаан угсааны өв залгамжлагч",
+      "iconName": "Award"
     },
     {
       "id": "title-05",
       "number": "05",
-      "mongolianTitle": "Титэм залгамжлах гүнж",
+      "mongolianTitle": "Титэмт Гүнж",
       "englishTitle": "Crown Princess",
-      "description": "Титэм залгамжлагч ханхүүгийн гэргий эсвэл хаан ширээ залгамжлах гүнж.",
-      "rankCategory": "heir",
-      "holder": "Титэм залгамжлагч гүнж",
-      "iconName": "Award"
+      "description": "Хаан ширээг залгамжлах албан ёсны эмэгтэй өв залгамжлагч.",
+      "rankCategory": "princess",
+      "holder": "Хаан угсааны тэргүүн гүнж",
+      "iconName": "Gem"
     },
     {
       "id": "title-06",
       "number": "06",
       "mongolianTitle": "Ханхүү",
       "englishTitle": "Prince",
-      "description": "Хааны удмын хүү, эзэнт гүрний тулгуур.",
+      "description": "Хаан болон хатан хааны хүү.",
       "rankCategory": "prince",
-      "holder": "Хаан угсааны ханхүүгийн хэргэм",
-      "iconName": "Flame"
+      "holder": "Хаан угсааны ханхүү нар",
+      "iconName": "Compass"
     },
     {
       "id": "title-07",
@@ -90,7 +101,7 @@
       "englishTitle": "Princess",
       "description": "Хаан болон хатан хааны охин.",
       "rankCategory": "princess",
-      "holder": "Хаан угсааны гүнжийн хэргэм",
+      "holder": "Хаан угсааны гүнж нар",
       "iconName": "Sun"
     }
   ],
@@ -107,7 +118,7 @@
         "Төрийн хүлээн авалт, ёслол, титэм залах болон бусад төрийн хэмжээний арга хэмжээг зохион байгуулна.",
         "Хааны зөвшөөрлөөс гадна ордны дотоод үйл ажиллагаа, баяр ёслолын тодорхой асуудлаар шийдвэр гаргах эрхтэй."
       ],
-      "currentHolder": "Төрийн Дээд Канцлер",
+      "currentHolder": "Их Төрийн Тэргүүн Зөвлөх",
       "badgeSymbol": "Scroll"
     },
     {
@@ -122,7 +133,7 @@
         "Хааны зарлиг, бичиг баримт, төрийн гадаад дотоод харилцааг хариуцах.",
         "Хааны уулзалт, хуваарь болон төрийн албан харилцааг өндөр түвшинд зохицуулах."
       ],
-      "currentHolder": "Бодлогын Тэргүүн Зөвлөх",
+      "currentHolder": "Дээд Зөвлөлийн Ахлах",
       "badgeSymbol": "BookOpen"
     },
     {
@@ -142,197 +153,641 @@
     }
   ],
   "nobilityHierarchy": [
-    { "id": "nob-11", "number": "11", "mongolianTitle": "Их Гүн", "englishTitle": "Grand Duke", "category": "high", "rankLevel": 1, "description": "Дээд язгууртны тэргүүн эрэмбэ, өргөн уудам нутаг дэвсгэр, цэргийн бүрэн эрх эзэмшигч." },
-    { "id": "nob-12", "number": "12", "mongolianTitle": "Их Гүнгийн ахайтан", "englishTitle": "Grand Duchess", "category": "high", "rankLevel": 1, "description": "Их гүнтний гэргий эсвэл өөрийн эрхээр Их гүнт улсыг эзэмшигч хатагтай." },
-    { "id": "nob-13", "number": "13", "mongolianTitle": "Вант Гүн", "englishTitle": "Sovereign Duke", "category": "high", "rankLevel": 2, "description": "Хаант улсын дотор бие даасан засаглал бүхий бүс нутгийг захирагч." },
-    { "id": "nob-14", "number": "14", "mongolianTitle": "Вант Гүнгийн ахайтан", "englishTitle": "Sovereign Duchess", "category": "high", "rankLevel": 2, "description": "Вант гүнтний гэргий, бүс нутгийн дээд хатагтай." },
-    { "id": "nob-15", "number": "15", "mongolianTitle": "Гүн", "englishTitle": "Duke", "category": "high", "rankLevel": 3, "description": "Түүхт томоохон гүнт нутгийн эзэн, эзэн хааны итгэлт ноён." },
-    { "id": "nob-16", "number": "16", "mongolianTitle": "Гүнгийн ахайтан", "englishTitle": "Duchess", "category": "high", "rankLevel": 3, "description": "Гүнтний гэргий, ордны өндөр нөлөө бүхий язгууртан." },
-    { "id": "nob-17", "number": "17", "mongolianTitle": "Маркиз", "englishTitle": "Marquess", "category": "middle", "rankLevel": 4, "description": "Хил хязгаарын чухал бүс нутаг болон бэхлэлт бүхий газар нутгийн захирагч." },
-    { "id": "nob-18", "number": "18", "mongolianTitle": "Маркизын ахайтан", "englishTitle": "Marchioness", "category": "middle", "rankLevel": 4, "description": "Маркизийн гэргий, хил орчмын язгууртны төлөөлөл." },
-    { "id": "nob-19", "number": "19", "mongolianTitle": "Эрхэм Гүн", "englishTitle": "Count", "category": "middle", "rankLevel": 5, "description": "Хот мужийн засаг захиргаа, эдийн засгийн төвийг удирдагч." },
-    { "id": "nob-20", "number": "20", "mongolianTitle": "Эрхэм Гүнгийн ахайтан", "englishTitle": "Countess", "category": "middle", "rankLevel": 5, "description": "Эрхэм гүнгийн хатан, соёл гэгээрлийг ивээн тэтгэгч." },
-    { "id": "nob-21", "number": "21", "mongolianTitle": "Виконт", "englishTitle": "Viscount", "category": "middle", "rankLevel": 6, "description": "Гүн болон Маркизын дэд захирагч, бүсийн шүүн таслах эрх бүхий ноён." },
-    { "id": "nob-22", "number": "22", "mongolianTitle": "Виконтын ахайтан", "englishTitle": "Viscountess", "category": "middle", "rankLevel": 6, "description": "Виконтын гэргий, орон нутгийн дээд язгууртан." },
-    { "id": "nob-23", "number": "23", "mongolianTitle": "Барон", "englishTitle": "Baron", "category": "middle", "rankLevel": 7, "description": "Эдлэн газар, цайз бүхий язгууртны үндсэн түвшний цолтон." },
-    { "id": "nob-24", "number": "24", "mongolianTitle": "Бароны ахайтан", "englishTitle": "Baroness", "category": "middle", "rankLevel": 7, "description": "Бароны гэргий, эдлэнгийн удирдагч хатагтай." },
-    { "id": "nob-25", "number": "25", "mongolianTitle": "Ихэс Ноён", "englishTitle": "Lord", "category": "noble", "rankLevel": 8, "description": "Эзэнт гүрний хүндэт язгууртан ноён." },
-    { "id": "nob-26", "number": "26", "mongolianTitle": "Ихэс Хатагтай", "englishTitle": "Lady", "category": "noble", "rankLevel": 8, "description": "Ордны хүндэт язгууртан хатагтай." },
-    { "id": "nob-27", "number": "27", "mongolianTitle": "Цолгүй язгууртан", "englishTitle": "Untitled Noble", "category": "noble", "rankLevel": 9, "description": "Язгууртан овог, гэр бүлээс гаралтай боловч тусгай цол эзэмшдэггүй язгууртан иргэд." },
-    { "id": "nob-28", "number": "28", "mongolianTitle": "Хүлэг Баатар", "englishTitle": "Knight", "category": "title", "rankLevel": 10, "description": "Эзэн хаанд үнэнчээр зүтгэж, эх орныхоо төлөө байгуулсан гавьяаг үнэлэн олгосон цэргийн дээд эрхэм цол." },
-    { "id": "nob-29", "number": "29", "mongolianTitle": "Хатагтай Баатар", "englishTitle": "Dame", "category": "title", "rankLevel": 10, "description": "Эзэнт гүрний төлөө гарамгай гавьяа байгуулсан эмэгтэй баатарт олгох эрхэм хүндэт цол." },
-    { "id": "nob-30", "number": "30", "mongolianTitle": "Баронет", "englishTitle": "Baronet", "category": "title", "rankLevel": 11, "description": "Удам дамжин өвлөгдөх хүлэг баатрын хэргэм бүхий язгууртан." },
-    { "id": "nob-31", "number": "31", "mongolianTitle": "Баронетын ахайтан", "englishTitle": "Baronetess", "category": "title", "rankLevel": 11, "description": "Баронетын гэргий, хүндэт эзэмшигч хатагтай." }
+    {
+      "id": "nob-11",
+      "number": "11",
+      "mongolianTitle": "Их Гүн",
+      "englishTitle": "Grand Duke",
+      "category": "high",
+      "rankLevel": 1,
+      "description": "Дээд язгууртны тэргүүн эрэмбэ, өргөн уудам нутаг дэвсгэр, цэргийн бүрэн эрх эзэмшигч.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-12",
+      "number": "12",
+      "mongolianTitle": "Их Гүнгийн ахайтан",
+      "englishTitle": "Grand Duchess",
+      "category": "high",
+      "rankLevel": 1,
+      "description": "Их гүнтний гэргий эсвэл өөрийн эрхээр Их гүнт улсыг эзэмшигч хатагтай.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-13",
+      "number": "13",
+      "mongolianTitle": "Вант Гүн",
+      "englishTitle": "Sovereign Duke",
+      "category": "high",
+      "rankLevel": 2,
+      "description": "Хаант улсын дотор бие даасан засаглал бүхий бүс нутгийг захирагч.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-14",
+      "number": "14",
+      "mongolianTitle": "Вант Гүнгийн ахайтан",
+      "englishTitle": "Sovereign Duchess",
+      "category": "high",
+      "rankLevel": 2,
+      "description": "Вант гүнтний гэргий, бүс нутгийн дээд хатагтай.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-15",
+      "number": "15",
+      "mongolianTitle": "Гүн",
+      "englishTitle": "Duke",
+      "category": "high",
+      "rankLevel": 3,
+      "description": "Түүхт томоохон гүнт нутгийн эзэн, эзэн хааны итгэлт ноён.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-16",
+      "number": "16",
+      "mongolianTitle": "Гүнгийн ахайтан",
+      "englishTitle": "Duchess",
+      "category": "high",
+      "rankLevel": 3,
+      "description": "Гүнтний гэргий, ордны өндөр нөлөө бүхий язгууртан.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-17",
+      "number": "17",
+      "mongolianTitle": "Маркиз",
+      "englishTitle": "Marquess",
+      "category": "middle",
+      "rankLevel": 4,
+      "description": "Хил хязгаарын чухал бүс нутаг болон бэхлэлт бүхий газар нутгийн захирагч.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-18",
+      "number": "18",
+      "mongolianTitle": "Маркизын ахайтан",
+      "englishTitle": "Marchioness",
+      "category": "middle",
+      "rankLevel": 4,
+      "description": "Маркизийн гэргий, хил орчмын язгууртны төлөөлөл.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-19",
+      "number": "19",
+      "mongolianTitle": "Эрхэм Гүн",
+      "englishTitle": "Count",
+      "category": "middle",
+      "rankLevel": 5,
+      "description": "Хот мужийн засаг захиргаа, эдийн засгийн төвийг удирдагч.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-20",
+      "number": "20",
+      "mongolianTitle": "Эрхэм Гүнгийн ахайтан",
+      "englishTitle": "Countess",
+      "category": "middle",
+      "rankLevel": 5,
+      "description": "Эрхэм гүнгийн хатан, соёл гэгээрлийг ивээн тэтгэгч.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-21",
+      "number": "21",
+      "mongolianTitle": "Виконт",
+      "englishTitle": "Viscount",
+      "category": "middle",
+      "rankLevel": 6,
+      "description": "Гүн болон Маркизын дэд захирагч, бүсийн шүүн таслах эрх бүхий ноён.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-22",
+      "number": "22",
+      "mongolianTitle": "Виконтын ахайтан",
+      "englishTitle": "Viscountess",
+      "category": "middle",
+      "rankLevel": 6,
+      "description": "Виконтын гэргий, орон нутгийн дээд язгууртан.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-23",
+      "number": "23",
+      "mongolianTitle": "Барон",
+      "englishTitle": "Baron",
+      "category": "middle",
+      "rankLevel": 7,
+      "description": "Эдлэн газар, цайз бүхий язгууртны үндсэн түвшний цолтон.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-24",
+      "number": "24",
+      "mongolianTitle": "Бароны ахайтан",
+      "englishTitle": "Baroness",
+      "category": "middle",
+      "rankLevel": 7,
+      "description": "Бароны гэргий, эдлэнгийн удирдагч хатагтай.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-25",
+      "number": "25",
+      "mongolianTitle": "Ихэс Ноён",
+      "englishTitle": "Lord",
+      "category": "noble",
+      "rankLevel": 8,
+      "description": "Эзэнт гүрний хүндэт язгууртан ноён.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-26",
+      "number": "26",
+      "mongolianTitle": "Ихэс Хатагтай",
+      "englishTitle": "Lady",
+      "category": "noble",
+      "rankLevel": 8,
+      "description": "Ордны хүндэт язгууртан хатагтай.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-27",
+      "number": "27",
+      "mongolianTitle": "Цолгүй язгууртан",
+      "englishTitle": "Untitled Noble",
+      "category": "noble",
+      "rankLevel": 9,
+      "description": "Язгууртан овог, гэр бүлээс гаралтай боловч тусгай цол эзэмшдэггүй язгууртан иргэд.",
+      "exampleFamilies": []
+    },
+    {
+      "id": "nob-28",
+      "number": "28",
+      "mongolianTitle": "Хотын Захирагч",
+      "englishTitle": "Mayor",
+      "category": "title",
+      "rankLevel": 10,
+      "description": "Эзэнт гүрний томоохон хотуудын захиргаа, худалдаа хариуцсан тэргүүн."
+    },
+    {
+      "id": "nob-29",
+      "number": "29",
+      "mongolianTitle": "Яамны Тэргүүн",
+      "englishTitle": "Provost",
+      "category": "title",
+      "rankLevel": 11,
+      "description": "Төрийн тусгай алба, хяналт болон хууль сахиулах салбарын дарга."
+    },
+    {
+      "id": "nob-30",
+      "number": "30",
+      "mongolianTitle": "Хүлэг Баатар",
+      "englishTitle": "Knight",
+      "category": "title",
+      "rankLevel": 12,
+      "description": "Хааны эр зоригийн батламж бүхий цэрэг дайны алдарт баатар."
+    },
+    {
+      "id": "nob-31",
+      "number": "31",
+      "mongolianTitle": "Ордны Үйлчлэгч",
+      "englishTitle": "Royal Retainer / Servant",
+      "category": "title",
+      "rankLevel": 13,
+      "description": "Хааны ордны дотоод үйл хэрэг, ёслолын өдөр тутмын хүндэт алба хаагч."
+    }
   ],
   "regions": [
     {
       "id": "region-celestine",
-      "name": "Селестин Төв Бүс",
-      "englishName": "Celestine Crown Region",
-      "geographicPosition": "Төв Эх Газар",
-      "rulingFamily": "Хааны Титмийн Их Овог",
-      "climateAndNature": "Зөөлөн уур амьсгалтай, нарлаг уудам хөндий, саффир болор нуурууд.",
-      "prominentBuildings": [
-        "Селестин Эзэн Хааны Цайз (Imperial Palace)",
-        "Төрийн Дээд Канцлерын Ордон",
-        "Саффирын Тэнгэрлэг Их Сүм (Cathedral of Azure Light)",
-        "Үндэсний Их Эрдэм Шинжилгээний Академи"
+      "name": "Селестин",
+      "englishName": "Celestine",
+      "geographicPosition": "Central Region · Capital",
+      "description": "Саффир улсын улс төр, төрийн захиргаа, хааны ордон болон санхүүгийн төв. Төрийн захиргаа, хааны ордон, санхүү болон улсын төв байгууллагууд төвлөрнө.",
+      "origin": "Эртний Саффир",
+      "areaKm2": "50,000 км²",
+      "leadingHouse": "Obelia",
+      "regionalLeader": "Zaifer",
+      "concentratedHouses": [
+        "Obelia"
+      ],
+      "tax": "3,000 зоос",
+      "mainBuildings": [
+        "Либертиа Хатан хааны шилтгээн",
+        "Цагаан ордон",
+        "Төрийн ордон",
+        "Төв банк",
+        "Хүлээн авах ордон",
+        "Хааны цэцэрлэгт хүрээлэн",
+        "Эдлэн газар",
+        "Тосгон"
       ],
       "naturalFeatures": [
-        "Индранил Нуур (Sapphire Lake)",
-        "Алтан Сүлдний Уулс",
-        "Хөх Сэвшээний Хөндий"
+        "Хааны цэцэрлэгт хүрээлэн",
+        "Мөнгөн нуур",
+        "Индранил усан оргилуур",
+        "Ногоон дэнж"
       ],
-      "coreProducts": [
-        "Эзэн хааны шилмэл саффир эрдэнийн шигтгээ",
-        "Хааны зоорийн хувийн усан үзмийн дарс",
-        "Алтан утаст хилэн даавуу"
+      "mainProducts": [
+        "Төрийн бичиг баримт",
+        "Улсын мөнгөн тэмдэгт",
+        "Хааны тамга бүхий бүтээгдэхүүн",
+        "Санхүүгийн үйлчилгээ"
       ],
-      "nobleEstates": [
-        "Хааны шууд эзэмшил 12 том цэцэрлэгт эдлэн",
-        "Их Канцлерын хувийн харш"
-      ]
+      "estateHolders": [
+        "Хааны гэр бүл",
+        "Obelia овог",
+        "Дээд язгууртнууд"
+      ],
+      "historicalNotes": "Эрт дээр үеэс Саффирын хаадын төв өргөө байрлаж ирсэн хамгийн хүчирхэг, сүрлэг нийслэл бүс нутаг.",
+      "mapCoordinates": {
+        "x": 50,
+        "y": 48
+      }
     },
     {
-      "id": "region-valdor",
-      "name": "Валдор Уулын Бүс",
-      "englishName": "Valdor Mountain Highlands",
-      "geographicPosition": "Хойд Бүс",
-      "rulingFamily": "Монтакью Их Гүнгийн Удам (Montaque)",
-      "climateAndNature": "Сэрүүн, мөнх цаст оргилууд, шилмүүст ой, байгалийн баялаг уурхай.",
-      "prominentBuildings": [
-        "Валдор Мөнх Цэвдгийн Цайз",
-        "Эрдэнийн Гүн Хайлуулах Үйлдвэр"
+      "id": "region-ludwinburg",
+      "name": "Месопатами",
+      "englishName": "Ludwinburg",
+      "geographicPosition": "Eastern Region",
+      "description": "Газар тариалан, цэцэрлэгжүүлэлт, гар урлал болон худалдаа хөгжсөн бүс. Байгаль, түүхэн дурсгал болон соёлын үйл ажиллагаагаараа алдартай.",
+      "origin": "Эртний Саффир",
+      "areaKm2": "10,000 км²",
+      "leadingHouse": "Montaque",
+      "regionalLeader": "Tiara Von Montaque",
+      "concentratedHouses": [
+        "Montaque",
+        "Castiglione"
+      ],
+      "tax": "3,000 зоос",
+      "mainBuildings": [
+        "STARWISH театр",
+        "Түүхийн музей",
+        "Номын сан",
+        "Одон орон судлалын төв",
+        "Төв зах",
+        "Худалдаачдын гудамж",
+        "Урлан, дэлгүүрүүд",
+        "Харуулын цамхаг",
+        "Хуаран"
       ],
       "naturalFeatures": [
-        "Цагаан Барсын Хавцал",
-        "Мөсөн Оргил Уулс"
+        "Тариалан",
+        "Жимсний талбай",
+        "Усан үзмийн талбай",
+        "Ой",
+        "Цэцэрлэгт хүрээлэн",
+        "Цөөрөм",
+        "Нуур",
+        "Салхин тээрэм",
+        "Усан тээрэм",
+        "Гэрэлт цохны хөндий",
+        "Хүрхрээ",
+        "Агуй",
+        "Хавцал"
       ],
-      "coreProducts": [
-        "Өндөр зэрэглэлийн ган, дамаск илд",
-        "Болор саффирын түүхий эд",
-        "Ангийн үнэт арьс"
+      "mainProducts": [
+        "Жимс",
+        "Хүнсний ногоо",
+        "Цэцэг",
+        "Эмийн ургамал",
+        "Зөгийн бал",
+        "Шавар",
+        "Шил",
+        "Шаазан",
+        "Модон эдлэл",
+        "Энгийн хөгжмийн зэмсэг"
       ],
-      "nobleEstates": [
-        "Монтакью Их гүнгийн Валдор цайз",
-        "Төмөр Хүлэг Баатруудын бэлтгэлийн талбай"
-      ]
+      "estateHolders": [
+        "Montfier",
+        "Serena",
+        "Ivan",
+        "Amethyst",
+        "Ren болон бусад язгууртан"
+      ],
+      "historicalNotes": "Соёл урлаг, одон орон, гар урлалын өлгий нутаг.",
+      "mapCoordinates": {
+        "x": 78,
+        "y": 52
+      }
     },
     {
-      "id": "region-aurelia",
-      "name": "Аурелиа Эргийн Бүс",
-      "englishName": "Aurelia Coastal Haven",
-      "geographicPosition": "Өмнөд Бүс",
-      "rulingFamily": "Агрише Вант Гүнгийн Овог (Agriche)",
-      "climateAndNature": "Дулаан далайн эргийн уур амьсгал, далайн боомтууд, зөөлөн салхи.",
-      "prominentBuildings": [
-        "Аурелиа Олон Улсын Худалдааны Боомт",
-        "Цэнхэр Сувдан Гэрэлт Цамхаг"
+      "id": "region-saint-elynthia",
+      "name": "Гэгээн Элинтиа",
+      "englishName": "Saint Elynthia",
+      "geographicPosition": "Southern Region",
+      "description": "Ферм, мал аж ахуй, загас агнуур болон нэхмэлийн үйлдвэрлэл давамгайлсан, Саффирын хүнс ба түүхий эдийн гол ханган нийлүүлэгч бүс.",
+      "origin": "Эртний Саффир",
+      "areaKm2": "10,000 км²",
+      "leadingHouse": "Charmiell",
+      "regionalLeader": "Serena Charmiell",
+      "concentratedHouses": [
+        "Charmiell",
+        "Vensanting"
+      ],
+      "tax": "3,000 зоос",
+      "mainBuildings": [
+        "Фермүүд",
+        "Эдлэн газрууд",
+        "Их дэлгүүр",
+        "Цэцэрлэг",
+        "Боомт",
+        "Нуур"
       ],
       "naturalFeatures": [
-        "Номин Далайн Булан",
-        "Шүрэн Эргийн Хаднууд"
+        "Өмнөд тэнгисийн булан",
+        "Шүрэн эрэг",
+        "Ногоон нуга",
+        "Цэнгэг нуурууд",
+        "Цэцэгт хөндий"
       ],
-      "coreProducts": [
-        "Далайн сувд ба сувдан эдлэл",
-        "Ховор халуун орны жимс, амтлагч",
-        "Усан онгоцны мод, дарвуулт завь"
+      "mainProducts": [
+        "Загас",
+        "Хясаа",
+        "Далайн бүтээгдэхүүн",
+        "Шүр",
+        "Сувд",
+        "Мах",
+        "Сүү",
+        "Өндөг",
+        "Ноос",
+        "Ноолуур",
+        "Торго",
+        "Арьс шир",
+        "Савхи",
+        "Олс",
+        "Тор",
+        "Завь болон усан онгоц"
       ],
-      "nobleEstates": [
-        "Агрише гэр бүлийн усан эргийн зуны ордон",
-        "Аурелиа худалдааны биржийн төв харш"
-      ]
+      "estateHolders": [
+        "Arlecchino Montaque",
+        "Andres Agriche"
+      ],
+      "historicalNotes": "Эзэнт гүрний далайн худалдаа, хүнс болон нэхмэлийн алтан сан.",
+      "mapCoordinates": {
+        "x": 52,
+        "y": 82
+      }
+    },
+    {
+      "id": "region-sunset-vale",
+      "name": "Сансет Вэйл",
+      "englishName": "Sunset Vale",
+      "geographicPosition": "Western Region",
+      "description": "Саффирын уул уурхай, үнэт чулуу, үнэт металл болон дархны урлалын гол төв.",
+      "origin": "Эртний Саффир",
+      "areaKm2": "10,000 км²",
+      "leadingHouse": "Agriche",
+      "regionalLeader": "Andres Agriche",
+      "concentratedHouses": [
+        "Agriche",
+        "Avrevielle"
+      ],
+      "tax": "3,000 зоос",
+      "mainBuildings": [
+        "Уурхай",
+        "Дархны төв",
+        "Эдлэн газрууд",
+        "Сүм",
+        "Цэцэрлэг",
+        "Нуур"
+      ],
+      "naturalFeatures": [
+        "Эрдэнийн хадан уулс",
+        "Алтан жалга",
+        "Гүн уурхайн хонгилууд",
+        "Нар жаргах хавцал"
+      ],
+      "mainProducts": [
+        "Алт",
+        "Мөнгө",
+        "Үнэт металл",
+        "Үнэт чулуу",
+        "Эрдэнэс",
+        "Зоос",
+        "Үнэт эдлэл",
+        "Дархны бүтээл",
+        "Тансаг тавилга",
+        "Сүйх тэрэг",
+        "Механик тоноглол",
+        "Хөгжмийн зэмсэг"
+      ],
+      "estateHolders": [
+        "Andres Agriche",
+        "Ivan Chandler",
+        "Roxana Agriche"
+      ],
+      "historicalNotes": "Саффир улсын эрдэнэс, зоос цутгамал, төмөрлөг боловсруулалтын төв өлгий.",
+      "mapCoordinates": {
+        "x": 22,
+        "y": 55
+      }
+    },
+    {
+      "id": "region-monolith",
+      "name": "Монолит",
+      "englishName": "Monolith",
+      "geographicPosition": "Northern Region",
+      "description": "Саффирын хойд хязгаарын стратегийн болон цэргийн бүс. Хойд нутаг нь түүхийн өөр өөр үед хааны гэр бүлийн гишүүд болон язгууртан ноёдод олгогдож ирсэн бөгөөд одоо Ren Von Montaque-ийн мэдэлд байна.",
+      "origin": "Дундад үеийн Саффир",
+      "areaKm2": "10,000 км²",
+      "leadingHouse": "Sergeyev",
+      "regionalLeader": "Ren Von Montaque",
+      "concentratedHouses": [
+        "Sergeyev",
+        "Bismarck",
+        "Riegrow"
+      ],
+      "tax": "3,000 зоос",
+      "mainBuildings": [
+        "Ан агнуурын байгууллага",
+        "ШШЯ-ны бааз",
+        "Цайз",
+        "Шилтгээн",
+        "Хатан хааны шилэн цайз"
+      ],
+      "naturalFeatures": [
+        "Цаст өндөр оргилууд",
+        "Мөнх цэвдэгт ой",
+        "Хойд туйлын туяат хадан хясаа",
+        "Гүн хавцлын бэхлэлт"
+      ],
+      "mainProducts": [
+        "Ан агнуурын бүтээгдэхүүн",
+        "Мах",
+        "Яс",
+        "Эвэр",
+        "Үс",
+        "Арьс шир",
+        "Хүйтний хувцас",
+        "Модон зэвсэг",
+        "Жад",
+        "Нум сум",
+        "Нүүрс",
+        "Төмөр",
+        "Зэс",
+        "Барилгын мод",
+        "Түлээ"
+      ],
+      "estateHolders": [
+        "Ren Von Montaque",
+        "Sergeyev овог",
+        "Хойд нутгийн цэргийн жанжид"
+      ],
+      "historicalNotes": "Хойд нутаг нь түүхийн өөр өөр үед хааны гэр бүлийн гишүүд болон язгууртан ноёдод олгогдож ирсэн бөгөөд одоо Ren Von Montaque-ийн мэдэлд байна.",
+      "mapCoordinates": {
+        "x": 50,
+        "y": 18
+      }
     }
   ],
   "landValues": [
     {
       "id": "land-01",
       "regionId": "region-celestine",
-      "regionName": "Селестин Нийслэл Хот",
-      "zoneTitle": "Төвийн Нэгдүгээр Зэрэглэлийн Бүс (Zone A)",
-      "pricePerHa": "2,500,000 Саффир зоос",
-      "pricePerHaNumeric": 2500000,
-      "pricePerKm2": "6,250,000,000 Саффир зоос",
-      "pricePerKm2Numeric": 6250000000,
-      "economicNotes": "Хааны ордон болон төрийн дээд байгууллагууд байрладаг эзэнт гүрний хамгийн үнэ цэнтэй байршил."
+      "regionName": "Central Region — Obelia (Селестин)",
+      "zoneTitle": "Төв Бүс — Obelia",
+      "pricePerHa": "1,000,000 зоос",
+      "pricePerHaNumeric": 1000000,
+      "pricePerKm2": "2,000,000 зоос",
+      "pricePerKm2Numeric": 2000000,
+      "economicNotes": "Нийслэлийн эзэн хааны төв бүс, хамгийн өндөр үнэ цэнэтэй дээд зэрэглэлийн эдлэн газар."
     },
     {
       "id": "land-02",
-      "regionId": "region-celestine",
-      "regionName": "Селестин Хөндий",
-      "zoneTitle": "Ногоон Эдлэнгийн Бүс (Zone B)",
-      "pricePerHa": "850,000 Саффир зоос",
-      "pricePerHaNumeric": 850000,
-      "pricePerKm2": "2,125,000,000 Саффир зоос",
-      "pricePerKm2Numeric": 2125000000,
-      "economicNotes": "Дээд язгууртнуудын хувийн харш, цэцэрлэгт хүрээлэн, морин тойруулга бүхий тансаг эдлэнгүүд."
+      "regionId": "region-sunset-vale",
+      "regionName": "Western Region — Sunset Vale (Сансет Вэйл)",
+      "zoneTitle": "Баруун Бүс — Sunset Vale",
+      "pricePerHa": "350,000 зоос",
+      "pricePerHaNumeric": 350000,
+      "pricePerKm2": "1,000,000 зоос орчим",
+      "pricePerKm2Numeric": 1000000,
+      "economicNotes": "Уул уурхай, үнэт металл, дархны үйлдвэрлэл өндөр хөгжсөн ашигт бүс."
     },
     {
       "id": "land-03",
-      "regionId": "region-valdor",
-      "regionName": "Валдор Уулын Бүс",
-      "zoneTitle": "Уурхай, Үйлдвэрлэлийн Бүс (Zone C)",
-      "pricePerHa": "450,000 Саффир зоос",
-      "pricePerHaNumeric": 450000,
-      "pricePerKm2": "1,125,000,000 Саффир зоос",
-      "pricePerKm2Numeric": 1125000000,
-      "economicNotes": "Эрдэнийн чулуу олборлолт, төмөрлөг хайлуулах үйлдвэрлэл, батлан хамгаалах суурь түшиц газар."
+      "regionId": "region-ludwinburg",
+      "regionName": "Eastern Region — Ludwinburg (Людвинбург)",
+      "zoneTitle": "Зүүн Бүс — Ludwinburg",
+      "pricePerHa": "300,000 зоос",
+      "pricePerHaNumeric": 300000,
+      "pricePerKm2": "1,000,000 зоос",
+      "pricePerKm2Numeric": 1000000,
+      "economicNotes": "Газар тариалан, жимс, соёл, худалдааны өргөн уудам нутаг."
     },
     {
       "id": "land-04",
-      "regionId": "region-aurelia",
-      "regionName": "Аурелиа Эргийн Бүс",
-      "zoneTitle": "Худалдаа, Далайн Боомтын Бүс (Zone D)",
-      "pricePerHa": "1,200,000 Саффир зоос",
-      "pricePerHaNumeric": 1200000,
-      "pricePerKm2": "3,000,000,000 Саффир зоос",
-      "pricePerKm2Numeric": 3000000000,
-      "economicNotes": "Далайн худалдаа, гадаад харилцаа, зочид буудал, усан онгоцны үйлдвэрлэл төвлөрсөн бүс нутаг."
+      "regionId": "region-saint-elynthia",
+      "regionName": "Southern Region — Saint Elynthia (Сент Элинтиа)",
+      "zoneTitle": "Өмнөд Бүс — Saint Elynthia",
+      "pricePerHa": "400,000 зоос",
+      "pricePerHaNumeric": 400000,
+      "pricePerKm2": "1,000,000 зоос",
+      "pricePerKm2Numeric": 1000000,
+      "economicNotes": "Боомт, тэнгисийн бүтээгдэхүүн, сувд, торго болон мал аж ахуйн бүс."
+    },
+    {
+      "id": "land-05",
+      "regionId": "region-monolith",
+      "regionName": "Northern Region — Monolith (Монолит)",
+      "zoneTitle": "Хойд Бүс — Monolith",
+      "pricePerHa": "750,000 зоос",
+      "pricePerHaNumeric": 750000,
+      "pricePerKm2": "1,000,000 зоос",
+      "pricePerKm2Numeric": 1000000,
+      "economicNotes": "Стратегийн чухал цэргийн болон ан агнуур, эрдэс баялгийн хойд цайз бүс."
     }
   ],
   "customSections": [
     {
-      "id": "sec-decrees",
-      "titleMongolian": "ЭЗЭНТ ГҮРНИЙ ХААНЫ ЗАРЛИГ БА ТҮҮХЭН ШИЙДВЭРҮҮД",
-      "titleEnglish": "IMPERIAL DECREES & HISTORICAL EDICTS",
-      "description": "Саффир улсын хууль цааз, төрийн тулгуур зарлигууд болон эзэн хааны соёрхолууд.",
+      "id": "section-chronicles",
+      "titleMongolian": "Хаант Улсын Түүхэн Тэмдэглэл",
+      "titleEnglish": "Imperial Chronicles & Royal Decrees",
+      "description": "Саффир улсын олон зууны түүх, хааны зарлигууд болон төрийн онцгой үйл явдлуудын архивын тэмдэглэл.",
+      "sectionType": "chronicle",
+      "isVisible": true,
       "items": [
         {
-          "id": "item-dec-01",
-          "title": "Саффирын Их Титэм залах тунхаг",
-          "subtitle": "Хаан ширээний залгамжлалын дээд хууль",
-          "content": "Эзэнт гүрний анхдугаар он тоололд зарлигласан Саффирын их титмийн өв залгамжлал нь цусан төрөл болон эзэн хааны итгэмжлэлийг үндэслэн тунхаглагдана.",
-          "tag": "Imperial Edict",
-          "dateOrEra": "Эрин Үе I - Он 01"
+          "id": "chron-1",
+          "title": "Эзэнт Гүрний Үүсэл ба Индранил Титэм",
+          "subtitle": "Ancient Era · Foundation of the Realm",
+          "content": "Эртний Vanchellsing эзэнт гүрнээс эхлэн үүсэл суурь нь тавигджээ.\n\nНийтдээ 10 үндсэн төрийн тэргүүнтэй байснаас авч үзвэл:\n\n；𝐑𝐎𝐗𝐀𝐍𝐀 𝐕𝐀𝐍𝐂𝐇𝐄𝐋𝐋𝐒𝐈𝐍𝐆.\n\nБᴜднᴜᴜ ʏᴇᴜᴜн бʏх улс, хʏндлэлᴜᴜн дээдэс бол яᴀхын ᴀᴘгᴀгʏᴜ хᴀтᴀн 𝐑𝐎𝐗𝐀𝐍𝐀 𝐕𝐀𝐍𝐂𝐇𝐄𝐋𝐋𝐒𝐈𝐍𝐆 бᴜлээ. Тʏʏнᴜᴜ нэᴘᴜᴜг дуᴘсᴀх бʏᴘᴜᴜд ухᴀᴀн, удмын сʏᴘ хʏч, улс оᴘноо гэсэн хᴀлуун сэтгэл зэᴘэгцэн бодогддог. Хᴀтᴀн Roxana нь тʏʏхэн дэх хᴀмгᴜᴜн ᴀнхны вᴀнт улс болох Зжᴘп-ᴜᴜг ʏндэслэн бᴀᴜгуулсᴀн бөгөөд тэᴘхʏʏ улс өнөөгᴜᴜн олон улсын ʏндэс сууᴘᴜᴜг тᴀвьсᴀн юм. Энэ нь зʏгээᴘ нэг тʏʏхэн бᴀᴘᴜмт бᴜш бөгөөд хᴀᴘᴜн өнөө ч бᴜднᴜᴜ оюун сᴀнᴀᴀнд ᴀмьдᴀᴘсᴀᴀᴘ буᴜ нэгэн бᴀхᴀᴘхᴀлт эхлэл буюу хʏн. Тэᴘээᴘ улсᴀᴀ ᴀнхлᴀн босгоход овгᴜᴜн нэгдʏгээᴘ ᴀхᴀᴜтᴀн буюу хᴀᴀн шᴜᴘээнᴜᴜ ᴀнхны суудᴀлд зᴀлᴀᴘч, ухᴀᴀн, зоᴘᴜг, энэᴘэл, шᴜᴘʏʏн шᴜᴜдэмгᴜᴜ зᴀнгᴜᴜн нэгдлᴜᴜг ᴜлэᴘхᴜᴜлж явсᴀн. Roxana хᴀтны хᴀᴀнᴜᴜг Claude Vanchellsing гэх бᴀ тэд хᴀмтдᴀᴀ улс оᴘны гол бᴀгᴀнын нэгэн адᴜл бᴀᴜж, хᴀᴀн хᴀтны сʏᴘ хʏчᴜᴜг бᴀтᴀтгᴀж өгсөн хос юм. Тэднᴜᴜ хᴀᴜᴘ сэтгэл, удам зᴀлгᴀмжлᴀл тᴀвᴀн ʏᴘээᴘ дᴀмжᴜн ʏᴘгэлжᴜлсэн нь улс оᴘны ʏᴘгэлжлэл, ʏндэстнᴜᴜ цусны хэлхээ болон цууᴘᴀᴜтсᴀн юм. Хᴀтны тᴀвᴀн хʏʏхэд бол:\nCarmen, Athanasia, Francisco, Ariadne, Emeliet эд бʏгд тʏʏхэнд нэᴘээ ʏлдээсэн язгууᴘтны удмын эхлэл болон ᴀсᴀн хᴀтᴀн хᴀᴀны хʏʏхэд хэмээн цоллуулдᴀг бᴜлээ. Roxana хᴀтныг зөʙхөн хᴀᴀн төᴘᴜᴜн тэᴘгʏʏн гэж бᴜш, хᴀᴘᴜн сэтгэл зʏᴘх, мэдлэг ухᴀᴀнᴀᴀᴘᴀᴀ улс ʏндэстнᴜᴜхээ ᴀмь болсон нэгэн гэж дуᴘдᴀнᴀ.\n\n; 𝗖𝗔𝗥𝗠𝗘𝗡 𝗩𝗔𝗡𝗖𝗛𝗘𝗟𝗟𝗦𝗜𝗡𝗚\n\nVanchellsing удмын анхны гүнж, Roxana хатан хааны ууган охин болох Carmen Vanchellsing бол түүхийн хуудаснаа өөрийн өнгө аясаар тодрон бичигдсэн онцгой нэгэн байлаа.\n\nТэр хүүхэд насандаа бусад шиг эрх дураараа биш, ёс журам, төрийн өнгө аяс дунд өссөн. Арван хэдхэн настайгаасаа эхлэн ээжийнхээ хажууд сууж, төрийн хичээл сонсон, хатны үүрэг, хүндлэл, хариуцлага гэж юу байдгийг биеэр мэдэрч сурсан гэдэг.\n\nCarmen 18 насандаа анхны хуримаа хийж, удаагүй хаан ширээнд залран хоёрдугаар хатан хаан болсон. Тэрээр тэргүүн нөхөртэйгөө хамтдаа хоёр ихэр гүнж төрүүлсэн ч, гашуун тавилангаар нэг нь бага насандаа нас нөгчсөн. Тэдний нэрс — Этан ба Росалиа.\n\n20 нас хүрээгүй шахам залуу хатан нэг л өдөр дахин хайр дурлалтай учирч, хоёр дахь удаагаа хурим хийсэн нь түүхэндээ үлдэх нэгэн онцлог болсон. Ингэснээр Carmen бол улсынхаа түүхэнд хоёр нөхөртэй байсан цорын ганц хатан хаан болон тэмдэглэгдсэн юм.\n\nГэвч хувь тавилан хатуу 23 насандаа тэр нас барсан. Богинохон амьдралынхаа туршид тэр түүхийг өөрчлөхүйц гэрэлтэй мөр үлдээжээ.\n\nCarmen Vanchellsing бол зөвхөн төрийн хатан байгаагүй. Тэр хөгжилтэй, уужуу, хүнлэг сэтгэлтэй, элгэмсүү хүн байсан. Хүмүүстэй амархан ойлголцож, хэнтэй ч дасаад л явчихдаг нэгэн. Түүний эргэн тойронд байхуйд л гэр бүлийн уур амьсгал, халуун дулаан мэдрэмж мэдэгддэг байв.\n\n;   𝗥𝗔𝗣𝗛𝗔𝗘𝗟 𝗠𝗜𝗭𝗘𝗟𝗜𝗔𝗡 — (Ванхэллисэнг Керис Саффир) -улсын анхны хаан\n\nVanchellsing улсын түүхэнд хамгийн эмзэг, донсолгоотой үед, тэнгэрт нүүж буй үүлсийн цаанаас нар мандах шиг нэгэн хүний нэр тодрон гарч ирсэн нь Raphael Mizelian байлаа.\n\nТэрбээр Vanchellsing улсын бослого, хямралын үеэр босч, өнөөгийн бидний мэдэх Керис, буюу одоогийн Саффир улсын үндэс суурийг тавьсан, ард түмнээ нэгтгэж, итгэлийг нь сэргээсэн анхны хаан юм.\n\nRaphael бол хоосон үг ярианы хүн биш  ухаалаг, шийдэмгий, заримдаа бүр хошин мэдрэмжтэй хаан байв. Гэхдээ түүний хошин үгнүүдийн цаана амьдралын гүн ухаан шингэсэн байдаг.\n\nТүүний хамгийн алдартай үг бол:\n\n> “Харилцаанаас харьцлаа, хүндлэлээс хүндлэл.”\nЭнэ нь түүний төр улсыг авч явах зарчим, хүнийг хүндлэх үзлийнх нь мөн чанарыг илтгэж байлаа.\n\nТэрээр хатан хаан Serena-тай гэрлэж, тэдний хайр дурлалын үр болгон Haesa хэмээх гүнж мэндэлсэн. Хаесаг ард түмэн “мэлмийн гүн ухаан шиг” нүдтэй, эцгийнхээ эрдэм, эхийнхээ ухааныг өвлөсөн хэмээн ярьдаг.\n\nRaphael Mizelian-ийн төр барьсан он жилүүд бол Саффирын ард түмэнд итгэл, нөхөрлөл, эр зориг ямар үнэтэй болохыг сануулсан цаг үе байв.\n\nТүүхийн хуудас эргэхэд хаад хатдын нэр бүдгэрч мэдэх ч, Raphael-ийн үйлс, үгс, сэтгэл нь ард түмний зүрхэнд мөнх ногоорон үлдсэн билээ.\n\n; 𝗦𝗘𝗥𝗘𝗡𝗔 𝗦𝗘𝗥𝗘𝗡𝗜𝗧𝗬 \n\nСаффир улсын түүхэн хуудсыг эргүүлбэл, алтан үсгээр сийлэгдсэн нэгэн нэр зөөлөн ч итгэл төгс тодрон уншигдана. Энэ бол хатан хаан Serena Serenity. Анхны хаан Raphael Mizelian-ий амьдралын хань, итгэлт нөхөр, төрийн ухаант түшээ байсны сацуу, тэр хүн түүний нас барснаар улсын дараагийн ХАТАН ХААН болж, түүхэнд шинэ бүлгийг эхлүүлсэн юм. Serena бол гоо үзэсгэлэнтэйгээс гадна, шийдэмгий, хурц ухаантай, шулуухан үгтэй нэгэн байв. Гэхдээ тэр хэзээ ч хоосон үгээр бус, бодит үйлдлээр өөрийгөө илэрхийлдэг хүн байсан. Зжрп улсаас уламжлагдан ирсэн олон зуун жилийн ёс жаяг, хуучинсаг хандлагын эсрэг тэр шинэчлэл авчирсан юм. Түүнийг зарим нь эрсдэлтэй алхам гэж харсан ч, түүх бидэнд харуулсан  тэр алхмууд нь үндэстнийг сэрээж, Саффирыг өөр түвшинд гаргасан зөв зам байсан гэдгийг.  Serena Serenity бол Саффир улсын төрийн хатан төдийгүй шинэ эрин үеийн эхлэл байлаа\n\n;  𝗘𝗥𝗜𝗦 𝗠𝗜𝗭𝗘𝗟𝗜𝗔𝗡 — Энэрэл, эр зоригийн нэгдэл болсон төрийн тэргүүн\n\nСаффир улсын хатан хаан Эрис Мизелиан бол үндэсний эв нэгдлийн бэлгэ тэмдэг, гурван овгийн хамтын хүч, ард түмний итгэлээр мэндэлсэн удирдагч билээ.\n\nТүүний төрийн замнал гурван овгийн хамтрал, нэгдмэл сэтгэл, үндэсний эвийн илэрхийлэл болон эхэлжээ. Эелдэг зөөлөн ааш, хүний зовлонд уяхан сэтгэл, дэргэдэх бүхэндээ халамжтай ханддаг зан нь түүнийг овгийнхоо дүү нарын хайранд умбуулж, хүн бүрийн түшиг, тулах цэг болгожээ.\n\nЭрис анхнаасаа л удирдагч хүний төрх, тэнцвэртэй сэтгэлгээг агуулсан нэгэн байсан. Тэр бусдыг дагуулж биш, ойлгож урагшилдаг, дээрээс захирч биш, хажууд нь зогсож урам өгдөг хүн байв.\n\nТүүний хамт бүтээлцсэн төрийн дэг журам хүнд цагт улсын багана нь болж чадаж байсан ч, энх цагийн нар хур тэгширсэн үед ч тайван амгалан нийгмийг авч ирж чадсангүй. Тиймээс Эрис овгийнхоо удирдагч байх хугацаандаа: Шударга ёс, Дотоод эв нэгдэл, Иргэдийн дуу хоолойг сонсох, Итгэл, харилцан ойлголцол\nгэсэн зарчмыг эрхэмлэн төрийн бодлогоо чиглүүлж байлаа. Түүний эхлүүлсэн уриалга, хөдөлгөөн анх овгийн хүрээнд л цуурайтаж байв. Гэвч үнэн сэтгэлийн дуудлага, итгэлийн дуудлага шиг байсан түүний үгс, үйлдэл ард түмний сэтгэлийг хөдөлгөж, хуучин харгис дэглэмийн эсрэг тэмцэл улмаар улс даяар хүчээ авч, түүхийн шинэ хуудсыг нээжээ.\n\nЭнэхүү бослого, хувьсгал бол дарангуйллын эсрэг зүгээр нэг тэмцэл биш, харин итгэлийн сэргэлт байв. Ард иргэд өөрсдийн сонголт, хүсэл мөрөөдлөөрөө Эрисийг төрийн манлайд залахаар нэгдсэн юм.\n\nТийнхүү түүнийг Саффир улсын хамгийн анхны хатан хаан хэмээн өргөмжилсөн нь зүгээр нэг титэм зүүлгэж өгсөн хэрэг бус энэ бол ард түмний итгэлийн дээд илэрхийлэл байв.\n\nӨнөөдөр түүнийг хүмүүс “эрх мэдэлтэй хүн” гэж бус, энэрэл ба эр зоригийн нийлбэр, шударга ёсны дуу хоолой, энх тайвныг эрхэмлэгч удирдагч хэмээн дурсдаг.\n\nЭрис Мизелиан бол Саффир улсын зүрх сэтгэл, гэрэл гэгээ, итгэлийн эх ундарга болсон тэргүүн билээ.\n\n;  𝗖𝗟𝗔𝗨𝗗𝗘 𝗗𝗘 𝗔𝗟𝗚𝗘𝗥 𝗢𝗕𝗘𝗟𝗜𝗔 бол Саффир улсын түүхэнд хоёр дахь хаан, мөн хаан суудлын залгамж хүү хэмээн тэмдэглэгддэг. Тэр бол анхны хатан хаан Эрис Мизелиан-ы хамгийн том хүү бөгөөд төрийн ухаан, энэрэл, хариуцлагыг ээжээсээ өвлөсөн нэгэн билээ.\n\nЭрис хатан хаан улс орныг шинэчлэн босгож, ард түмний итгэл найдварын гэрэл болон залагдаж, үндэсний эв нэгдлийг хангаж байсан бол Claude бол тэр гэрлийг цааш залгамжлан ассаар байлгасан дөл юм.\n\nЭрис хатан хаан суудлаасаа албан ёсоор буух үед ард түмний итгэл, төрийн зөвлөхүүдийн санал нэгтэйгээр Claude De Alger Obelia хаан ширээнд заларсан бөгөөд энэхүү шилжилт нь Саффир улсын түүхэнд энх амгалан, зохион байгуулалттай, итгэл дээр суурилсан удирдлагын шилжилт байв.\n\nClaude нь эцэг эхийнхээ нөлөөгөөр төлөв даруу, дуу цөөтэй атлаа сэтгэлдээ гүн ухаан тээгч, нам гүм мөртөө тун нарийн ажигч нэгэн хэмээн ард иргэдийн дунд үнэлэгддэг байв\n\nТүүний засаглал дор Саффир улс улам бүр батжин тогтож, иргэдийн дунд итгэлцэл гүнзгийрч, төрд хандах хүндлэл улам бүр өндөрссөн юм\n\n;  𝗥𝗨𝗗𝗕𝗘𝗖𝗞𝗜𝗔 𝗗𝗘 𝗔𝗟𝗚𝗘𝗥 𝗢𝗕𝗘𝗟𝗜𝗔 бол Саффир улсын анхны хатан хаан Эрис Мизелиан-ы бага охин бөгөөд түүний төрсөн цагаас эхлэн тэсвэр тэвчээр, шийдэмгий байдал, төрмөл удирдагчийн шинжийг агуулсан охин байлаа.\n\nХүмүүс түүнийг ээжтэй нь адил энэрэнгүй зөөлөн байх болов уу хэмээн таамаглаж байсан ч, Rudbeckía бол өөрийн гэсэн өнгө, өөрийн гэсэн дуу хоолойтой, илүү ширүүн шуурга мэт тод эрхэмсэг нэгэн байв.\n\nЭрэмгий харцтай, дуу цөөнтэй мөртлөө хүчтэй илэрхийлэлтэй, алсын хараатай, зорьсон бол ухардаггүй, төр, түмнийхээ төлөө хатуу ч шударга шийдвэр гаргахад бэлэн удирдагч байв. Эцэг эхээсээ өвлөсөн цус, хувь тавилан хоёр түүнийг хатны суудалд хүргэж, тэр хаан төрийн жолоог атгасан эмэгтэйчүүдийн гурав дахь төлөөлөл болсон юм. Түүний засаглалын он жилүүд бол зөвхөн эмэгтэй удирдагчийн хүч гэлтгүй, шинэ цагийн сэтгэлгээтэй, зоримог үеийн төлөөлөл ямар үнэ цэнтэйг харуулсан цаг үе байсан юм. Ард түмэн түүнийг “Итгэлтэй үед түшиг, хүнд үед дуулгавартай биш, ухаантай удирдагч” хэмээн тодорхойлдог. Rudbeckía нь ээж, ахынхаа замналаас суралцсан ч тэдний сүүдэрт бус, өөрийн гэрлээр гялалзаж чадсан хатан байв\n\n; 𝗟𝗨𝗖𝗔𝗦 𝗗𝗘 𝗔𝗟𝗚𝗘𝗥 𝗢𝗕𝗘𝗟𝗜𝗔\n\nLucas De Alger Obelia бол Саффир улсын түүхэнд гурван дахь хаан бөгөөд анхны хатан хаан Эрис Мизелиан-ы дундах хүү юм. Тэр төрсөн цагаасаа эхлэн л өөртөө итгэлтэй, дөлгөөн хэрнээ дотооддоо асгарч буй тэсрэх эрч хүчтэй нэгэн хүү байжээ. Ээжээсээ сайхан сэтгэл, энэрлийг, ах, эгч нараасаа тэсвэр, шийдэмгий занг өвлөн авсан тэрээр насанд хүрмэгцээ ард түмний итгэл найдварын төв болж чадсан юм.\n\nLucas хаанд сэтгэл татам боловч даруу, эрэмгий боловч ухаалаг төрхийн тэнцвэр оршдог байв. Тэр хэзээ ч эрх мэдлийн оргилд хүрэх гэж тэмүүлээгүй харин түмний итгэл өөрөө түүнийг оргил руу аваачсан билээ. Эцэг шигээ төлөв даруу, эх шигээ энэрэнгүй, гэр бүлийнхээ жишээ мэт бодолтой, хүнлэг нэгэн байв.\n\nХаан ширээнд залрах үед нь улс орны дотоод байдал харьцангуй тогтвортой байсан ч, шинэ үеийн сорилт, шинэ үзэл санаа үүднээс нийгэмд өөрчлөлт хэрэгтэй байлаа. Энэ үед Lucas бол зөв хүн гэдгийг ард түмэн нэгэн дуугаар хүлээн зөвшөөрчээ.\n\nТэрээр ухаалаг, тэнцвэртэй, үзэл бодол нь гүнзгий нэгэн бүсгүйтэй учирсан нь Aisha Agriche байв. Тэд хамтдаа хоёр хүү, нэг охин төрүүлж, тэднийгээ төрийн ухаанд, хүн чанарын гүнд хүмүүжүүлэн өсгөжээ.\n\n;  𝗗𝗜𝗢𝗡 𝗔𝗚𝗥𝗜𝗖𝗛𝗘\n\n Керис, буюу өнөөгийн Саффир улсын үндэс суурийг тавьж, Зжрпийн харьяанд оруулж, улс төрийн хөл дээр нь зогсоосон нэрт удирдагч, төрийн суут сэтгэгч байлаа.\n\nТэрбээр тухайн цаг үед хаанд хамгийн ойр зогсдог, итгэл хүлээсэн төрийн зөвлөх байсан төдийгүй, зөвхөн үг хэлээр бус, бодлого, бүтээл, байгуулалт бүхий улсыг шинээр бий болгоход гар бие оролцсон, үндэсний хэмжээний гавьяат хүн юм.\n\nDion-ийн түүхэнд оруулсан гол хувь нэмэр бол:\n\nЗжрп улсын дэмжлэгээр Керисийг албан ёсны улс болгон бүрдүүлсэн нь,\n\nТөрийн суурь бүтцийг боловсруулж, анхны хуулийн үндэс, удирдлагын хэлбэрийг тогтоосон нь,\n\nМөн ард иргэдийн дуу хоолойг төрд хүргэх боломжийг анхлан бий болгосон явдал байв.",
+          "tag": "Foundation",
+          "dateOrEra": "Эрин 01"
         },
         {
-          "id": "item-dec-02",
-          "title": "Язгууртны Эдлэн Газрын Дархан Цааз",
-          "subtitle": "Газар эзэмшлийн дээд эрхийн зарлиг",
-          "content": "Язгууртны цол олгогдсон эрхмүүдийн эдлэн газар нь хааны тамгаар баталгаажин, гэр бүлийн хүрээнд өвлөгдөх дархан эрхээр хамгаалагдана.",
-          "tag": "Nobility Law",
-          "dateOrEra": "Эрин Үе II - Он 114"
-        },
-        {
-          "id": "item-dec-03",
-          "title": "Индранил Эрдэнийн Хамгаалалтын Зарлиг",
-          "subtitle": "Улсын эрдэнэсийн сангийн тогтоол",
-          "content": "Бүх дээд зэрэглэлийн саффир чулууг эзэнт гүрний төрийн сан, хааны титэмд зориулан ангилан бүртгэх ёстой.",
-          "tag": "Crown Asset",
-          "dateOrEra": "Эрин Үе III - Он 380"
+          "id": "chron-2",
+          "title": "Таван Бүсийн Нэгдсэн Гэрээ",
+          "subtitle": "The Great Pentarchy Pact",
+          "content": "Төв, Зүүн, Баруун, Өмнөд, Хойд бүс нутгууд төрийн тамгын дор нэгдэж, татвар, худалдаа, аюулгүй байдлын үүргийг хуваарилан баталжээ.",
+          "tag": "Treaty",
+          "dateOrEra": "Эрин 140"
         }
       ]
     }
   ],
   "navigation": [
-    { "id": "nav-hero", "labelMongolian": "Эхлэл", "labelEnglish": "Imperial Crest", "targetId": "hero", "isVisible": true },
-    { "id": "nav-overview", "labelMongolian": "Төрийн Дээд Мэдээлэл", "labelEnglish": "State Dossier", "targetId": "overview", "isVisible": true },
-    { "id": "nav-royal", "labelMongolian": "Хааны Гэр Бүл", "labelEnglish": "Royal Titles", "targetId": "royal-family", "isVisible": true },
-    { "id": "nav-court", "labelMongolian": "Ордны Дээд Алба", "labelEnglish": "High Court", "targetId": "court-ranks", "isVisible": true },
-    { "id": "nav-nobility", "labelMongolian": "Язгууртны Эрэмбэ", "labelEnglish": "Nobility Rank", "targetId": "nobility", "isVisible": true },
-    { "id": "nav-regions", "labelMongolian": "Бүс Нутгууд", "labelEnglish": "Realm Regions", "targetId": "regions", "isVisible": true },
-    { "id": "nav-map", "labelMongolian": "Газрын Зураг", "labelEnglish": "Realm Map", "targetId": "realm-map", "isVisible": true },
-    { "id": "nav-economy", "labelMongolian": "Эдлэн Газар", "labelEnglish": "Land Economy", "targetId": "economy", "isVisible": true },
-    { "id": "nav-chronicles", "labelMongolian": "Хааны Зарлиг", "labelEnglish": "Chronicles", "targetId": "chronicles", "isVisible": true }
-  ]
+    {
+      "id": "nav-home",
+      "labelMongolian": "НҮҮР",
+      "labelEnglish": "HOME",
+      "targetId": "hero",
+      "isVisible": true
+    },
+    {
+      "id": "nav-kingdom",
+      "labelMongolian": "УЛС ТӨР",
+      "labelEnglish": "THE KINGDOM",
+      "targetId": "overview",
+      "isVisible": true
+    },
+    {
+      "id": "nav-royal-family",
+      "labelMongolian": "ХААН УГСАА",
+      "labelEnglish": "ROYAL FAMILY",
+      "targetId": "royal-titles",
+      "isVisible": true
+    },
+    {
+      "id": "nav-court-nobility",
+      "labelMongolian": "ОРДОН & ЯЗГУУРТАН",
+      "labelEnglish": "COURT & NOBILITY",
+      "targetId": "court-nobility",
+      "isVisible": true
+    },
+    {
+      "id": "nav-regions",
+      "labelMongolian": "БҮС НУТАГ",
+      "labelEnglish": "REGIONS",
+      "targetId": "regions",
+      "isVisible": true
+    },
+    {
+      "id": "nav-land-economy",
+      "labelMongolian": "ГАЗАР & ЭДИЙН ЗАСАГ",
+      "labelEnglish": "LAND & ECONOMY",
+      "targetId": "land-economy",
+      "isVisible": true
+    },
+    {
+      "id": "nav-map",
+      "labelMongolian": "ГАЗАР ЗҮЙН ЗУРАГ",
+      "labelEnglish": "REALM MAP",
+      "targetId": "realm-map",
+      "isVisible": true
+    },
+    {
+      "id": "nav-chronicles",
+      "labelMongolian": "ТҮҮХ & ЗАРЛИГ",
+      "labelEnglish": "CHRONICLES",
+      "targetId": "chronicles",
+      "isVisible": true
+    }
+  ],
+  "heroMotto": "СҮР ЖАВХЛАН · ИТГЭЛ ҮНЭМШИЛ · МӨНХИЙН ИНДРАНИЛ",
+  "heroSubtitle": "ANCIENT ROYAL KINGDOM & IMPERIAL DIGITAL ARCHIVE",
+  "footerArchiveNote": "Саффир Улсын Албан Ёсны Цахим Архив — Бүх мэдээлэл төрийн хамгаалалтад хамаарна."
 }

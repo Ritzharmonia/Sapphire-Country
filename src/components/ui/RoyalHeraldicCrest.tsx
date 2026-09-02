@@ -49,8 +49,8 @@ export const RoyalHeraldicCrest: React.FC<RoyalHeraldicCrestProps> = ({
   return (
     <div className="relative flex flex-col items-center justify-center my-3 group">
       
-      {/* Soft Ambient Sapphire & Golden Radiant Halo in Background */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#1F4E79]/35 via-[#2A75D3]/20 to-transparent blur-3xl rounded-full scale-125 pointer-events-none -z-10" />
+      {/* Soft Ambient Warm Gold & Velvet Navy Atmosphere in Background */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(201,168,92,0.12)_0%,_rgba(20,43,74,0.15)_45%,_transparent_70%)] blur-2xl rounded-full scale-110 pointer-events-none -z-10" />
 
       {/* Pure & Clean Image Container */}
       <div
@@ -66,7 +66,7 @@ export const RoyalHeraldicCrest: React.FC<RoyalHeraldicCrestProps> = ({
         {/* Subtle Backdrop Illumination for Crisp Contrast */}
         <div className="absolute inset-2 rounded-2xl bg-[#0C1421]/30 backdrop-blur-[1px] border border-[#C9A85C]/15 pointer-events-none transition-all group-hover:border-[#E8C87A]/30" />
 
-        {/* Clean Unobstructed Crest Image */}
+        {/* Clean Unobstructed Crest Image - Original artwork completely preserved and crisp */}
         {currentImg ? (
           <div className="relative w-full h-full flex items-center justify-center overflow-hidden z-10">
             <img
@@ -76,7 +76,7 @@ export const RoyalHeraldicCrest: React.FC<RoyalHeraldicCrestProps> = ({
               style={{
                 transform: `scale(${scale}) translate(${offsetX}px, ${offsetY}px)`
               }}
-              className="max-w-full max-h-full object-contain filter drop-shadow-[0_10px_25px_rgba(0,0,0,0.85)] transition-transform duration-200"
+              className="max-w-full max-h-full object-contain filter drop-shadow-[0_8px_24px_rgba(0,0,0,0.85)] transition-transform duration-200"
             />
           </div>
         ) : (
@@ -108,7 +108,7 @@ export const RoyalHeraldicCrest: React.FC<RoyalHeraldicCrestProps> = ({
         <button
           type="button"
           onClick={handleCrestClick}
-          className="mt-3 px-4 py-1.5 bg-gradient-to-r from-[#142B4A] via-[#1F4E79] to-[#142B4A] hover:from-[#1F4E79] hover:to-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C]/70 rounded-full font-royal text-[11px] tracking-widest uppercase flex items-center gap-2 shadow-[0_4px_15px_rgba(0,0,0,0.6)] transition-all hover:scale-105 hover:border-[#E8C87A] cursor-pointer"
+          className="mt-3 px-4 py-1.5 bg-gradient-to-r from-[#142B4A] via-[#1B385D] to-[#142B4A] hover:from-[#1B385D] hover:to-[#224A7A] text-[#FFF0CA] border border-[#C9A85C]/70 rounded-full font-royal text-[11px] tracking-widest uppercase flex items-center gap-2 shadow-[0_4px_15px_rgba(0,0,0,0.6)] transition-all hover:scale-105 hover:border-[#E8C87A] cursor-pointer"
         >
           <UploadCloud className="w-3.5 h-3.5 text-[#E8C87A]" />
           <span>Зураг оруулах / Сүлд солих ✎</span>

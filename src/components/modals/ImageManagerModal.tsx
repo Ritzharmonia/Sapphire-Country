@@ -67,7 +67,7 @@ const ROYAL_PRESETS = [
   <!-- Imperial Eagle/Gem Center -->
   <polygon points="250,190 310,270 250,360 190,270" fill="url(#goldG)"/>
   <polygon points="250,210 290,270 250,335 210,270" fill="#2A75D3"/>
-  <text x="250" y="445" text-anchor="middle" fill="#E8C87A" font-family="Cinzel, serif" font-size="14" letter-spacing="4" font-weight="bold">COUNTRY OF SAPPHIRE</text>
+  <text x="250" y="445" text-anchor="middle" fill="#E8C87A" font-family="'Playfair Display', serif" font-size="14" letter-spacing="4" font-weight="bold">COUNTRY OF SAPPHIRE</text>
 </svg>
 `)}`
   },
@@ -104,8 +104,8 @@ const ROYAL_PRESETS = [
   <circle cx="250" cy="95" r="6" fill="#2A75D3" stroke="url(#queenGold)" stroke-width="1"/>
   <circle cx="225" cy="120" r="4" fill="#2A75D3"/>
   <circle cx="275" cy="120" r="4" fill="#2A75D3"/>
-  <text x="250" y="530" text-anchor="middle" fill="#E8C87A" font-family="Cinzel, serif" font-size="16" letter-spacing="4" font-weight="bold">HER MAJESTY THE QUEEN</text>
-  <text x="250" y="552" text-anchor="middle" fill="#D9DEE5" font-family="Cinzel, serif" font-size="10" letter-spacing="3" opacity="0.75">IMPERIAL SOVEREIGN</text>
+  <text x="250" y="530" text-anchor="middle" fill="#E8C87A" font-family="'Playfair Display', serif" font-size="16" letter-spacing="4" font-weight="bold">HER MAJESTY THE QUEEN</text>
+  <text x="250" y="552" text-anchor="middle" fill="#D9DEE5" font-family="'Playfair Display', serif" font-size="10" letter-spacing="3" opacity="0.75">IMPERIAL MONARCH</text>
 </svg>
 `)}`
   }
@@ -382,7 +382,7 @@ export const ImageManagerModal: React.FC = () => {
                 </span>
               </div>
               
-              <div className={`relative w-48 h-48 sm:w-56 sm:h-56 ${isMonarch ? 'rounded-2xl' : 'rounded-xl'} bg-gradient-to-b from-[#142B4A] to-[#0C1421] border-2 border-[#C9A85C] flex items-center justify-center overflow-hidden shadow-[0_0_35px_rgba(31,78,121,0.5)]`}>
+              <div className={`relative w-48 h-48 sm:w-56 sm:h-56 ${isMonarch ? 'rounded-2xl' : 'rounded-xl'} bg-[#0C1421] border-2 border-[#C9A85C]/80 flex items-center justify-center overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.8),0_0_15px_rgba(201,168,92,0.15)]`}>
                 {imageUrl ? (
                   <img
                     src={imageUrl}

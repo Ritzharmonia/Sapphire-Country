@@ -14,14 +14,14 @@ export const HeroLanding: React.FC = () => {
 
   return (
     <section id="hero" className="relative min-h-[92vh] flex flex-col items-center justify-center text-center px-4 sm:px-6 lg:px-8 overflow-hidden pt-10 pb-16">
-      {/* Dramatic Atmospheric Background Gradients & Vignette */}
-      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#1F4E79]/20 via-[#142B4A]/40 to-[#0C1421] z-0" />
+      {/* Refined Deep Midnight Background Gradients & Vignette - Softened Blue */}
+      <div className="absolute inset-0 pointer-events-none bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#142B4A]/25 via-[#0F1E33]/35 to-[#0C1421] z-0" />
       
       {/* Subtle Sapphire Starlight / Particle Grid */}
-      <div className="absolute inset-0 opacity-20 bg-[radial-gradient(#C9A85C_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none" />
+      <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#C9A85C_1px,transparent_1px)] [background-size:32px_32px] pointer-events-none" />
 
-      {/* Atmospheric Glowing Rings */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] md:w-[650px] h-[350px] sm:h-[500px] md:h-[650px] rounded-full bg-[#1F4E79]/15 blur-3xl pointer-events-none animate-royal-shimmer" />
+      {/* Soft Ambient Glowing Ring */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] sm:w-[500px] md:w-[650px] h-[350px] sm:h-[500px] md:h-[650px] rounded-full bg-[#142B4A]/15 blur-3xl pointer-events-none animate-royal-shimmer" />
 
       {/* Main Container */}
       <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center">
@@ -48,9 +48,9 @@ export const HeroLanding: React.FC = () => {
           size="lg"
         />
 
-        {/* Refined Royal Country Name: Elegant, Balanced & Noble */}
+        {/* Refined Royal Country Name: Elegant, Balanced & Noble with Canva Cyrillic Display Font */}
         <div className="mt-4 mb-1.5">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-normal font-marcellus tracking-[0.18em] sm:tracking-[0.22em] text-[#FFF5DF] drop-shadow-[0_4px_16px_rgba(0,0,0,0.9)]">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-playfair tracking-[0.14em] sm:tracking-[0.18em] text-[#FFF5DF] drop-shadow-[0_4px_20px_rgba(0,0,0,0.95)]">
             {data.crest.customTitle || 'SAPPHIRE COUNTRY'}
           </h1>
         </div>
@@ -83,7 +83,7 @@ export const HeroLanding: React.FC = () => {
           <button
             type="button"
             onClick={scrollToOverview}
-            className="px-6 py-2.5 bg-gradient-to-r from-[#142B4A] via-[#1F4E79] to-[#142B4A] hover:from-[#1F4E79] hover:to-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C] rounded font-royal tracking-widest text-xs uppercase shadow-xl transition-all transform hover:scale-105 flex items-center gap-2"
+            className="px-6 py-2.5 bg-gradient-to-r from-[#142B4A] via-[#1B385D] to-[#142B4A] hover:from-[#1B385D] hover:to-[#224A7A] text-[#FFF0CA] border border-[#C9A85C] rounded font-royal tracking-widest text-xs uppercase shadow-xl transition-all transform hover:scale-105 flex items-center gap-2"
           >
             <Crown className="w-4 h-4 text-[#C9A85C]" />
             <span>Архив Нээх (Explore Archive)</span>

@@ -1,128 +1,10 @@
 import { WebsiteData } from './types';
 
-// Default royal crest SVG as high-definition data URI so it looks majestic out of the box
-export const DEFAULT_ROYAL_CREST = `data:image/svg+xml;utf8,${encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
-  <defs>
-    <radialGradient id="sapphireGlow" cx="50%" cy="50%" r="50%">
-      <stop offset="0%" stop-color="#4189e0" stop-opacity="0.9" />
-      <stop offset="45%" stop-color="#1F4E79" stop-opacity="0.8" />
-      <stop offset="85%" stop-color="#142B4A" stop-opacity="0.9" />
-      <stop offset="100%" stop-color="#0C1421" stop-opacity="1" />
-    </radialGradient>
-    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF3D4" />
-      <stop offset="30%" stop-color="#E5C378" />
-      <stop offset="70%" stop-color="#C9A85C" />
-      <stop offset="100%" stop-color="#846624" />
-    </linearGradient>
-    <linearGradient id="silverGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFFFFF" />
-      <stop offset="50%" stop-color="#D9DEE5" />
-      <stop offset="100%" stop-color="#808B9B" />
-    </linearGradient>
-    <filter id="royalShadow" x="-20%" y="-20%" width="140%" height="140%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.6"/>
-    </filter>
-  </defs>
+// Locked Official Royal Crest PNG (Sapphire & Gold harmonic palette)
+export const DEFAULT_ROYAL_CREST = '/official-royal-crest.png';
 
-  <!-- Ornate Outer Shield & Flourishes -->
-  <g filter="url(#royalShadow)">
-    <!-- Wings / Baroque Mantling -->
-    <path d="M 200 40 C 230 20, 310 30, 340 90 C 360 130, 340 190, 310 240 C 280 290, 230 340, 200 370 C 170 340, 120 290, 90 240 C 60 190, 40 130, 60 90 C 90 30, 170 20, 200 40 Z" 
-          fill="none" stroke="url(#goldGrad)" stroke-width="3" />
-    
-    <path d="M 200 55 C 225 38, 295 48, 320 100 C 338 135, 320 185, 295 230 C 270 275, 225 320, 200 350 C 175 320, 130 275, 105 230 C 80 185, 62 135, 80 100 C 105 48, 175 38, 200 55 Z" 
-          fill="url(#sapphireGlow)" stroke="url(#silverGrad)" stroke-width="1.5" />
-    
-    <!-- Inner Escutcheon -->
-    <path d="M 200 80 Q 270 80 280 150 Q 280 240 200 310 Q 120 240 120 150 Q 130 80 200 80 Z" 
-          fill="#0C1421" stroke="url(#goldGrad)" stroke-width="2.5" />
-
-    <!-- Central Sapphire Diamond / Star of the Realm -->
-    <polygon points="200,105 245,150 200,240 155,150" fill="#1F4E79" stroke="url(#goldGrad)" stroke-width="2"/>
-    <polygon points="200,120 230,150 200,215 170,150" fill="#2A75D3" opacity="0.85"/>
-    <polygon points="200,135 215,150 200,185 185,150" fill="#FFF3D4" opacity="0.9"/>
-    
-    <!-- Imperial Crown Crest Top -->
-    <path d="M 160 75 L 170 50 L 185 65 L 200 40 L 215 65 L 230 50 L 240 75 Z" fill="url(#goldGrad)" stroke="#846624" stroke-width="1"/>
-    <circle cx="200" cy="38" r="4" fill="#D9DEE5" stroke="url(#goldGrad)" stroke-width="1"/>
-    <circle cx="170" cy="48" r="3" fill="#D9DEE5"/>
-    <circle cx="230" cy="48" r="3" fill="#D9DEE5"/>
-
-    <!-- Flourishes and Crosses -->
-    <path d="M 195 260 L 205 260 M 200 255 L 200 268" stroke="url(#goldGrad)" stroke-width="2"/>
-    <path d="M 140 110 Q 160 130 140 160 Q 130 180 145 200" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
-    <path d="M 260 110 Q 240 130 260 160 Q 270 180 255 200" fill="none" stroke="url(#goldGrad)" stroke-width="1.5" opacity="0.7"/>
-  </g>
-</svg>
-`)}`;
-
-// Default Regal Sovereign Monarch Portrait
-export const DEFAULT_MONARCH_IMAGE = `data:image/svg+xml;utf8,${encodeURIComponent(`
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 600" width="100%" height="100%">
-  <defs>
-    <radialGradient id="monarchGlow" cx="50%" cy="40%" r="60%">
-      <stop offset="0%" stop-color="#2A75D3" stop-opacity="0.6"/>
-      <stop offset="40%" stop-color="#1F4E79" stop-opacity="0.8"/>
-      <stop offset="80%" stop-color="#142B4A" stop-opacity="0.95"/>
-      <stop offset="100%" stop-color="#0C1421" stop-opacity="1"/>
-    </radialGradient>
-    <linearGradient id="monarchGold" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#FFF0CA"/>
-      <stop offset="40%" stop-color="#E8C87A"/>
-      <stop offset="80%" stop-color="#C9A85C"/>
-      <stop offset="100%" stop-color="#8A6D2B"/>
-    </linearGradient>
-    <linearGradient id="cloakGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="#1B3A61"/>
-      <stop offset="60%" stop-color="#10233D"/>
-      <stop offset="100%" stop-color="#09111E"/>
-    </linearGradient>
-  </defs>
-
-  <!-- Background Canvas -->
-  <rect width="500" height="600" fill="url(#monarchGlow)"/>
-  
-  <!-- Outer Filigree Arch -->
-  <rect x="25" y="25" width="450" height="550" rx="16" fill="none" stroke="url(#monarchGold)" stroke-width="2" opacity="0.8"/>
-  <rect x="35" y="35" width="430" height="530" rx="12" fill="none" stroke="url(#monarchGold)" stroke-width="1" stroke-dasharray="6,4" opacity="0.4"/>
-
-  <!-- Halo Aura -->
-  <circle cx="250" cy="220" r="140" fill="none" stroke="url(#monarchGold)" stroke-width="1.5" opacity="0.35"/>
-  <circle cx="250" cy="220" r="160" fill="none" stroke="#2A75D3" stroke-width="1" opacity="0.25"/>
-
-  <!-- Royal Robe / Mantle -->
-  <path d="M 120 560 L 150 360 Q 200 320 250 320 Q 300 320 350 360 L 380 560 Z" fill="url(#cloakGrad)" stroke="url(#monarchGold)" stroke-width="2"/>
-  <path d="M 210 330 L 250 480 L 290 330 Z" fill="#0C1421" stroke="url(#monarchGold)" stroke-width="1.5" opacity="0.9"/>
-  
-  <!-- Imperial Medallion & Ribbons -->
-  <circle cx="250" cy="380" r="18" fill="#1F4E79" stroke="url(#monarchGold)" stroke-width="2.5"/>
-  <polygon points="250,368 258,380 250,392 242,380" fill="#FFF0CA"/>
-  <path d="M 250 398 L 240 440 L 250 432 L 260 440 Z" fill="url(#monarchGold)" opacity="0.85"/>
-
-  <!-- Royal Sovereign Head / Profile Silhouette -->
-  <circle cx="250" cy="225" r="58" fill="#142B4A" stroke="url(#monarchGold)" stroke-width="1.5"/>
-  <path d="M 215 240 Q 250 280 285 240 Q 260 300 250 310 Q 240 300 215 240 Z" fill="#142B4A" stroke="url(#monarchGold)" stroke-width="1"/>
-
-  <!-- Grand Crown of Sapphire -->
-  <g transform="translate(0, -10)">
-    <path d="M 195 170 L 210 120 L 230 145 L 250 95 L 270 145 L 290 120 L 305 170 Z" fill="url(#monarchGold)" stroke="#8A6D2B" stroke-width="1.5"/>
-    <circle cx="250" cy="90" r="7" fill="#FFF0CA" stroke="url(#monarchGold)" stroke-width="1.5"/>
-    <circle cx="210" cy="115" r="5" fill="#2A75D3" stroke="url(#monarchGold)" stroke-width="1"/>
-    <circle cx="290" cy="115" r="5" fill="#2A75D3" stroke="url(#monarchGold)" stroke-width="1"/>
-    <!-- Sapphire Gemstones on Crown Base -->
-    <rect x="200" y="162" width="100" height="12" rx="3" fill="#0C1421" stroke="url(#monarchGold)" stroke-width="1.5"/>
-    <polygon points="250,164 255,168 250,172 245,168" fill="#2A75D3"/>
-    <polygon points="225,164 229,168 225,172 221,168" fill="#2A75D3"/>
-    <polygon points="275,164 279,168 275,172 271,168" fill="#2A75D3"/>
-  </g>
-
-  <!-- Constellations & Filigrees -->
-  <text x="250" y="530" text-anchor="middle" fill="#E8C87A" font-family="Cinzel, serif" font-size="16" letter-spacing="4" font-weight="bold">THE SOVEREIGN MONARCH</text>
-  <text x="250" y="552" text-anchor="middle" fill="#D9DEE5" font-family="Cinzel, serif" font-size="10" letter-spacing="3" opacity="0.75">SAPPHIRE IMPERIAL CROWN</text>
-</svg>
-`)}`;
+// Locked Official Reigning Monarch Portrait PNG
+export const DEFAULT_MONARCH_IMAGE = '/official-monarch-portrait.png';
 
 export const initialWebsiteData: WebsiteData = {
   crest: {
@@ -148,7 +30,7 @@ export const initialWebsiteData: WebsiteData = {
     stateSymbolMongolian: 'Индранил чулуу',
     stateSymbolEnglish: 'Blue Sapphire',
     motto: 'Сүр жавхлан, Итгэл үнэмшил, Мөнхийн Индранил',
-    foundingEra: 'Эртний Саффирын Эрин Үе (Imperial Ancient Era)',
+    foundingEra: 'Саффир улс',
     capitalCity: 'Селестин (Celestine Capital)',
     nationalAnthemTitle: 'Индранил Титмийн Сүлд Дуулал',
     nationalAnthemExcerpt: 'Мөнхийн цэнхэр гэрэл дор эзэнт гүрэн мандан бадарч, язгууртны алдар нэр үеийн үед цуурайтна.',
@@ -171,7 +53,7 @@ export const initialWebsiteData: WebsiteData = {
       number: '02',
       mongolianTitle: 'Эрхэм Дээдэс, Хаан',
       englishTitle: 'His Majesty the King',
-      description: 'Саффир улсын төрийн тэргүүн бөгөөд хаан ширээний дээд эзэн.',
+      description: 'Саффир улсын төрийн тэргүүн бөгөөд хаан ширээний дээд хэргэм.',
       rankCategory: 'sovereign',
       holder: 'Хаан ширээний тэргүүн хэргэм',
       iconName: 'Shield'

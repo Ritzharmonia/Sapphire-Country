@@ -45,7 +45,13 @@ async function startServer() {
     if (fs.existsSync(dataFilePath)) {
       try {
         const raw = fs.readFileSync(dataFilePath, 'utf-8');
-        return res.json(JSON.parse(raw));
+        const parsed = JSON.parse(raw);
+        if (parsed.crest) parsed.crest.imageUrl = '/official-royal-crest.png';
+        if (parsed.overview) {
+          parsed.overview.monarchImage = '/official-monarch-portrait.png';
+          parsed.overview.foundingEra = 'Саффир улс';
+        }
+        return res.json(parsed);
       } catch (e) {
         console.error('Error reading persisted data file:', e);
       }
@@ -69,13 +75,24 @@ async function startServer() {
       }
 
       // Check and persist official crest image
-      if (lockedData.crest?.imageUrl) {
+      if (lockedData.crest?.imageUrl && lockedData.crest.imageUrl.startsWith('data:image/')) {
         lockedData.crest.imageUrl = saveBase64Image(lockedData.crest.imageUrl, 'official-royal-crest');
+      } else {
+        if (!lockedData.crest) lockedData.crest = {};
+        lockedData.crest.imageUrl = '/official-royal-crest.png';
       }
 
       // Check and persist official monarch portrait image
-      if (lockedData.overview?.monarchImage) {
+      if (lockedData.overview?.monarchImage && lockedData.overview.monarchImage.startsWith('data:image/')) {
         lockedData.overview.monarchImage = saveBase64Image(lockedData.overview.monarchImage, 'official-monarch-portrait');
+      } else {
+        if (!lockedData.overview) lockedData.overview = {};
+        lockedData.overview.monarchImage = '/official-monarch-portrait.png';
+      }
+
+      if (lockedData.overview) {
+        lockedData.overview.foundingEra = 'Саффир улс';
+        lockedData.overview.reignPeriod = 'Саффир улс 1424 оноос эдүгээ хүртэл';
       }
 
       // Write persisted JSON file

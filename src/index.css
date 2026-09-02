@@ -9,7 +9,7 @@
     --color-antique-gold: #C9A85C;
     --color-bright-gold: #E8C87A;
     --color-cream-gold: #FFF0CA;
-    --color-sapphire-glow: #2A75D3;
+    --color-sapphire-glow: #4A7BA7;
   }
 
   body {
@@ -20,15 +20,34 @@
   }
 
   h1, h2, h3, h4, .royal-font, .font-royal {
-    font-family: 'Marcellus', 'Cinzel', serif;
+    font-family: 'Playfair Display', 'Cormorant Garamond', 'Forum', 'Prata', 'Oranienbaum', serif;
+    letter-spacing: 0.025em;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1, "dlig" 1;
   }
 
   .font-marcellus {
-    font-family: 'Marcellus', serif;
+    font-family: 'Forum', 'Playfair Display', 'Cormorant Garamond', serif;
+  }
+
+  .font-playfair {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .font-forum {
+    font-family: 'Forum', 'Playfair Display', serif;
+  }
+
+  .font-prata {
+    font-family: 'Prata', 'Playfair Display', serif;
+  }
+
+  .font-oranienbaum {
+    font-family: 'Oranienbaum', 'Playfair Display', serif;
   }
 
   .font-royal-decorative {
-    font-family: 'Cinzel Decorative', serif;
+    font-family: 'Playfair Display', 'Cormorant Garamond', serif;
   }
 
   .font-cormorant {
@@ -46,7 +65,12 @@
 
 /* Immersive UI Specific Utility Classes */
 .royal-font {
-  font-family: 'Marcellus', 'Cinzel', serif;
+  font-family: 'Playfair Display', 'Cormorant Garamond', 'Forum', 'Prata', 'Oranienbaum', serif;
+}
+
+.ornate-heading {
+  font-family: 'Playfair Display', 'Forum', 'Cormorant Garamond', serif;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 0 16px rgba(201, 168, 92, 0.12);
 }
 
 .royal-title-gradient {
@@ -66,7 +90,7 @@
 }
 
 .sapphire-glow {
-  box-shadow: 0 0 25px rgba(31, 78, 121, 0.45);
+  box-shadow: 0 0 20px rgba(20, 43, 74, 0.4);
 }
 
 .gold-glow {

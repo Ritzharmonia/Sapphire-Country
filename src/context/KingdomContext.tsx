@@ -3,8 +3,10 @@ import { WebsiteData, Region, RoyalTitle, CourtRank, NobilityItem, LandValueItem
 import { initialWebsiteData } from '../initialData';
 import persistedDataJson from '../persistedData.json';
 
-const STORAGE_KEY = 'sapphire_country_archive_data_v2';
+const STORAGE_KEY = 'sapphire_country_archive_data_v3';
 const DEFAULT_PIN = 'Indranil777';
+const OFFICIAL_CREST_PNG = '/official-royal-crest.png';
+const OFFICIAL_MONARCH_PNG = '/official-monarch-portrait.png';
 
 const persistedData = persistedDataJson as unknown as WebsiteData;
 
@@ -84,7 +86,6 @@ export const KingdomProvider: React.FC<{ children: ReactNode }> = ({ children })
       const saved = localStorage.getItem(STORAGE_KEY);
       if (saved) {
         const parsed = JSON.parse(saved);
-        // Ensure all required fields exist and retain all customizations
         return {
           ...initialWebsiteData,
           ...persistedData,
@@ -92,19 +93,36 @@ export const KingdomProvider: React.FC<{ children: ReactNode }> = ({ children })
           overview: { 
             ...initialWebsiteData.overview, 
             ...(persistedData?.overview || {}), 
-            ...(parsed.overview || {}) 
+            ...(parsed.overview || {}),
+            monarchImage: OFFICIAL_MONARCH_PNG,
+            foundingEra: 'Саффир улс',
+            reignPeriod: 'Саффир улс 1424 оноос эдүгээ хүртэл'
           },
           crest: { 
             ...initialWebsiteData.crest, 
             ...(persistedData?.crest || {}), 
-            ...(parsed.crest || {}) 
+            ...(parsed.crest || {}),
+            imageUrl: OFFICIAL_CREST_PNG
           }
         };
       }
     } catch (e) {
       console.warn('Failed to parse saved sapphire archive data:', e);
     }
-    return (persistedData as WebsiteData) || initialWebsiteData;
+    const fallback = (persistedData as WebsiteData) || initialWebsiteData;
+    return {
+      ...fallback,
+      overview: {
+        ...fallback.overview,
+        monarchImage: OFFICIAL_MONARCH_PNG,
+        foundingEra: 'Саффир улс',
+        reignPeriod: 'Саффир улс 1424 оноос эдүгээ хүртэл'
+      },
+      crest: {
+        ...fallback.crest,
+        imageUrl: OFFICIAL_CREST_PNG
+      }
+    };
   });
 
   // Edit Mode is strictly and permanently FALSE across all environments (Read-Only Official Archive)
@@ -132,11 +150,12 @@ export const KingdomProvider: React.FC<{ children: ReactNode }> = ({ children })
               ...prev,
               crest: {
                 ...prev.crest,
-                imageUrl: result.data.crest?.imageUrl || prev.crest.imageUrl
+                imageUrl: OFFICIAL_CREST_PNG
               },
               overview: {
                 ...prev.overview,
-                monarchImage: result.data.overview?.monarchImage || prev.overview.monarchImage
+                monarchImage: OFFICIAL_MONARCH_PNG,
+                foundingEra: 'Саффир улс'
               }
             }));
           }

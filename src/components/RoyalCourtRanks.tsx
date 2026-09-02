@@ -22,7 +22,7 @@ export const RoyalCourtRanks: React.FC = () => {
   const getBadgeIcon = (symbol?: string) => {
     switch (symbol) {
       case 'Scroll': return <Scroll className="w-5 h-5 text-[#C9A85C]" />;
-      case 'BookOpen': return <BookOpen className="w-5 h-5 text-[#2A75D3]" />;
+      case 'BookOpen': return <BookOpen className="w-5 h-5 text-[#5B8AC4]" />;
       case 'Megaphone': return <Megaphone className="w-5 h-5 text-[#E8C87A]" />;
       default: return <ShieldCheck className="w-5 h-5 text-[#C9A85C]" />;
     }
