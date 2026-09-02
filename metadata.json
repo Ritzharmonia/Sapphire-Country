@@ -1,0 +1,6 @@
+{
+  "name": "Sapphire Country",
+  "description": "An ancient royal kingdom transformed into an elegant, luxurious, interactive, and fully editable modern digital archive.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
