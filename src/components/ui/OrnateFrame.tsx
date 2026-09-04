@@ -1,75 +1,82 @@
 import React, { ReactNode } from 'react';
+import { VictorianCorner, VictorianCenterFinial, VictorianOrnamentVariant } from './VictorianOrnaments';
 
 interface OrnateFrameProps {
   children: ReactNode;
   className?: string;
-  variant?: 'gold' | 'silver' | 'sapphire' | 'minimal';
+  variant?: 'platinum' | 'silver' | 'sapphire' | 'minimal' | 'gold';
   glow?: boolean;
   withCorners?: boolean;
+  withFinial?: boolean;
   padding?: string;
 }
 
 export const OrnateFrame: React.FC<OrnateFrameProps> = ({
   children,
   className = '',
-  variant = 'gold',
+  variant = 'platinum',
   glow = false,
   withCorners = true,
+  withFinial = false,
   padding = 'p-6 sm:p-8'
 }) => {
+  const isPlatinumOrGold = variant === 'platinum' || variant === 'gold';
+
   const getBorderColor = () => {
+    if (isPlatinumOrGold) {
+      return 'border-[#CBD5E1]/60 hover:border-[#FFFFFF]/85';
+    }
     switch (variant) {
-      case 'gold':
-        return 'border-[#C9A85C]/50 hover:border-[#C9A85C]/80';
       case 'silver':
-        return 'border-[#D9DEE5]/35 hover:border-[#D9DEE5]/70';
+        return 'border-[#E2E8F0]/45 hover:border-[#FFFFFF]/75';
       case 'sapphire':
-        return 'border-[#1F4E79]/70 hover:border-[#C9A85C]/60';
+        return 'border-[#2A75D3]/60 hover:border-[#CBD5E1]/80';
       case 'minimal':
       default:
-        return 'border-[#142B4A]/80 hover:border-[#1F4E79]';
+        return 'border-[#1F4E79]/60 hover:border-[#CBD5E1]/50';
     }
   };
 
   const getGlow = () => {
-    if (!glow) return 'shadow-lg shadow-[#000000]/60';
+    if (!glow) return 'shadow-xl shadow-[#000000]/70';
+    if (isPlatinumOrGold) {
+      return 'shadow-[0_8px_32px_rgba(0,0,0,0.85),0_0_22px_rgba(226,232,240,0.22)]';
+    }
     switch (variant) {
-      case 'gold':
-        return 'shadow-[0_0_30px_rgba(201,168,92,0.2)]';
+      case 'silver':
+        return 'shadow-[0_8px_32px_rgba(0,0,0,0.85),0_0_20px_rgba(226,232,240,0.18)]';
       case 'sapphire':
-        return 'sapphire-glow';
+        return 'shadow-[0_8px_32px_rgba(0,0,0,0.85),0_0_24px_rgba(31,78,121,0.45)]';
       default:
-        return 'shadow-[0_0_25px_rgba(20,43,74,0.4)]';
+        return 'shadow-[0_8px_30px_rgba(0,0,0,0.7)]';
     }
   };
 
+  const ornamentVariant: VictorianOrnamentVariant =
+    variant === 'sapphire' ? 'sapphire' : 'platinum';
+
   return (
     <div
-      className={`relative bg-[#0C1421]/90 backdrop-blur-md border ${getBorderColor()} ${getGlow()} ${padding} transition-all duration-300 ${className}`}
+      className={`relative bg-[#0C1421]/95 backdrop-blur-md border ${getBorderColor()} ${getGlow()} ${padding} transition-all duration-300 rounded-sm ${className}`}
     >
-      {/* Decorative Corner Ornaments */}
-      {withCorners && (
+      {/* Top Center Platinum Victorian Fleur-de-lis Finial */}
+      {withFinial && (
+        <VictorianCenterFinial variant={ornamentVariant} position="top" width={110} />
+      )}
+
+      {/* Slender Platinum Fleur-de-lis Corner Accents */}
+      {withCorners && variant !== 'minimal' && (
         <>
-          {/* Top-Left */}
-          <div className="absolute -top-[4px] -left-[4px] w-3 h-3 border-t-2 border-l-2 border-[#C9A85C] pointer-events-none" />
-          <div className="absolute top-1 left-1 w-1 h-1 bg-[#C9A85C]/70 pointer-events-none" />
-
-          {/* Top-Right */}
-          <div className="absolute -top-[4px] -right-[4px] w-3 h-3 border-t-2 border-r-2 border-[#C9A85C] pointer-events-none" />
-          <div className="absolute top-1 right-1 w-1 h-1 bg-[#C9A85C]/70 pointer-events-none" />
-
-          {/* Bottom-Left */}
-          <div className="absolute -bottom-[4px] -left-[4px] w-3 h-3 border-b-2 border-l-2 border-[#C9A85C] pointer-events-none" />
-          <div className="absolute bottom-1 left-1 w-1 h-1 bg-[#C9A85C]/70 pointer-events-none" />
-
-          {/* Bottom-Right */}
-          <div className="absolute -bottom-[4px] -right-[4px] w-3 h-3 border-b-2 border-r-2 border-[#C9A85C] pointer-events-none" />
-          <div className="absolute bottom-1 right-1 w-1 h-1 bg-[#C9A85C]/70 pointer-events-none" />
+          <VictorianCorner position="top-left" size={26} variant={ornamentVariant} opacity={0.85} />
+          <VictorianCorner position="top-right" size={26} variant={ornamentVariant} opacity={0.85} />
+          <VictorianCorner position="bottom-left" size={26} variant={ornamentVariant} opacity={0.85} />
+          <VictorianCorner position="bottom-right" size={26} variant={ornamentVariant} opacity={0.85} />
         </>
       )}
 
-      {/* Inner subtle filigree hairline */}
-      <div className="absolute inset-[3px] border border-[#C9A85C]/15 pointer-events-none" />
+      {/* Dual Inset Slender Platinum Moldings */}
+      <div className="absolute inset-[3px] sm:inset-[4px] border border-[#CBD5E1]/20 pointer-events-none rounded-[1px]" />
+      <div className="absolute inset-[5px] sm:inset-[7px] border border-[#CBD5E1]/10 pointer-events-none rounded-[1px]" />
 
       {/* Content */}
       <div className="relative z-10">{children}</div>

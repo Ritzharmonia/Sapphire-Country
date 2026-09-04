@@ -1,13 +1,6 @@
 import React, { useState } from 'react';
-import { 
-  Crown, 
-  Shield, 
-  Award, 
-  Sparkles, 
-  Filter 
-} from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
-import { OrnateFrame } from './ui/OrnateFrame';
+import { ElegantLineCard } from './ui/ElegantLineCard';
 import { SectionHeading } from './ui/SectionHeading';
 import { NobilityCategory } from '../types';
 
@@ -30,13 +23,13 @@ export const NobilityHierarchy: React.FC = () => {
   const getCategoryBadge = (category: NobilityCategory) => {
     switch (category) {
       case 'high':
-        return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#C9A85C]/20 text-[#FFF0CA] border border-[#C9A85C]/50">HIGH NOBILITY</span>;
+        return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#CBD5E1]/20 text-[#FFFFFF] border border-[#CBD5E1]/50">HIGH NOBILITY</span>;
       case 'middle':
         return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#1F4E79]/40 text-[#D9DEE5] border border-[#1F4E79]">MIDDLE NOBILITY</span>;
       case 'noble':
-        return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#142B4A]/60 text-[#D9DEE5]/90 border border-[#C9A85C]/30">NOBLE</span>;
+        return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#142B4A]/60 text-[#D9DEE5]/90 border border-[#CBD5E1]/30">NOBLE</span>;
       case 'title':
-        return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#0C1421] text-[#C9A85C] border border-[#C9A85C]/30">TITLE / CIVIC</span>;
+        return <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#0C1421] text-[#CBD5E1] border border-[#CBD5E1]/30">TITLE / CIVIC</span>;
     }
   };
 
@@ -50,20 +43,20 @@ export const NobilityHierarchy: React.FC = () => {
       />
 
       {/* Royal Progression Hierarchy Banner */}
-      <div className="mb-10 p-4 sm:p-6 rounded-xl bg-gradient-to-r from-[#0C1421] via-[#142B4A]/80 to-[#0C1421] border border-[#C9A85C]/40 shadow-xl">
-        <div className="text-[11px] font-mono uppercase tracking-widest text-[#C9A85C] text-center mb-3">
+      <div className="mb-10 p-4 sm:p-6 rounded-xl bg-gradient-to-r from-[#0C1421] via-[#142B4A]/80 to-[#0C1421] border border-[#CBD5E1]/40 shadow-xl">
+        <div className="text-[11px] font-mono uppercase tracking-widest text-[#CBD5E1] text-center mb-3">
           — ЭЗЭНТ ГҮРНИЙ ДЭЭД ЭРЭМБИЙН ШАТЛАЛ (IMPERIAL PRECEDENCE) —
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-royal text-[#FFF0CA]">
-          <span className="px-3 py-1 rounded bg-[#C9A85C] text-[#0C1421] font-bold shadow">Хаан Угсаа (Royal Family)</span>
-          <span className="text-[#C9A85C]">→</span>
-          <span className="px-3 py-1 rounded bg-[#1F4E79] border border-[#C9A85C]/60 text-[#FFF0CA]">Хааны Ордны Канцлер (Royal Court)</span>
-          <span className="text-[#C9A85C]">→</span>
-          <span className="px-3 py-1 rounded bg-[#142B4A] border border-[#C9A85C]/40 text-[#D9DEE5]">Дээд Язгууртан (High Nobility)</span>
-          <span className="text-[#C9A85C]">→</span>
+        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 text-xs font-royal text-[#FFFFFF]">
+          <span className="px-3 py-1 rounded bg-[#CBD5E1] text-[#0C1421] font-bold shadow">Хаан Угсаа (Royal Family)</span>
+          <span className="text-[#CBD5E1]">→</span>
+          <span className="px-3 py-1 rounded bg-[#1F4E79] border border-[#CBD5E1]/60 text-[#FFFFFF]">Хааны Ордны Канцлер (Royal Court)</span>
+          <span className="text-[#CBD5E1]">→</span>
+          <span className="px-3 py-1 rounded bg-[#142B4A] border border-[#CBD5E1]/40 text-[#D9DEE5]">Дээд Язгууртан (High Nobility)</span>
+          <span className="text-[#CBD5E1]">→</span>
           <span className="px-3 py-1 rounded bg-[#142B4A] border border-[#1F4E79] text-[#D9DEE5]">Дунд Язгууртан (Middle Nobility)</span>
-          <span className="text-[#C9A85C]">→</span>
-          <span className="px-3 py-1 rounded bg-[#0C1421] border border-[#C9A85C]/30 text-[#C9A85C]">Язгууртан & Цолтон (Noble & Titles)</span>
+          <span className="text-[#CBD5E1]">→</span>
+          <span className="px-3 py-1 rounded bg-[#0C1421] border border-[#CBD5E1]/30 text-[#CBD5E1]">Язгууртан & Цолтон (Noble & Titles)</span>
         </div>
       </div>
 
@@ -76,59 +69,59 @@ export const NobilityHierarchy: React.FC = () => {
             onClick={() => setActiveCategory(cat.key)}
             className={`px-3 sm:px-4 py-2 rounded text-xs font-serif tracking-wider uppercase transition-all duration-200 flex items-center gap-2 ${
               activeCategory === cat.key
-                ? 'bg-[#C9A85C] text-[#0C1421] font-bold shadow-lg scale-105'
-                : 'bg-[#142B4A]/60 hover:bg-[#1F4E79] text-[#D9DEE5] border border-[#C9A85C]/30'
+                ? 'bg-[#CBD5E1] text-[#0C1421] font-bold shadow-lg scale-105'
+                : 'bg-[#142B4A]/60 hover:bg-[#1F4E79] text-[#D9DEE5] border border-[#CBD5E1]/30'
             }`}
           >
             <span>{cat.labelMongolian}</span>
-            <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${activeCategory === cat.key ? 'bg-[#0C1421] text-[#FFF0CA]' : 'bg-[#0C1421]/60 text-[#C9A85C]'}`}>
+            <span className={`text-[10px] px-1.5 py-0.2 rounded font-mono ${activeCategory === cat.key ? 'bg-[#0C1421] text-[#FFFFFF]' : 'bg-[#0C1421]/60 text-[#CBD5E1]'}`}>
               {cat.count}
             </span>
           </button>
         ))}
       </div>
 
-
-
-      {/* Nobility Cards Grid */}
+      {/* Nobility Cards Grid with Elegant Lines */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         {filteredItems.map((item) => {
           return (
-            <OrnateFrame
+            <ElegantLineCard
               key={item.id}
-              variant={item.category === 'high' ? 'gold' : 'sapphire'}
-              padding="p-4 sm:p-5"
-              className="flex flex-col justify-between hover:border-[#C9A85C] transition-all"
+              accentColor={item.category === 'high' ? 'platinum' : 'sapphire'}
+              padding="p-5"
+              className="flex flex-col justify-between transition-all duration-300 hover:bg-[#142B4A]/30"
             >
               <div>
                 {/* Header: Number & Category Badge */}
-                <div className="flex items-center justify-between border-b border-[#C9A85C]/20 pb-2.5 mb-3">
+                <div className="flex items-center justify-between border-b border-[#CBD5E1]/20 pb-2.5 mb-3">
                   <div className="flex items-center gap-2">
-                    <span className="font-mono text-xs font-bold text-[#E8C87A] px-2 py-0.5 rounded bg-[#0C1421] border border-[#C9A85C]/40">
+                    <span className="font-mono text-xs font-bold text-[#E2E8F0] px-2 py-0.5 rounded bg-[#0C1421]/90 border border-[#CBD5E1]/30">
                       {item.number}
                     </span>
                     {getCategoryBadge(item.category)}
                   </div>
                 </div>
 
-                {/* Title & Rank (Refined font size) */}
+                {/* Title & Rank in Single Elegant Imperial Typography */}
                 <div className="mb-3">
-                  <h4 className="font-royal text-sm sm:text-base font-bold text-[#FFF0CA] mb-0.5">
+                  <h4 className="font-royal font-semibold tracking-wide text-2xl sm:text-[25px] text-[#FFFFFF] mb-1 drop-shadow-[0_1px_6px_rgba(0,0,0,0.8)] leading-snug">
                     {item.mongolianTitle}
                   </h4>
-                  <div className="font-serif italic text-xs text-[#D9DEE5]/80">
+                  <div className="font-serif italic text-xs text-[#CBD5E1]/80">
                     {item.englishTitle}
                   </div>
+                  {/* Subtle hairline under title */}
+                  <div className="w-12 h-[1px] bg-gradient-to-r from-[#CBD5E1]/40 to-transparent my-2" />
                 </div>
 
-                {/* Description */}
+                {/* Description with Clean Left Line Accent */}
                 {item.description && (
-                  <p className="text-xs text-[#D9DEE5]/75 leading-relaxed font-sans bg-[#0C1421]/50 p-2.5 rounded border border-[#1F4E79]/30">
+                  <p className="text-xs text-[#D9DEE5]/80 leading-relaxed font-sans pl-3 border-l border-[#CBD5E1]/20 py-0.5">
                     {item.description}
                   </p>
                 )}
               </div>
-            </OrnateFrame>
+            </ElegantLineCard>
           );
         })}
       </div>

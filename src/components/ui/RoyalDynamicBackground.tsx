@@ -9,7 +9,7 @@ interface Particle {
   opacity: number;
   targetOpacity: number;
   pulseSpeed: number;
-  hue: 'gold' | 'sapphire' | 'amber' | 'starlight';
+  hue: 'platinum' | 'sapphire' | 'silver' | 'starlight';
 }
 
 interface Star {
@@ -68,10 +68,10 @@ export const RoyalDynamicBackground: React.FC = () => {
       const starCount = Math.min(Math.floor((width * height) / 16000), 85);
       const gemCount = Math.min(Math.max(Math.floor((width * height) / 75000), 8), 16);
 
-      // 1. Golden stardust particles
+      // 1. Platinum stardust particles
       particles = [];
       for (let i = 0; i < particleCount; i++) {
-        const types: ('gold' | 'sapphire' | 'amber' | 'starlight')[] = ['gold', 'gold', 'sapphire', 'amber', 'starlight'];
+        const types: ('platinum' | 'sapphire' | 'silver' | 'starlight')[] = ['platinum', 'platinum', 'sapphire', 'silver', 'starlight'];
         particles.push({
           x: Math.random() * width,
           y: Math.random() * height,
@@ -88,10 +88,10 @@ export const RoyalDynamicBackground: React.FC = () => {
       // 2. Diamond starlight stars
       stars = [];
       const starColors = [
-        'rgba(255, 245, 223, ',
-        'rgba(232, 200, 122, ',
+        'rgba(255, 255, 255, ',
+        'rgba(226, 232, 240, ',
         'rgba(147, 197, 253, ',
-        'rgba(255, 255, 255, '
+        'rgba(203, 213, 225, '
       ];
 
       for (let i = 0; i < starCount; i++) {
@@ -384,7 +384,7 @@ export const RoyalDynamicBackground: React.FC = () => {
         ctx.fill();
 
         if (alpha > 0.65 && star.size > 1.2) {
-          ctx.strokeStyle = `rgba(255, 245, 223, ${alpha * 0.6})`;
+          ctx.strokeStyle = `rgba(255, 255, 255, ${alpha * 0.6})`;
           ctx.lineWidth = 0.75;
           const rayLen = star.size * 3.5;
           ctx.beginPath();
@@ -434,18 +434,18 @@ export const RoyalDynamicBackground: React.FC = () => {
           p.targetOpacity = Math.random() * 0.75 + 0.2;
         }
 
-        let gradColorCenter = 'rgba(255, 245, 223, ';
-        let gradColorOuter = 'rgba(201, 168, 92, ';
+        let gradColorCenter = 'rgba(255, 255, 255, ';
+        let gradColorOuter = 'rgba(203, 213, 225, ';
 
         if (p.hue === 'sapphire') {
           gradColorCenter = 'rgba(147, 197, 253, ';
           gradColorOuter = 'rgba(42, 117, 211, ';
-        } else if (p.hue === 'amber') {
-          gradColorCenter = 'rgba(254, 240, 138, ';
-          gradColorOuter = 'rgba(217, 119, 6, ';
+        } else if (p.hue === 'silver' || p.hue === 'platinum') {
+          gradColorCenter = 'rgba(241, 245, 249, ';
+          gradColorOuter = 'rgba(203, 213, 225, ';
         } else if (p.hue === 'starlight') {
           gradColorCenter = 'rgba(255, 255, 255, ';
-          gradColorOuter = 'rgba(203, 213, 225, ';
+          gradColorOuter = 'rgba(226, 232, 240, ';
         }
 
         const rad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, p.size * 3.5);
@@ -486,22 +486,22 @@ export const RoyalDynamicBackground: React.FC = () => {
         }}
       />
       
-      {/* Warm Golden Imperial Aurora Glow in upper-center */}
+      {/* Radiant Platinum Imperial Aurora Glow in upper-center */}
       <div 
         className="absolute top-0 left-1/2 -translate-x-1/2 w-[85vw] max-w-5xl h-[600px] opacity-25 blur-3xl pointer-events-none animate-[pulse_10s_ease-in-out_infinite]"
         style={{
-          background: 'radial-gradient(ellipse at 50% 0%, rgba(232, 200, 122, 0.35) 0%, rgba(31, 78, 121, 0.2) 50%, transparent 80%)'
+          background: 'radial-gradient(ellipse at 50% 0%, rgba(226, 232, 240, 0.25) 0%, rgba(31, 78, 121, 0.2) 50%, transparent 80%)'
         }}
       />
 
-      {/* Dynamic Canvas with Sapphire Crystals, Golden Dust, Twinkling Stars & Shimmer */}
+      {/* Dynamic Canvas with Sapphire Crystals, Platinum Dust, Twinkling Stars & Shimmer */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full block"
       />
 
       {/* Royal Subtle Geometric Watermark */}
-      <div className="absolute inset-0 opacity-[0.035] bg-[radial-gradient(#E8C87A_1.5px,transparent_1.5px)] [background-size:48px_48px]" />
+      <div className="absolute inset-0 opacity-[0.035] bg-[radial-gradient(#CBD5E1_1.5px,transparent_1.5px)] [background-size:48px_48px]" />
     </div>
   );
 };

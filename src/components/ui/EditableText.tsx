@@ -63,7 +63,7 @@ export const EditableText: React.FC<EditableTextProps> = ({
   if (isEditing && isEditMode) {
     return (
       <div className="inline-flex flex-col gap-1.5 z-20 relative my-1 w-full max-w-full">
-        {label && <span className="text-xs uppercase tracking-wider text-[#C9A85C] font-mono">{label}</span>}
+        {label && <span className="text-xs uppercase tracking-wider text-[#CBD5E1] font-mono">{label}</span>}
         <div className="flex items-center gap-1.5 w-full">
           {multiline ? (
             <textarea
@@ -73,7 +73,7 @@ export const EditableText: React.FC<EditableTextProps> = ({
               onKeyDown={handleKeyDown}
               rows={3}
               placeholder={placeholder}
-              className={`w-full bg-[#0C1421]/95 text-[#FFF0CA] border border-[#C9A85C] rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#C9A85C] shadow-lg ${inputClassName}`}
+              className={`w-full bg-[#0C1421]/95 text-[#FFFFFF] border border-[#CBD5E1] rounded px-3 py-2 text-sm focus:outline-none focus:ring-1 focus:ring-[#CBD5E1] shadow-lg ${inputClassName}`}
             />
           ) : (
             <input
@@ -83,14 +83,14 @@ export const EditableText: React.FC<EditableTextProps> = ({
               onChange={(e) => setCurrentValue(e.target.value)}
               onKeyDown={handleKeyDown}
               placeholder={placeholder}
-              className={`w-full bg-[#0C1421]/95 text-[#FFF0CA] border border-[#C9A85C] rounded px-2.5 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-[#C9A85C] shadow-lg ${inputClassName}`}
+              className={`w-full bg-[#0C1421]/95 text-[#FFFFFF] border border-[#CBD5E1] rounded px-2.5 py-1 text-sm focus:outline-none focus:ring-1 focus:ring-[#CBD5E1] shadow-lg ${inputClassName}`}
             />
           )}
           <button
             type="button"
             onClick={handleSave}
             title="Хадгалах (Save)"
-            className="p-1.5 bg-[#1F4E79] hover:bg-[#C9A85C] text-[#FFF0CA] hover:text-[#0C1421] rounded border border-[#C9A85C]/60 transition-colors shadow"
+            className="p-1.5 bg-[#1F4E79] hover:bg-[#CBD5E1] text-[#FFFFFF] hover:text-[#0C1421] rounded border border-[#CBD5E1]/60 transition-colors shadow"
           >
             <Check className="w-4 h-4" />
           </button>
@@ -121,7 +121,7 @@ export const EditableText: React.FC<EditableTextProps> = ({
           }}
           title="Засварлах (Edit ✎)"
           aria-label="Засварлах"
-          className="edit-trigger inline-flex items-center justify-center w-5 h-5 rounded bg-[#142B4A]/90 hover:bg-[#C9A85C] text-[#C9A85C] hover:text-[#0C1421] border border-[#C9A85C]/40 text-[10px] transition-all transform hover:scale-110 shadow-sm ml-1.5"
+          className="edit-trigger inline-flex items-center justify-center w-5 h-5 rounded bg-[#142B4A]/90 hover:bg-[#CBD5E1] text-[#CBD5E1] hover:text-[#0C1421] border border-[#CBD5E1]/40 text-[10px] transition-all transform hover:scale-110 shadow-sm ml-1.5"
         >
           <Edit2 className="w-2.5 h-2.5" />
         </button>

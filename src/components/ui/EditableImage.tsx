@@ -52,7 +52,7 @@ export const EditableImage: React.FC<EditableImageProps> = ({
         />
       ) : (
         <div className={`w-full h-full bg-[#142B4A]/40 border border-[#1F4E79]/60 flex flex-col items-center justify-center p-6 text-center ${getAspectClass()} ${className}`}>
-          <ImageIcon className="w-10 h-10 text-[#C9A85C]/60 mb-2" />
+          <ImageIcon className="w-10 h-10 text-[#CBD5E1]/60 mb-2" />
           <span className="text-xs text-[#D9DEE5]/60 font-serif">{fallbackPlaceholder || alt}</span>
         </div>
       )}
@@ -63,7 +63,7 @@ export const EditableImage: React.FC<EditableImageProps> = ({
           <button
             type="button"
             onClick={handleEdit}
-            className="px-3 py-2 bg-[#1F4E79] hover:bg-[#C9A85C] text-[#FFF0CA] hover:text-[#0C1421] rounded border border-[#C9A85C] text-xs font-semibold flex items-center gap-2 shadow-xl transition-all transform hover:scale-105"
+            className="px-3 py-2 bg-[#1F4E79] hover:bg-[#CBD5E1] text-[#FFFFFF] hover:text-[#0C1421] rounded border border-[#CBD5E1] text-xs font-semibold flex items-center gap-2 shadow-xl transition-all transform hover:scale-105"
           >
             <Camera className="w-3.5 h-3.5" />
             <span>Зураг солих ✎ (Change Image)</span>

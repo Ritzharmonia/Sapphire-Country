@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
   Scroll, 
   BookOpen, 
@@ -6,13 +6,12 @@ import {
   ShieldCheck, 
   PlusCircle, 
   Trash2, 
-  CheckCircle, 
   Plus, 
   X 
 } from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
 import { EditableText } from './ui/EditableText';
-import { OrnateFrame } from './ui/OrnateFrame';
+import { ElegantLineCard } from './ui/ElegantLineCard';
 import { SectionHeading } from './ui/SectionHeading';
 import { CourtRank } from '../types';
 
@@ -21,10 +20,10 @@ export const RoyalCourtRanks: React.FC = () => {
 
   const getBadgeIcon = (symbol?: string) => {
     switch (symbol) {
-      case 'Scroll': return <Scroll className="w-5 h-5 text-[#C9A85C]" />;
+      case 'Scroll': return <Scroll className="w-5 h-5 text-[#CBD5E1]" />;
       case 'BookOpen': return <BookOpen className="w-5 h-5 text-[#5B8AC4]" />;
-      case 'Megaphone': return <Megaphone className="w-5 h-5 text-[#E8C87A]" />;
-      default: return <ShieldCheck className="w-5 h-5 text-[#C9A85C]" />;
+      case 'Megaphone': return <Megaphone className="w-5 h-5 text-[#FFFFFF]" />;
+      default: return <ShieldCheck className="w-5 h-5 text-[#CBD5E1]" />;
     }
   };
 
@@ -83,35 +82,35 @@ export const RoyalCourtRanks: React.FC = () => {
           <button
             type="button"
             onClick={handleAddNewRank}
-            className="flex items-center gap-2 px-4 py-2 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C] rounded font-royal text-xs tracking-wider shadow-lg transition-all transform hover:scale-105"
+            className="flex items-center gap-2 px-4 py-2 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFFFFF] border border-[#CBD5E1] rounded font-royal text-xs tracking-wider shadow-lg transition-all transform hover:scale-105"
           >
-            <PlusCircle className="w-4 h-4 text-[#C9A85C]" />
+            <PlusCircle className="w-4 h-4 text-[#CBD5E1]" />
             <span>+ Ордны Тушаал Нэмэх (Add Court Officer)</span>
           </button>
         </div>
       )}
 
-      {/* Cards Grid for Court Ranks */}
+      {/* Cards Grid for Court Ranks with Elegant Lines */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
         {data.courtRanks.map((rank) => (
-          <OrnateFrame
+          <ElegantLineCard
             key={rank.id}
-            variant="gold"
-            className="flex flex-col justify-between h-full"
+            accentColor="platinum"
+            className="flex flex-col justify-between h-full transition-all duration-300"
             glow={rank.number === '08'}
           >
             <div>
               {/* Header Number & Badge */}
-              <div className="flex items-center justify-between border-b border-[#C9A85C]/30 pb-3 mb-4">
+              <div className="flex items-center justify-between border-b border-[#CBD5E1]/20 pb-3 mb-4">
                 <div className="flex items-center gap-2">
-                  <span className="font-mono text-sm font-bold text-[#E8C87A] px-2 py-0.5 rounded bg-[#0C1421] border border-[#C9A85C]/60">
+                  <span className="font-mono text-sm font-bold text-[#E2E8F0] px-2 py-0.5 rounded bg-[#0C1421]/90 border border-[#CBD5E1]/30">
                     <EditableText
                       value={rank.number}
                       onSave={(val) => updateCourtRank(rank.id, { number: val })}
                       label="№"
                     />
                   </span>
-                  <span className="text-[10px] uppercase tracking-widest text-[#D9DEE5]/60 font-serif">
+                  <span className="text-[10px] uppercase tracking-widest text-[#CBD5E1]/70 font-serif">
                     HIGH COURT RANK
                   </span>
                 </div>
@@ -131,7 +130,7 @@ export const RoyalCourtRanks: React.FC = () => {
                       <Trash2 className="w-3.5 h-3.5" />
                     </button>
                   )}
-                  <div className="p-2 rounded bg-[#142B4A] border border-[#C9A85C]/50">
+                  <div className="p-2 rounded bg-[#142B4A]/80 border border-[#CBD5E1]/30">
                     {getBadgeIcon(rank.badgeSymbol)}
                   </div>
                 </div>
@@ -139,38 +138,40 @@ export const RoyalCourtRanks: React.FC = () => {
 
               {/* Title & Informal Title */}
               <div className="mb-4">
-                <h3 className="text-xl font-royal font-bold text-[#FFF0CA] mb-1">
+                <h3 className="text-2xl sm:text-[26px] font-royal font-semibold tracking-wide text-[#FFFFFF] mb-1 leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                   <EditableText
                     value={rank.mongolianTitle}
                     onSave={(val) => updateCourtRank(rank.id, { mongolianTitle: val })}
                     label="Монгол нэршил"
-                    className="text-xl font-royal font-bold text-[#FFF0CA]"
+                    className="text-2xl sm:text-[26px] font-royal font-semibold tracking-wide text-[#FFFFFF]"
                   />
                 </h3>
-                <div className="text-xs font-serif italic text-[#D9DEE5]/80 mb-2">
+                <div className="text-xs font-serif italic text-[#CBD5E1]/80 mb-2">
                   <EditableText
                     value={rank.englishTitle}
                     onSave={(val) => updateCourtRank(rank.id, { englishTitle: val })}
                     label="English Title"
-                    className="text-xs font-serif italic text-[#D9DEE5]/80"
+                    className="text-xs font-serif italic text-[#CBD5E1]/80"
                   />
                 </div>
                 {rank.informalTitle && (
-                  <div className="inline-block px-2.5 py-0.5 rounded bg-[#1F4E79]/40 border border-[#C9A85C]/30 text-[11px] text-[#C9A85C] font-mono">
+                  <div className="inline-flex items-center gap-1.5 text-xs sm:text-sm text-[#CBD5E1] font-royal italic tracking-wide mb-2">
                     «
                     <EditableText
                       value={rank.informalTitle}
                       onSave={(val) => updateCourtRank(rank.id, { informalTitle: val })}
                       label="Албан бус нэршил"
-                      className="text-[11px] text-[#C9A85C] font-mono"
+                      className="text-xs sm:text-sm text-[#CBD5E1] font-royal italic"
                     />
                     »
                   </div>
                 )}
+                {/* Subtle hairline under title */}
+                <div className="w-16 h-[1px] bg-gradient-to-r from-[#CBD5E1]/50 to-transparent my-2" />
               </div>
 
-              {/* Summary */}
-              <div className="p-3 bg-[#0C1421]/60 rounded border border-[#1F4E79]/40 mb-4 text-xs text-[#D9DEE5]/80 leading-relaxed font-sans">
+              {/* Summary with Clean Left Line Accent */}
+              <div className="pl-3.5 border-l border-[#CBD5E1]/25 py-1 mb-4 text-xs text-[#D9DEE5]/80 leading-relaxed font-sans">
                 <EditableText
                   value={rank.summary}
                   onSave={(val) => updateCourtRank(rank.id, { summary: val })}
@@ -182,13 +183,13 @@ export const RoyalCourtRanks: React.FC = () => {
 
               {/* Duties List */}
               <div className="space-y-2 mb-4">
-                <div className="text-[11px] uppercase font-serif tracking-wider text-[#C9A85C] flex items-center justify-between">
+                <div className="text-[11px] uppercase font-serif tracking-wider text-[#CBD5E1] flex items-center justify-between">
                   <span>ҮНДСЭН ҮҮРЭГ, БҮРЭН ЭРХ:</span>
                   {isEditMode && (
                     <button
                       type="button"
                       onClick={() => handleAddDuty(rank.id)}
-                      className="text-[10px] text-[#E8C87A] hover:underline flex items-center gap-1 font-mono"
+                      className="text-[10px] text-[#FFFFFF] hover:underline flex items-center gap-1 font-mono"
                     >
                       <Plus className="w-3 h-3" /> Үүрэг нэмэх
                     </button>
@@ -201,7 +202,7 @@ export const RoyalCourtRanks: React.FC = () => {
                       key={idx}
                       className="flex items-start gap-2 text-xs text-[#D9DEE5]/90 bg-[#142B4A]/25 p-2 rounded border border-[#1F4E79]/30"
                     >
-                      <span className="text-[#C9A85C] text-xs mt-0.5">❖</span>
+                      <span className="text-[#CBD5E1] text-xs mt-0.5">⚜</span>
                       <div className="flex-1">
                         <EditableText
                           value={duty}
@@ -226,21 +227,21 @@ export const RoyalCourtRanks: React.FC = () => {
               </div>
             </div>
 
-            {/* Bottom Rank Designation (Pure Title Names) */}
-            <div className="pt-3 border-t border-[#C9A85C]/20 flex items-center justify-between text-xs mt-4">
-              <span className="text-[#C9A85C] font-serif uppercase tracking-wider text-[10px]">
+            {/* Bottom Rank Designation */}
+            <div className="pt-3 border-t border-[#CBD5E1]/15 flex items-center justify-between text-xs mt-4">
+              <span className="text-[#CBD5E1] font-serif uppercase tracking-wider text-[10px]">
                 Хэргэмийн Зэрэг:
               </span>
-              <div className="font-royal text-[#FFF0CA] font-medium text-right">
+              <div className="font-royal text-[#FFFFFF] font-medium text-right">
                 <EditableText
                   value={rank.currentHolder || 'Төрийн Дээд Зэрэг'}
                   onSave={(val) => updateCourtRank(rank.id, { currentHolder: val })}
                   label="Хэргэмийн зэрэг / Албан тушаал"
-                  className="font-royal text-[#FFF0CA] font-medium text-xs"
+                  className="font-royal text-[#FFFFFF] font-medium text-xs"
                 />
               </div>
             </div>
-          </OrnateFrame>
+          </ElegantLineCard>
         ))}
       </div>
     </section>

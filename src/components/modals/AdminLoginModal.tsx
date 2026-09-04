@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShieldCheck, Lock, Key, X, AlertCircle, Sparkles } from 'lucide-react';
+import { ShieldCheck, Lock, Key, X, AlertCircle } from 'lucide-react';
 import { useKingdom } from '../../context/KingdomContext';
 
 export const AdminLoginModal: React.FC = () => {
@@ -32,37 +32,37 @@ export const AdminLoginModal: React.FC = () => {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#070B12]/85 backdrop-blur-md animate-fadeIn">
-      <div className="relative w-full max-w-md bg-[#0C1421] border-2 border-[#C9A85C] rounded-2xl shadow-[0_0_50px_rgba(201,168,92,0.3)] p-6 sm:p-8 text-[#D9DEE5]">
+      <div className="relative w-full max-w-md bg-[#0C1421] border-2 border-[#CBD5E1] rounded-2xl shadow-[0_0_50px_rgba(226,232,240,0.3)] p-6 sm:p-8 text-[#D9DEE5]">
         
         {/* Close Button */}
         <button
           type="button"
           onClick={handleClose}
-          className="absolute top-4 right-4 p-1.5 rounded-full bg-[#142B4A]/80 hover:bg-[#1F4E79] text-[#FFF0CA] border border-[#C9A85C]/40 transition-colors"
+          className="absolute top-4 right-4 p-1.5 rounded-full bg-[#142B4A]/80 hover:bg-[#1F4E79] text-[#FFFFFF] border border-[#CBD5E1]/40 transition-colors"
         >
           <X className="w-4 h-4" />
         </button>
 
         {/* Header Icon */}
         <div className="flex flex-col items-center text-center mb-6">
-          <div className="w-14 h-14 rounded-full bg-gradient-to-b from-[#1F4E79] to-[#142B4A] border-2 border-[#C9A85C] flex items-center justify-center shadow-lg mb-3">
-            <Lock className="w-7 h-7 text-[#E8C87A]" />
+          <div className="w-14 h-14 rounded-full bg-gradient-to-b from-[#1F4E79] to-[#142B4A] border-2 border-[#CBD5E1] flex items-center justify-center shadow-lg mb-3">
+            <Lock className="w-7 h-7 text-[#E2E8F0]" />
           </div>
-          <h3 className="text-xl font-royal font-bold text-[#FFF0CA] tracking-wider">
+          <h3 className="text-xl font-royal font-bold text-[#FFFFFF] tracking-wider">
             ЭЗЭН ХААНЫ АДМИН ХАНДАЛТ
           </h3>
-          <p className="text-xs font-serif text-[#C9A85C] mt-1">
+          <p className="text-xs font-serif text-[#CBD5E1] mt-1">
             (Imperial Sovereign Admin Verification)
           </p>
           <p className="text-xs text-[#D9DEE5]/70 mt-2 max-w-xs">
-            Энэхүү цахим архив олон нийтэд зөвхөн <strong className="text-[#FFF0CA]">Үзэх Горим</strong> (Read-Only)-оор харагдах ба зөвхөн эзэмшигч админ нууц кодоор нэвтэрч засварлана.
+            Энэхүү цахим архив олон нийтэд зөвхөн <strong className="text-[#FFFFFF]">Үзэх Горим</strong> (Read-Only)-оор харагдах ба зөвхөн эзэмшигч админ нууц кодоор нэвтэрч засварлана.
           </p>
         </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
-            <label className="block text-xs font-royal uppercase tracking-widest text-[#E8C87A] mb-1.5 flex items-center gap-1.5">
+            <label className="block text-xs font-royal uppercase tracking-widest text-[#E2E8F0] mb-1.5 flex items-center gap-1.5">
               <Key className="w-3.5 h-3.5" />
               <span>Админы Нууц Код / PIN:</span>
             </label>
@@ -75,10 +75,10 @@ export const AdminLoginModal: React.FC = () => {
               }}
               placeholder="Нууц кодоо оруулна уу..."
               autoFocus
-              className="w-full px-4 py-3 bg-[#142B4A]/80 border-2 border-[#C9A85C]/60 focus:border-[#E8C87A] rounded-xl text-center text-lg tracking-[0.3em] font-mono text-[#FFF0CA] focus:outline-none focus:ring-2 focus:ring-[#C9A85C]/40 shadow-inner"
+              className="w-full px-4 py-3 bg-[#142B4A]/80 border-2 border-[#CBD5E1]/60 focus:border-[#E2E8F0] rounded-xl text-center text-lg tracking-[0.3em] font-mono text-[#FFFFFF] focus:outline-none focus:ring-2 focus:ring-[#CBD5E1]/40 shadow-inner"
             />
             <div className="mt-1.5 flex items-center justify-between text-[11px] text-[#D9DEE5]/60">
-              <span>Анхны үндсэн код: <code className="text-[#E8C87A] font-bold">1234</code></span>
+              <span>Анхны үндсэн код: <code className="text-[#E2E8F0] font-bold">1234</code></span>
               <span>Хаалттай горим 🔒</span>
             </div>
           </div>
@@ -94,13 +94,13 @@ export const AdminLoginModal: React.FC = () => {
             <button
               type="button"
               onClick={handleClose}
-              className="flex-1 py-2.5 bg-[#142B4A]/80 hover:bg-[#1F4E79] text-[#D9DEE5] border border-[#C9A85C]/40 rounded-xl text-xs font-royal tracking-wider transition-all"
+              className="flex-1 py-2.5 bg-[#142B4A]/80 hover:bg-[#1F4E79] text-[#D9DEE5] border border-[#CBD5E1]/40 rounded-xl text-xs font-royal tracking-wider transition-all"
             >
               Болих (Үзэх)
             </button>
             <button
               type="submit"
-              className="flex-1 py-2.5 bg-gradient-to-r from-[#C9A85C] via-[#E8C87A] to-[#C9A85C] hover:from-[#E8C87A] hover:to-[#FFF0CA] text-[#0C1421] font-bold rounded-xl text-xs font-royal tracking-wider shadow-lg transition-all flex items-center justify-center gap-2"
+              className="flex-1 py-2.5 bg-gradient-to-r from-[#CBD5E1] via-[#E2E8F0] to-[#CBD5E1] hover:from-[#E2E8F0] hover:to-[#FFFFFF] text-[#0C1421] font-bold rounded-xl text-xs font-royal tracking-wider shadow-lg transition-all flex items-center justify-center gap-2"
             >
               <ShieldCheck className="w-4 h-4 text-[#0C1421]" />
               <span>Нэвтрэх (Unlock)</span>

@@ -17,8 +17,19 @@ import { EditableText } from './ui/EditableText';
 import { DEFAULT_MONARCH_IMAGE } from '../initialData';
 
 export const CountryOverview: React.FC = () => {
-  const { data, updateField } = useKingdom();
+  const { data, updateField, openModal, isEditMode } = useKingdom();
   const { overview } = data;
+
+  const handleMonarchClick = () => {
+    if (!isEditMode) return;
+    openModal('image', 'monarch-portrait', {
+      currentUrl: overview.monarchImage || DEFAULT_MONARCH_IMAGE,
+      scale: overview.monarchScale || 1,
+      offsetX: overview.monarchOffsetX || 0,
+      offsetY: overview.monarchOffsetY || 0,
+      title: 'ХАТАН ХААНЫ ХӨРӨГ ЗУРАГ (ROYAL MONARCH PORTRAIT)'
+    });
+  };
 
   return (
     <section id="overview" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative">
@@ -31,53 +42,101 @@ export const CountryOverview: React.FC = () => {
 
       {/* Grand Sovereign Monarch Feature Card with Locked Royal Portrait */}
       <div className="mb-10">
-        <OrnateFrame variant="gold" glow padding="p-6 sm:p-8" className="bg-gradient-to-r from-[#0C1421] via-[#142B4A]/80 to-[#0C1421]">
+        <OrnateFrame variant="platinum" glow padding="p-6 sm:p-8" className="bg-gradient-to-r from-[#0C1421] via-[#142B4A]/80 to-[#0C1421]">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 lg:gap-8 items-center">
             
-            {/* Left: Royal Monarch Portrait Frame - Officially Locked */}
+            {/* Left: Royal Queen / Monarch Portrait in Luxurious Oval (Зууван) Imperial Medallion Frame */}
             <div className="md:col-span-5 lg:col-span-4 flex flex-col items-center">
               <div 
-                className="relative w-48 h-60 sm:w-56 sm:h-72 rounded-2xl overflow-hidden bg-[#0C1421] border-2 border-[#C9A85C]/80 shadow-[0_12px_36px_rgba(0,0,0,0.85),0_0_15px_rgba(201,168,92,0.18)] cursor-default"
+                onClick={handleMonarchClick}
+                className={`relative w-56 h-72 sm:w-64 sm:h-80 md:w-68 md:h-84 rounded-[50%] select-none transition-all duration-300 ${
+                  isEditMode ? 'cursor-pointer hover:scale-[1.02] group' : 'cursor-default'
+                }`}
+                title={isEditMode ? 'Хатан хааны хөрөг зураг солих (Click to Change Monarch Portrait)' : 'Эрхэм Дээдэс Хатан Хааны Хөрөг'}
               >
-                {/* Filigree Corner Accents */}
-                <div className="absolute top-1.5 left-1.5 w-4 h-4 border-t-2 border-l-2 border-[#C9A85C] z-10" />
-                <div className="absolute top-1.5 right-1.5 w-4 h-4 border-t-2 border-r-2 border-[#C9A85C] z-10" />
-                <div className="absolute bottom-1.5 left-1.5 w-4 h-4 border-b-2 border-l-2 border-[#C9A85C] z-10" />
-                <div className="absolute bottom-1.5 right-1.5 w-4 h-4 border-b-2 border-r-2 border-[#C9A85C] z-10" />
+                {/* Outer Platinum Oval Ring with Deep Imperial Shadow */}
+                <div className="absolute inset-0 rounded-[50%] border-2 border-[#CBD5E1]/85 shadow-[0_16px_40px_rgba(0,0,0,0.95),0_0_25px_rgba(203,213,225,0.22)] bg-gradient-to-b from-[#142B4A]/60 via-[#0C1421] to-[#142B4A]/60 pointer-events-none transition-all group-hover:border-[#FFFFFF]" />
 
-                {/* Monarch Portrait Image - Original artwork remains 100% visible and crisp */}
-                <img
-                  src={overview.monarchImage || DEFAULT_MONARCH_IMAGE}
-                  alt="Monarch"
-                  referrerPolicy="no-referrer"
-                  style={{
-                    transform: `scale(${overview.monarchScale || 1}) translate(${overview.monarchOffsetX || 0}px, ${overview.monarchOffsetY || 0}px)`
-                  }}
-                  className="w-full h-full object-cover transition-transform duration-300 drop-shadow-[0_8px_16px_rgba(0,0,0,0.9)]"
-                />
+                {/* Inner Delicate Concentric Oval Hairline */}
+                <div className="absolute inset-2 sm:inset-2.5 rounded-[50%] border border-[#CBD5E1]/40 pointer-events-none z-20" />
 
-                {/* Soft perimeter shadow matching dark edges seamlessly to the background without tinting the subject */}
-                <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-[#C9A85C]/25 pointer-events-none z-10 shadow-[inset_0_0_14px_rgba(12,20,33,0.65)]" />
+                {/* Imperial Crown Topper mounted at top apex of the Oval */}
+                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-30 px-3 py-0.5 rounded-full bg-[#0C1421] border border-[#CBD5E1] shadow-[0_2px_12px_rgba(0,0,0,0.9)] flex items-center gap-1.5 text-[#E2E8F0]">
+                  <Crown className="w-3.5 h-3.5 text-[#E2E8F0]" />
+                  <span className="text-[10px] font-royal tracking-widest uppercase font-bold text-[#FFFFFF]">
+                    MONARCH
+                  </span>
+                </div>
+
+                {/* Bottom Heraldic Finial Ornament */}
+                <div className="absolute -bottom-2.5 left-1/2 -translate-x-1/2 z-30 px-2.5 py-0.5 rounded-full bg-[#0C1421] border border-[#CBD5E1]/70 shadow-[0_2px_8px_rgba(0,0,0,0.8)] text-[#CBD5E1] text-[10px] font-serif flex items-center gap-1">
+                  <span>⚜</span>
+                  <span className="text-[9px] font-mono tracking-widest text-[#FFFFFF]">SAPPHIRE</span>
+                  <span>⚜</span>
+                </div>
+
+                {/* Monarch Portrait Image - Preserved crisp inside the Oval Medallion */}
+                <div className="relative w-full h-full rounded-[50%] overflow-hidden bg-[#0C1421] flex items-center justify-center z-10">
+                  <img
+                    src={overview.monarchImage || DEFAULT_MONARCH_IMAGE}
+                    alt="Monarch"
+                    referrerPolicy="no-referrer"
+                    style={{
+                      transform: `scale(${overview.monarchScale || 1}) translate(${overview.monarchOffsetX || 0}px, ${overview.monarchOffsetY || 0}px)`
+                    }}
+                    className="w-full h-full object-cover transition-transform duration-300 drop-shadow-[0_8px_16px_rgba(0,0,0,0.9)]"
+                  />
+
+                  {/* Soft Perimeter Vignette Matching Royal Dark Canvas */}
+                  <div className="absolute inset-0 pointer-events-none z-10 rounded-[50%] shadow-[inset_0_0_24px_rgba(12,20,33,0.85)] border border-[#CBD5E1]/20" />
+                </div>
+
+                {/* Interactive Hover Overlay in Edit Mode */}
+                {isEditMode && (
+                  <div className="absolute inset-0 z-30 rounded-[50%] bg-[#0C1421]/85 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity duration-200 flex flex-col items-center justify-center p-4 text-center border-2 border-[#CBD5E1]">
+                    <div className="w-10 h-10 rounded-full bg-[#1F4E79] border border-[#CBD5E1] flex items-center justify-center mb-1.5 shadow-lg">
+                      <Crown className="w-5 h-5 text-[#CBD5E1]" />
+                    </div>
+                    <span className="text-xs font-royal font-bold text-[#FFFFFF] tracking-wider">
+                      Хөрөг зураг солих ✎
+                    </span>
+                    <span className="text-[9px] text-[#D9DEE5]/80 font-sans mt-0.5">
+                      (Файл хуулах эсвэл URL оруулах)
+                    </span>
+                  </div>
+                )}
               </div>
+
+              {/* Edit Mode Button Below Portrait */}
+              {isEditMode && (
+                <button
+                  type="button"
+                  onClick={handleMonarchClick}
+                  className="mt-3.5 px-4 py-1.5 bg-gradient-to-r from-[#142B4A] via-[#1B385D] to-[#142B4A] hover:from-[#1B385D] hover:to-[#224A7A] text-[#FFFFFF] border border-[#CBD5E1]/70 rounded-full font-royal text-[11px] tracking-widest uppercase flex items-center gap-2 shadow-[0_4px_15px_rgba(0,0,0,0.6)] transition-all hover:scale-105 hover:border-[#FFFFFF] cursor-pointer"
+                >
+                  <Crown className="w-3.5 h-3.5 text-[#CBD5E1]" />
+                  <span>Хатан хааны хөрөг солих ✎</span>
+                </button>
+              )}
             </div>
 
             {/* Right: Royal Monarch Information & Reign Dossier */}
             <div className="md:col-span-7 lg:col-span-8 flex flex-col justify-center space-y-4">
               
               {/* Monarch Badge */}
-              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded bg-[#0C1421] border border-[#C9A85C]/60 shadow">
-                <Crown className="w-4 h-4 text-[#E8C87A]" />
-                <span className="text-[11px] font-mono uppercase tracking-widest text-[#E8C87A] font-bold">
+              <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded bg-[#0C1421] border border-[#CBD5E1]/60 shadow">
+                <Crown className="w-4 h-4 text-[#E2E8F0]" />
+                <span className="text-[11px] font-mono uppercase tracking-widest text-[#E2E8F0] font-bold">
                   MONARCH · ТӨРИЙН ТЭРГҮҮН
                 </span>
               </div>
 
-              {/* Monarch Full Name (Refined slightly smaller font size) */}
+              {/* Monarch Full Name */}
               <div>
-                <span className="text-xs uppercase font-serif tracking-wider text-[#C9A85C] block mb-1">
+                <span className="text-xs uppercase font-serif tracking-wider text-[#CBD5E1] block mb-1">
                   Төрийн Тэргүүний Нэршил / Хаан Хэргэм:
                 </span>
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-royal font-bold text-[#FFF0CA] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-royal font-bold text-[#FFFFFF] drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">
                   {overview.monarch || 'Эрхэм Дээдэс Хаан / Хатан'}
                 </h3>
               </div>
@@ -88,18 +147,18 @@ export const CountryOverview: React.FC = () => {
               </div>
 
               {/* Imperial Proclamation / Quote */}
-              <div className="p-4 rounded-xl bg-[#0C1421]/70 border border-[#C9A85C]/30 relative text-xs sm:text-sm text-[#D9DEE5]/90 font-serif italic leading-relaxed">
-                <span className="text-[#C9A85C] text-lg font-royal mr-1">“</span>
+              <div className="p-4 rounded-xl bg-[#0C1421]/70 border border-[#CBD5E1]/30 relative text-xs sm:text-sm text-[#D9DEE5]/90 font-serif italic leading-relaxed">
+                <span className="text-[#CBD5E1] text-lg font-royal mr-1">“</span>
                 {overview.monarchQuote || 'Индранил эрдэнийн мөнхийн гэрэл дор эзэнт гүрний нэр хүнд, төрийн эрх үеэс үед өвлөгдөнө.'}
-                <span className="text-[#C9A85C] text-lg font-royal ml-1">”</span>
+                <span className="text-[#CBD5E1] text-lg font-royal ml-1">”</span>
               </div>
 
               {/* Quick Status Badges */}
               <div className="flex flex-wrap gap-2 pt-1 text-xs">
-                <span className="px-2.5 py-1 rounded bg-[#142B4A]/60 text-[#C9A85C] border border-[#C9A85C]/30 font-mono">
+                <span className="px-2.5 py-1 rounded bg-[#142B4A]/60 text-[#CBD5E1] border border-[#CBD5E1]/30 font-mono">
                   ✦ Саффирын Хаан Ширээ
                 </span>
-                <span className="px-2.5 py-1 rounded bg-[#142B4A]/60 text-[#D9DEE5] border border-[#C9A85C]/30 font-mono">
+                <span className="px-2.5 py-1 rounded bg-[#142B4A]/60 text-[#D9DEE5] border border-[#CBD5E1]/30 font-mono">
                   ✦ Тусгаар Тогтнолын Батлан Даагч
                 </span>
               </div>
@@ -114,17 +173,17 @@ export const CountryOverview: React.FC = () => {
         
         {/* Left Column: Official Imperial Dossier (The Core Fields) */}
         <div className="lg:col-span-7 flex flex-col">
-          <OrnateFrame variant="gold" glow className="h-full flex flex-col justify-between">
+          <OrnateFrame variant="platinum" glow className="h-full flex flex-col justify-between">
             <div>
               {/* Header Badge */}
-              <div className="flex items-center justify-between border-b border-[#C9A85C]/30 pb-4 mb-6">
+              <div className="flex items-center justify-between border-b border-[#CBD5E1]/30 pb-4 mb-6">
                 <div className="flex items-center gap-2">
-                  <Landmark className="w-5 h-5 text-[#C9A85C]" />
-                  <span className="font-royal text-sm uppercase tracking-widest text-[#FFF0CA] font-bold">
+                  <Landmark className="w-5 h-5 text-[#CBD5E1]" />
+                  <span className="font-royal text-sm uppercase tracking-widest text-[#FFFFFF] font-bold">
                     ТӨРИЙН ДЭЭД МЭДЭЭЛЭЛ / STATE DOSSIER
                   </span>
                 </div>
-                <span className="text-[10px] font-mono uppercase tracking-widest text-[#C9A85C] px-2 py-0.5 border border-[#C9A85C]/30 bg-[#142B4A]/50">
+                <span className="text-[10px] font-mono uppercase tracking-widest text-[#CBD5E1] px-2 py-0.5 border border-[#CBD5E1]/30 bg-[#142B4A]/50">
                   CONFIDENTIAL ARCHIVE
                 </span>
               </div>
@@ -133,19 +192,19 @@ export const CountryOverview: React.FC = () => {
               <div className="space-y-4 sm:space-y-5">
                 
                 {/* 1. Албан ёсны нэр */}
-                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#C9A85C]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#CBD5E1]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#C9A85C]/40 flex items-center justify-center shrink-0">
-                      <Flag className="w-4 h-4 text-[#C9A85C]" />
+                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#CBD5E1]/40 flex items-center justify-center shrink-0">
+                      <Flag className="w-4 h-4 text-[#CBD5E1]" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-serif tracking-wider text-[#C9A85C]">Албан ёсны нэр (Official Name)</div>
-                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA]">
+                      <div className="text-xs uppercase font-serif tracking-wider text-[#CBD5E1]">Албан ёсны нэр (Official Name)</div>
+                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFFFFF]">
                         <EditableText
                           value={overview.officialNameMongolian}
                           onSave={(val) => updateField('overview.officialNameMongolian', val)}
                           label="Албан ёсны нэр"
-                          className="font-royal font-bold text-[#FFF0CA]"
+                          className="font-royal font-bold text-[#FFFFFF]"
                         />
                       </div>
                     </div>
@@ -156,13 +215,13 @@ export const CountryOverview: React.FC = () => {
                 </div>
 
                 {/* 2. Англи нэр */}
-                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#C9A85C]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#CBD5E1]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#C9A85C]/40 flex items-center justify-center shrink-0">
-                      <BookOpen className="w-4 h-4 text-[#C9A85C]" />
+                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#CBD5E1]/40 flex items-center justify-center shrink-0">
+                      <BookOpen className="w-4 h-4 text-[#CBD5E1]" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-serif tracking-wider text-[#C9A85C]">Англи нэр (English Name)</div>
+                      <div className="text-xs uppercase font-serif tracking-wider text-[#CBD5E1]">Англи нэр (English Name)</div>
                       <div className="text-base sm:text-lg font-royal font-bold text-[#D9DEE5]">
                         <EditableText
                           value={overview.officialNameEnglish}
@@ -179,19 +238,19 @@ export const CountryOverview: React.FC = () => {
                 </div>
 
                 {/* 3. Харьяалал */}
-                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#C9A85C]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#CBD5E1]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#C9A85C]/40 flex items-center justify-center shrink-0">
-                      <Shield className="w-4 h-4 text-[#C9A85C]" />
+                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#CBD5E1]/40 flex items-center justify-center shrink-0">
+                      <Shield className="w-4 h-4 text-[#CBD5E1]" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-serif tracking-wider text-[#C9A85C]">Харьяалал (Jurisdiction / Group)</div>
-                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA]">
+                      <div className="text-xs uppercase font-serif tracking-wider text-[#CBD5E1]">Харьяалал (Jurisdiction / Group)</div>
+                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFFFFF]">
                         <EditableText
                           value={overview.jurisdiction}
                           onSave={(val) => updateField('overview.jurisdiction', val)}
                           label="Харьяалал"
-                          className="font-royal font-bold text-[#FFF0CA]"
+                          className="font-royal font-bold text-[#FFFFFF]"
                         />
                       </div>
                     </div>
@@ -202,39 +261,39 @@ export const CountryOverview: React.FC = () => {
                 </div>
 
                 {/* 4. Төрийн тэргүүн / Monarch Fast-Link */}
-                <div className="p-3.5 sm:p-4 rounded bg-gradient-to-r from-[#142B4A]/60 via-[#1F4E79]/40 to-[#142B4A]/60 border border-[#C9A85C]/60 hover:border-[#E8C87A] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-md">
+                <div className="p-3.5 sm:p-4 rounded bg-gradient-to-r from-[#142B4A]/60 via-[#1F4E79]/40 to-[#142B4A]/60 border border-[#CBD5E1]/60 hover:border-[#FFFFFF] transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2 shadow-md">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#C9A85C] flex items-center justify-center shrink-0 shadow-lg">
-                      <Crown className="w-4 h-4 text-[#E8C87A]" />
+                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#CBD5E1] flex items-center justify-center shrink-0 shadow-lg">
+                      <Crown className="w-4 h-4 text-[#E2E8F0]" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-serif tracking-wider text-[#E8C87A] font-bold">Төрийн тэргүүн / Monarch</div>
-                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA]">
+                      <div className="text-xs uppercase font-serif tracking-wider text-[#E2E8F0] font-bold">Төрийн тэргүүн / Monarch</div>
+                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFFFFF]">
                         {overview.monarch || 'Эрхэм Дээдэс Хаан / Хатан'}
                       </div>
                     </div>
                   </div>
-                  <div className="text-xs font-mono uppercase text-[#E8C87A]/80 pl-11 sm:pl-0 font-semibold tracking-wider">
+                  <div className="text-xs font-mono uppercase text-[#E2E8F0]/80 pl-11 sm:pl-0 font-semibold tracking-wider">
                     Monarch
                   </div>
                 </div>
 
                 {/* 5. Төрийн бэлгэдэл */}
-                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#C9A85C]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                <div className="p-3.5 sm:p-4 rounded bg-[#142B4A]/30 border border-[#1F4E79]/50 hover:border-[#CBD5E1]/50 transition-all flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#C9A85C]/40 flex items-center justify-center shrink-0">
+                    <div className="w-8 h-8 rounded bg-[#0C1421] border border-[#CBD5E1]/40 flex items-center justify-center shrink-0">
                       <Gem className="w-4 h-4 text-[#5B8AC4]" />
                     </div>
                     <div>
-                      <div className="text-xs uppercase font-serif tracking-wider text-[#C9A85C]">Төрийн бэлгэдэл (State Symbol)</div>
-                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA] flex items-center gap-2">
+                      <div className="text-xs uppercase font-serif tracking-wider text-[#CBD5E1]">Төрийн бэлгэдэл (State Symbol)</div>
+                      <div className="text-base sm:text-lg font-royal font-bold text-[#FFFFFF] flex items-center gap-2">
                         <EditableText
                           value={overview.stateSymbolMongolian}
                           onSave={(val) => updateField('overview.stateSymbolMongolian', val)}
                           label="Төрийн бэлгэдэл (Монгол)"
-                          className="font-royal font-bold text-[#FFF0CA]"
+                          className="font-royal font-bold text-[#FFFFFF]"
                         />
-                        <span className="text-[#C9A85C]">/</span>
+                        <span className="text-[#CBD5E1]">/</span>
                         <EditableText
                           value={overview.stateSymbolEnglish}
                           onSave={(val) => updateField('overview.stateSymbolEnglish', val)}
@@ -253,9 +312,9 @@ export const CountryOverview: React.FC = () => {
             </div>
 
             {/* Bottom Imperial Seal Footnote */}
-            <div className="mt-8 pt-4 border-t border-[#C9A85C]/20 flex items-center justify-between text-xs text-[#D9DEE5]/60 font-serif">
+            <div className="mt-8 pt-4 border-t border-[#CBD5E1]/20 flex items-center justify-between text-xs text-[#D9DEE5]/60 font-serif">
               <span>Эзэн Хааны Тамгын Газар</span>
-              <span className="text-[#C9A85C] font-mono">SEAL № 001-SFZ</span>
+              <span className="text-[#CBD5E1] font-mono">SEAL № 001-SFZ</span>
             </div>
           </OrnateFrame>
         </div>
@@ -266,15 +325,15 @@ export const CountryOverview: React.FC = () => {
           {/* Capital & Era Card */}
           <OrnateFrame variant="sapphire" padding="p-6">
             <div className="flex items-center gap-3 mb-4">
-              <Sparkles className="w-5 h-5 text-[#C9A85C]" />
-              <h3 className="font-royal text-sm uppercase tracking-widest text-[#FFF0CA] font-bold">
+              <Sparkles className="w-5 h-5 text-[#CBD5E1]" />
+              <h3 className="font-royal text-sm uppercase tracking-widest text-[#FFFFFF] font-bold">
                 НИЙСЛЭЛ & ЭРИН ҮЕ
               </h3>
             </div>
             <div className="space-y-3 text-sm">
               <div>
-                <span className="text-xs text-[#C9A85C] uppercase font-serif block">Төв Нийслэл Хот:</span>
-                <div className="font-royal text-base text-[#FFF0CA]">
+                <span className="text-xs text-[#CBD5E1] uppercase font-serif block">Төв Нийслэл Хот:</span>
+                <div className="font-royal text-base text-[#FFFFFF]">
                   <EditableText
                     value={overview.capitalCity || 'Селестин (Celestine Capital)'}
                     onSave={(val) => updateField('overview.capitalCity', val)}
@@ -282,7 +341,7 @@ export const CountryOverview: React.FC = () => {
                 </div>
               </div>
               <div>
-                <span className="text-xs text-[#C9A85C] uppercase font-serif block">Үүсгэн байгуулагдсан эрин:</span>
+                <span className="text-xs text-[#CBD5E1] uppercase font-serif block">Үүсгэн байгуулагдсан эрин:</span>
                 <div className="font-serif italic text-[#D9DEE5]/90">
                   <EditableText
                     value={overview.foundingEra || 'Саффир улс'}
@@ -294,23 +353,23 @@ export const CountryOverview: React.FC = () => {
           </OrnateFrame>
 
           {/* National Anthem & Crest Lore */}
-          <OrnateFrame variant="gold" padding="p-6" className="flex-1 flex flex-col justify-between">
+          <OrnateFrame variant="platinum" padding="p-6" className="flex-1 flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <Scroll className="w-5 h-5 text-[#C9A85C]" />
-                <h3 className="font-royal text-sm uppercase tracking-widest text-[#FFF0CA] font-bold">
+                <Scroll className="w-5 h-5 text-[#CBD5E1]" />
+                <h3 className="font-royal text-sm uppercase tracking-widest text-[#FFFFFF] font-bold">
                   СҮЛД ДУУЛАЛ & ТӨРИЙН СҮЛД
                 </h3>
               </div>
               <div className="mb-4">
-                <span className="text-xs text-[#C9A85C] uppercase font-serif block">Төрийн сүлд дуулал:</span>
-                <div className="font-royal text-sm font-bold text-[#FFF0CA] mb-2">
+                <span className="text-xs text-[#CBD5E1] uppercase font-serif block">Төрийн сүлд дуулал:</span>
+                <div className="font-royal text-sm font-bold text-[#FFFFFF] mb-2">
                   <EditableText
                     value={overview.nationalAnthemTitle || 'Индранил Титмийн Сүлд Дуулал'}
                     onSave={(val) => updateField('overview.nationalAnthemTitle', val)}
                   />
                 </div>
-                <div className="p-3 bg-[#0C1421]/80 rounded border border-[#C9A85C]/20 text-xs italic text-[#D9DEE5]/80 font-serif leading-relaxed">
+                <div className="p-3 bg-[#0C1421]/80 rounded border border-[#CBD5E1]/20 text-xs italic text-[#D9DEE5]/80 font-serif leading-relaxed">
                   "
                   <EditableText
                     value={overview.nationalAnthemExcerpt || 'Мөнхийн цэнхэр гэрэл дор эзэнт гүрэн мандан бадарч, язгууртны алдар нэр үеийн үед цуурайтна.'}
@@ -322,7 +381,7 @@ export const CountryOverview: React.FC = () => {
               </div>
               <div>
                 <div className="mb-1">
-                  <span className="text-xs text-[#C9A85C] uppercase font-serif block">Төрийн сүлдний тайлбар:</span>
+                  <span className="text-xs text-[#CBD5E1] uppercase font-serif block">Төрийн сүлдний тайлбар:</span>
                 </div>
                 <p className="text-xs text-[#D9DEE5]/75 font-sans leading-relaxed">
                   <EditableText
@@ -334,9 +393,9 @@ export const CountryOverview: React.FC = () => {
               </div>
             </div>
             
-            <div className="mt-4 pt-3 border-t border-[#C9A85C]/20 flex items-center justify-between text-[11px] text-[#C9A85C]">
+            <div className="mt-4 pt-3 border-t border-[#CBD5E1]/20 flex items-center justify-between text-[11px] text-[#CBD5E1]">
               <span>ТӨРИЙН ХАЛДАШГҮЙ ДАРХАН БАЙДАЛ</span>
-              <span>❖ ❖ ❖</span>
+              <span>⚜ ⚜ ⚜</span>
             </div>
           </OrnateFrame>
 

@@ -3,17 +3,14 @@ import {
   X, 
   Plus, 
   Layers, 
-  Trash2, 
-  Eye, 
-  EyeOff, 
-  Check 
+  Trash2 
 } from 'lucide-react';
 import { useKingdom } from '../../context/KingdomContext';
 import { OrnateFrame } from '../ui/OrnateFrame';
 import { CustomSection } from '../../types';
 
 export const SectionManagerModal: React.FC = () => {
-  const { activeModal, closeModal, data, addCustomSection, deleteCustomSection, updateCustomSection } = useKingdom();
+  const { activeModal, closeModal, data, addCustomSection, deleteCustomSection } = useKingdom();
   
   const [titleMongolian, setTitleMongolian] = useState('');
   const [titleEnglish, setTitleEnglish] = useState('');
@@ -53,20 +50,20 @@ export const SectionManagerModal: React.FC = () => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200">
       <div className="w-full max-w-2xl">
-        <OrnateFrame variant="gold" glow padding="p-6 sm:p-8" className="max-h-[90vh] overflow-y-auto">
+        <OrnateFrame variant="platinum" glow padding="p-6 sm:p-8" className="max-h-[90vh] overflow-y-auto">
           
           {/* Header */}
-          <div className="flex items-center justify-between border-b border-[#C9A85C]/30 pb-4 mb-6">
+          <div className="flex items-center justify-between border-b border-[#CBD5E1]/30 pb-4 mb-6">
             <div className="flex items-center gap-2.5">
-              <Layers className="w-5 h-5 text-[#C9A85C]" />
-              <h3 className="font-royal text-lg font-bold text-[#FFF0CA]">
+              <Layers className="w-5 h-5 text-[#CBD5E1]" />
+              <h3 className="font-royal text-lg font-bold text-[#FFFFFF]">
                 БҮЛЭГ & СЕКШН УДИРДЛАГА (MANAGE SECTIONS)
               </h3>
             </div>
             <button
               type="button"
               onClick={closeModal}
-              className="p-1 text-[#D9DEE5]/60 hover:text-[#FFF0CA] rounded-full hover:bg-[#142B4A]"
+              className="p-1 text-[#D9DEE5]/60 hover:text-[#FFFFFF] rounded-full hover:bg-[#142B4A]"
             >
               <X className="w-5 h-5" />
             </button>
@@ -75,14 +72,14 @@ export const SectionManagerModal: React.FC = () => {
           <div className="space-y-6 text-xs">
             
             {/* Create New Section Form */}
-            <form onSubmit={handleCreateSection} className="p-4 rounded-lg bg-[#0C1421]/90 border border-[#C9A85C]/40 space-y-3">
-              <span className="font-royal text-sm font-bold text-[#FFF0CA] block">
+            <form onSubmit={handleCreateSection} className="p-4 rounded-lg bg-[#0C1421]/90 border border-[#CBD5E1]/40 space-y-3">
+              <span className="font-royal text-sm font-bold text-[#FFFFFF] block">
                 + Шинэ Бүлэг Нэмэх (Add Custom Section)
               </span>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
-                  <label className="block text-[11px] font-serif text-[#C9A85C] mb-1">
+                  <label className="block text-[11px] font-serif text-[#CBD5E1] mb-1">
                     Бүлгийн Монгол Нэршил:
                   </label>
                   <input
@@ -91,12 +88,12 @@ export const SectionManagerModal: React.FC = () => {
                     placeholder="Жнь: ХААНЫ ЗАРЛИГ, СОЁЛЫН ӨВ"
                     value={titleMongolian}
                     onChange={(e) => setTitleMongolian(e.target.value)}
-                    className="w-full bg-[#142B4A]/50 text-[#FFF0CA] border border-[#C9A85C]/40 rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#C9A85C]"
+                    className="w-full bg-[#142B4A]/50 text-[#FFFFFF] border border-[#CBD5E1]/40 rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#CBD5E1]"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-[11px] font-serif text-[#C9A85C] mb-1">
+                  <label className="block text-[11px] font-serif text-[#CBD5E1] mb-1">
                     English Title:
                   </label>
                   <input
@@ -104,13 +101,13 @@ export const SectionManagerModal: React.FC = () => {
                     placeholder="e.g. IMPERIAL DECREES & LAWS"
                     value={titleEnglish}
                     onChange={(e) => setTitleEnglish(e.target.value)}
-                    className="w-full bg-[#142B4A]/50 text-[#FFF0CA] border border-[#C9A85C]/40 rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#C9A85C]"
+                    className="w-full bg-[#142B4A]/50 text-[#FFFFFF] border border-[#CBD5E1]/40 rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#CBD5E1]"
                   />
                 </div>
               </div>
 
               <div>
-                <label className="block text-[11px] font-serif text-[#C9A85C] mb-1">
+                <label className="block text-[11px] font-serif text-[#CBD5E1] mb-1">
                   Тайлбар / Дэд өгүүлбэр:
                 </label>
                 <input
@@ -118,14 +115,14 @@ export const SectionManagerModal: React.FC = () => {
                   placeholder="Бүлгийн товч тайлбар"
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
-                  className="w-full bg-[#142B4A]/50 text-[#FFF0CA] border border-[#C9A85C]/40 rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#C9A85C]"
+                  className="w-full bg-[#142B4A]/50 text-[#FFFFFF] border border-[#CBD5E1]/40 rounded px-3 py-1.5 focus:outline-none focus:ring-1 focus:ring-[#CBD5E1]"
                 />
               </div>
 
               <div className="flex justify-end pt-2">
                 <button
                   type="submit"
-                  className="px-4 py-2 bg-[#C9A85C] hover:bg-[#E8C87A] text-[#0C1421] font-bold font-royal rounded flex items-center gap-1.5 shadow"
+                  className="px-4 py-2 bg-[#CBD5E1] hover:bg-[#E2E8F0] text-[#0C1421] font-bold font-royal rounded flex items-center gap-1.5 shadow"
                 >
                   <Plus className="w-4 h-4" />
                   <span>Бүлэг Үүсгэх (Create)</span>
@@ -135,7 +132,7 @@ export const SectionManagerModal: React.FC = () => {
 
             {/* List of current custom sections */}
             <div>
-              <span className="font-royal text-sm font-bold text-[#FFF0CA] block mb-3">
+              <span className="font-royal text-sm font-bold text-[#FFFFFF] block mb-3">
                 Одоо байгаа бүлгүүд ({data.customSections.length}):
               </span>
 
@@ -146,7 +143,7 @@ export const SectionManagerModal: React.FC = () => {
                     className="flex items-center justify-between p-3 bg-[#142B4A]/30 border border-[#1F4E79]/40 rounded"
                   >
                     <div>
-                      <div className="font-royal font-bold text-[#FFF0CA]">{sec.titleMongolian}</div>
+                      <div className="font-royal font-bold text-[#FFFFFF]">{sec.titleMongolian}</div>
                       <div className="text-xs text-[#D9DEE5]/60 font-serif italic">{sec.titleEnglish}</div>
                     </div>
 
@@ -169,11 +166,11 @@ export const SectionManagerModal: React.FC = () => {
 
           </div>
 
-          <div className="mt-6 pt-4 border-t border-[#C9A85C]/30 flex justify-end">
+          <div className="mt-6 pt-4 border-t border-[#CBD5E1]/30 flex justify-end">
             <button
               type="button"
               onClick={closeModal}
-              className="px-4 py-2 bg-[#142B4A] text-[#D9DEE5] rounded text-xs font-royal border border-[#C9A85C]/30"
+              className="px-4 py-2 bg-[#142B4A] text-[#D9DEE5] rounded text-xs font-royal border border-[#CBD5E1]/30"
             >
               Болсон (Done)
             </button>

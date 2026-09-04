@@ -10,20 +10,19 @@ import { RegionsSection } from './components/RegionsSection';
 import { LandEconomySection } from './components/LandEconomySection';
 import { RealmMap } from './components/RealmMap';
 import { RoyalChronicles } from './components/RoyalChronicles';
+import { InteractiveSapphireGem } from './components/InteractiveSapphireGem';
 import { RoyalFooter } from './components/RoyalFooter';
 import { RoyalDynamicBackground } from './components/ui/RoyalDynamicBackground';
+import { VictorianScreenFrame } from './components/ui/VictorianOrnaments';
 
 const KingdomAppContent: React.FC = () => {
   return (
-    <div className="min-h-screen bg-[#0C1421] text-[#D9DEE5] selection:bg-[#C9A85C]/30 selection:text-[#FFF0CA] font-serif antialiased relative overflow-x-hidden">
-      {/* Dynamic Animated Royal Celestial & Shimmering Gold Background */}
+    <div className="min-h-screen bg-[#0C1421] text-[#D9DEE5] selection:bg-[#CBD5E1]/30 selection:text-[#FFFFFF] font-serif antialiased relative overflow-x-hidden">
+      {/* Dynamic Animated Royal Celestial & Shimmering Platinum Background */}
       <RoyalDynamicBackground />
 
-      {/* Decorative Outer Imperial Filigree Corners */}
-      <div className="fixed top-0 right-0 w-20 sm:w-28 h-20 sm:h-28 border-r-4 border-t-4 border-[#C9A85C] opacity-35 pointer-events-none z-30" />
-      <div className="fixed bottom-0 left-0 w-20 sm:w-28 h-20 sm:h-28 border-l-4 border-b-4 border-[#C9A85C] opacity-35 pointer-events-none z-30" />
-      <div className="fixed top-0 left-0 w-12 sm:w-16 h-12 sm:h-16 border-l-2 border-t-2 border-[#C9A85C] opacity-20 pointer-events-none z-30" />
-      <div className="fixed bottom-0 right-0 w-12 sm:w-16 h-12 sm:h-16 border-r-2 border-b-2 border-[#C9A85C] opacity-20 pointer-events-none z-30" />
+      {/* Grand Victorian Palace Outer Frame with Authentic Baroque Filigree */}
+      <VictorianScreenFrame />
 
       {/* Main Royal Navigation */}
       <HeaderNav />
@@ -56,6 +55,9 @@ const KingdomAppContent: React.FC = () => {
 
         {/* 9. Royal Chronicles & Decrees */}
         <RoyalChronicles />
+
+        {/* 10. Interactive Sacred Sapphire Gem & Crystal Shimmer Relic */}
+        <InteractiveSapphireGem />
       </main>
 
       {/* Royal Footer */}

@@ -1,30 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
-  Scroll, 
-  BookOpen, 
-  Calendar, 
-  Tag, 
-  PlusCircle, 
-  Trash2, 
-  Sparkles, 
-  ChevronRight, 
   Plus, 
-  X 
+  Trash2 
 } from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
 import { EditableText } from './ui/EditableText';
 import { OrnateFrame } from './ui/OrnateFrame';
 import { SectionHeading } from './ui/SectionHeading';
-import { CustomSection, CustomSectionItem } from '../types';
+import { CustomSectionItem } from '../types';
 
 export const RoyalChronicles: React.FC = () => {
   const { 
     data, 
     updateCustomSection, 
-    addCustomSection, 
     deleteCustomSection, 
-    isEditMode, 
-    openModal 
+    isEditMode 
   } = useKingdom();
 
   const handleAddItem = (sectionId: string) => {
@@ -72,16 +62,16 @@ export const RoyalChronicles: React.FC = () => {
           {/* Admin Controls */}
           {isEditMode && (
             <div className="mb-6 flex justify-between items-center gap-3">
-              <span className="text-xs font-mono text-[#C9A85C]">
+              <span className="text-xs font-mono text-[#CBD5E1]">
                 Бүлэг: {section.titleMongolian} ({section.items.length} бичлэг)
               </span>
               <div className="flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => handleAddItem(section.id)}
-                  className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C] rounded text-xs font-royal"
+                  className="flex items-center gap-1.5 px-3 py-1.5 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFFFFF] border border-[#CBD5E1] rounded text-xs font-royal"
                 >
-                  <Plus className="w-3.5 h-3.5 text-[#C9A85C]" />
+                  <Plus className="w-3.5 h-3.5 text-[#CBD5E1]" />
                   <span>+ Тэмдэглэл нэмэх (Add Entry)</span>
                 </button>
 
@@ -108,14 +98,14 @@ export const RoyalChronicles: React.FC = () => {
             {section.items.map((item) => (
               <OrnateFrame
                 key={item.id}
-                variant="gold"
+                variant="platinum"
                 className="flex flex-col justify-between h-full"
               >
                 <div>
                   {/* Top Bar: Tag & Date */}
-                  <div className="flex items-center justify-between border-b border-[#C9A85C]/20 pb-3 mb-4">
+                  <div className="flex items-center justify-between border-b border-[#CBD5E1]/20 pb-3 mb-4">
                     <div className="flex items-center gap-2">
-                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#142B4A] border border-[#C9A85C]/30 text-[#E8C87A]">
+                      <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded bg-[#142B4A] border border-[#CBD5E1]/30 text-[#E2E8F0]">
                         <EditableText
                           value={item.tag || 'ARCHIVE'}
                           onSave={(val) => handleUpdateItem(section.id, item.id, { tag: val })}
@@ -147,12 +137,12 @@ export const RoyalChronicles: React.FC = () => {
 
                   {/* Title */}
                   <div className="mb-3">
-                    <h4 className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA] mb-1">
+                    <h4 className="text-base sm:text-lg font-royal font-bold text-[#FFFFFF] mb-1">
                       <EditableText
                         value={item.title}
                         onSave={(val) => handleUpdateItem(section.id, item.id, { title: val })}
                         label="Гарчиг"
-                        className="text-base sm:text-lg font-royal font-bold text-[#FFF0CA]"
+                        className="text-base sm:text-lg font-royal font-bold text-[#FFFFFF]"
                       />
                     </h4>
                     {item.subtitle && (
@@ -180,9 +170,9 @@ export const RoyalChronicles: React.FC = () => {
                 </div>
 
                 {/* Footer Decor */}
-                <div className="pt-2 border-t border-[#C9A85C]/20 flex items-center justify-between text-[10px] text-[#C9A85C] font-mono">
+                <div className="pt-2 border-t border-[#CBD5E1]/20 flex items-center justify-between text-[10px] text-[#CBD5E1] font-mono">
                   <span>IMPERIAL CHRONICLE</span>
-                  <span>❖ ❖</span>
+                  <span>⚜ ⚜</span>
                 </div>
               </OrnateFrame>
             ))}

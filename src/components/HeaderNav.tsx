@@ -31,7 +31,7 @@ export const HeaderNav: React.FC = () => {
     <header
       className={`sticky top-0 z-40 transition-all duration-300 ${
         isScrolled
-          ? 'bg-[#0C1421]/95 backdrop-blur-md border-b border-[#C9A85C]/30 shadow-2xl py-2.5'
+          ? 'bg-[#0C1421]/95 backdrop-blur-md border-b border-[#CBD5E1]/30 shadow-2xl py-2.5'
           : 'bg-gradient-to-b from-[#0C1421] via-[#0C1421]/80 to-transparent py-4'
       }`}
     >
@@ -41,7 +41,7 @@ export const HeaderNav: React.FC = () => {
           onClick={() => scrollToSection('hero')}
           className="flex items-center gap-3 cursor-pointer group"
         >
-          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#C9A85C] bg-[#142B4A] flex items-center justify-center sapphire-glow group-hover:border-[#E8C87A] transition-all transform group-hover:scale-105">
+          <div className="relative w-9 h-9 sm:w-10 sm:h-10 rounded-full border border-[#CBD5E1] bg-[#142B4A] flex items-center justify-center sapphire-glow group-hover:border-[#FFFFFF] transition-all transform group-hover:scale-105">
             {data.crest?.imageUrl ? (
               <img
                 src={data.crest.imageUrl}
@@ -50,22 +50,22 @@ export const HeaderNav: React.FC = () => {
                 className="w-7 h-7 object-contain rounded-full"
               />
             ) : (
-              <Crown className="w-5 h-5 text-[#C9A85C]" />
+              <Crown className="w-5 h-5 text-[#CBD5E1]" />
             )}
-            <div className="absolute -bottom-1 w-2 h-2 rotate-45 bg-[#C9A85C]" />
+            <div className="absolute -bottom-1 w-2 h-2 rotate-45 bg-[#CBD5E1]" />
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="ornament hidden sm:inline">✧</span>
+            <span className="ornament hidden sm:inline text-[#CBD5E1]">⚜</span>
             <div className="flex flex-col">
-              <span className="font-royal text-sm sm:text-base font-bold tracking-[0.14em] text-[#FFF0CA] group-hover:text-[#E8C87A] transition-colors leading-tight">
+              <span className="font-royal text-sm sm:text-base font-bold tracking-[0.14em] text-[#FFFFFF] group-hover:text-[#E2E8F0] transition-colors leading-tight">
                 {data.crest?.customTitle || 'SAPPHIRE COUNTRY'}
               </span>
               <span className="font-cormorant text-[11px] text-[#D9DEE5]/80 tracking-widest uppercase italic">
                 {data.overview?.officialNameMongolian || 'Саффир улс'}
               </span>
             </div>
-            <span className="ornament hidden sm:inline">✧</span>
+            <span className="ornament hidden sm:inline text-[#CBD5E1]">⚜</span>
           </div>
         </div>
 
@@ -79,7 +79,7 @@ export const HeaderNav: React.FC = () => {
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.targetId)}
-                  className="sidebar-item px-3 py-1.5 text-xs royal-font tracking-wider uppercase text-[#D9DEE5]/80 hover:text-[#FFF0CA] rounded border border-transparent hover:border-[#C9A85C]/30 transition-all duration-200"
+                  className="sidebar-item px-3 py-1.5 text-xs royal-font tracking-wider uppercase text-[#D9DEE5]/80 hover:text-[#FFFFFF] rounded border border-transparent hover:border-[#CBD5E1]/30 transition-all duration-200"
                 >
                   {item.labelEnglish}
                 </button>
@@ -87,9 +87,9 @@ export const HeaderNav: React.FC = () => {
           </nav>
 
           {/* Telemetry Metric Badges */}
-          <div className="hidden xl:flex items-center gap-4 text-[10px] royal-font tracking-widest text-[#C9A85C] border-l border-[#C9A85C]/30 pl-4 py-1">
+          <div className="hidden xl:flex items-center gap-4 text-[10px] royal-font tracking-widest text-[#CBD5E1] border-l border-[#CBD5E1]/30 pl-4 py-1">
             <span className="opacity-80">ER: 1424</span>
-            <span className="w-1 h-1 bg-[#C9A85C] rounded-full"></span>
+            <span className="w-1 h-1 bg-[#CBD5E1] rounded-full"></span>
             <span className="opacity-80">POP: 12.4M</span>
           </div>
         </div>
@@ -97,16 +97,16 @@ export const HeaderNav: React.FC = () => {
         {/* Right side controls: Official Royal Status Badge & Mobile Menu */}
         <div className="flex items-center gap-2 sm:gap-3">
           {/* Official Royal Seal Badge */}
-          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C1421] border border-[#C9A85C]/40 text-[#E8C87A] text-[11px] font-mono tracking-wider shadow-md">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#C9A85C] animate-pulse" />
-            <span className="font-royal text-[11px] tracking-widest text-[#FFF0CA]">OFFICIAL ARCHIVE</span>
+          <div className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0C1421] border border-[#CBD5E1]/40 text-[#E2E8F0] text-[11px] font-mono tracking-wider shadow-md">
+            <span className="w-1.5 h-1.5 rounded-full bg-[#CBD5E1] animate-pulse" />
+            <span className="font-royal text-[11px] tracking-widest text-[#FFFFFF]">OFFICIAL ARCHIVE</span>
           </div>
 
           {/* Mobile hamburger menu toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="p-1.5 bg-[#142B4A] hover:bg-[#1F4E79] text-[#FFF0CA] border border-[#C9A85C]/40 rounded lg:hidden transition-all"
+            className="p-1.5 bg-[#142B4A] hover:bg-[#1F4E79] text-[#FFFFFF] border border-[#CBD5E1]/40 rounded lg:hidden transition-all"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -116,9 +116,9 @@ export const HeaderNav: React.FC = () => {
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#0C1421]/95 border-b border-[#C9A85C]/40 backdrop-blur-xl px-4 py-6 shadow-2xl animate-in slide-in-from-top duration-300">
+        <div className="lg:hidden bg-[#0C1421]/95 border-b border-[#CBD5E1]/40 backdrop-blur-xl px-4 py-6 shadow-2xl animate-in slide-in-from-top duration-300">
           <div className="flex flex-col gap-2">
-            <div className="text-[10px] font-mono uppercase tracking-widest text-[#C9A85C] mb-2 px-2">
+            <div className="text-[10px] font-mono uppercase tracking-widest text-[#CBD5E1] mb-2 px-2">
               — АРХИВЫН ЦЭС / NAVIGATION —
             </div>
             {data.navigation
@@ -128,18 +128,18 @@ export const HeaderNav: React.FC = () => {
                   key={item.id}
                   type="button"
                   onClick={() => scrollToSection(item.targetId)}
-                  className="flex items-center justify-between px-4 py-2.5 text-left text-sm font-serif tracking-wider uppercase text-[#D9DEE5] hover:text-[#FFF0CA] hover:bg-[#142B4A]/80 border border-transparent hover:border-[#C9A85C]/30 rounded transition-all"
+                  className="flex items-center justify-between px-4 py-2.5 text-left text-sm font-serif tracking-wider uppercase text-[#D9DEE5] hover:text-[#FFFFFF] hover:bg-[#142B4A]/80 border border-transparent hover:border-[#CBD5E1]/30 rounded transition-all"
                 >
                   <span>{item.labelEnglish}</span>
-                  <span className="text-xs text-[#C9A85C] font-sans opacity-70">
+                  <span className="text-xs text-[#CBD5E1] font-sans opacity-70">
                     {item.labelMongolian}
                   </span>
                 </button>
               ))}
 
-            <div className="border-t border-[#C9A85C]/30 my-2 pt-3 flex items-center justify-center">
-              <span className="text-[11px] font-mono tracking-widest text-[#C9A85C]">
-                ✦ SAPPHIRE IMPERIAL ARCHIVE · SEALED ✦
+            <div className="border-t border-[#CBD5E1]/30 my-2 pt-3 flex items-center justify-center">
+              <span className="text-[11px] font-mono tracking-widest text-[#CBD5E1]">
+                ⚜ SAPPHIRE IMPERIAL ARCHIVE · SEALED ⚜
               </span>
             </div>
           </div>

@@ -3,7 +3,7 @@ import { WebsiteData, Region, RoyalTitle, CourtRank, NobilityItem, LandValueItem
 import { initialWebsiteData } from '../initialData';
 import persistedDataJson from '../persistedData.json';
 
-const STORAGE_KEY = 'sapphire_country_archive_data_v3';
+const STORAGE_KEY = 'sapphire_country_archive_data_v5';
 const DEFAULT_PIN = 'Indranil777';
 const OFFICIAL_CREST_PNG = '/official-royal-crest.png';
 const OFFICIAL_MONARCH_PNG = '/official-monarch-portrait.png';

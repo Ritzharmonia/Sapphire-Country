@@ -12,7 +12,7 @@ import {
 } from 'lucide-react';
 import { useKingdom } from '../context/KingdomContext';
 import { EditableText } from './ui/EditableText';
-import { OrnateFrame } from './ui/OrnateFrame';
+import { ElegantLineCard } from './ui/ElegantLineCard';
 import { SectionHeading } from './ui/SectionHeading';
 import { RoyalTitle } from '../types';
 
@@ -22,14 +22,14 @@ export const RoyalFamilyTitles: React.FC = () => {
 
   const getRankIcon = (iconName?: string) => {
     switch (iconName) {
-      case 'Crown': return <Crown className="w-5 h-5 text-[#E8C87A]" />;
-      case 'Shield': return <Shield className="w-5 h-5 text-[#C9A85C]" />;
+      case 'Crown': return <Crown className="w-5 h-5 text-[#FFFFFF]" />;
+      case 'Shield': return <Shield className="w-5 h-5 text-[#CBD5E1]" />;
       case 'Sparkles': return <Sparkles className="w-5 h-5 text-[#5B8AC4]" />;
-      case 'Award': return <Award className="w-5 h-5 text-[#C9A85C]" />;
+      case 'Award': return <Award className="w-5 h-5 text-[#CBD5E1]" />;
       case 'Gem': return <Gem className="w-5 h-5 text-[#5B8AC4]" />;
       case 'Compass': return <Compass className="w-5 h-5 text-[#D9DEE5]" />;
-      case 'Sun': return <Sun className="w-5 h-5 text-[#E8C87A]" />;
-      default: return <Crown className="w-5 h-5 text-[#C9A85C]" />;
+      case 'Sun': return <Sun className="w-5 h-5 text-[#FFFFFF]" />;
+      default: return <Crown className="w-5 h-5 text-[#CBD5E1]" />;
     }
   };
 
@@ -63,38 +63,39 @@ export const RoyalFamilyTitles: React.FC = () => {
           <button
             type="button"
             onClick={handleAddNewTitle}
-            className="flex items-center gap-2 px-4 py-2 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFF0CA] border border-[#C9A85C] rounded font-royal text-xs tracking-wider shadow-lg transition-all transform hover:scale-105"
+            className="flex items-center gap-2 px-4 py-2 bg-[#1F4E79] hover:bg-[#2A75D3] text-[#FFFFFF] border border-[#CBD5E1] rounded font-royal text-xs tracking-wider shadow-lg transition-all transform hover:scale-105"
           >
-            <PlusCircle className="w-4 h-4 text-[#C9A85C]" />
+            <PlusCircle className="w-4 h-4 text-[#CBD5E1]" />
             <span>+ Шинэ Хэргэм Нэмэх (Add Royal Title)</span>
           </button>
         </div>
       )}
 
-      {/* Grid of Royal Titles */}
+      {/* Grid of Royal Titles with Elegant Architectural Lines */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {data.royalTitles.map((title) => {
           const isExpanded = expandedId === title.id;
 
           return (
             <div key={title.id} className="flex flex-col">
-              <OrnateFrame
-                variant={title.number === '01' || title.number === '02' || title.number === '03' ? 'gold' : 'sapphire'}
+              <ElegantLineCard
+                accentColor={title.number === '01' || title.number === '02' || title.number === '03' ? 'platinum' : 'sapphire'}
                 glow={isExpanded}
-                className="h-full flex flex-col justify-between transition-all duration-300"
+                className="h-full flex flex-col justify-between transition-all duration-300 cursor-pointer"
+                onClick={() => setExpandedId(title.id)}
               >
                 <div>
                   {/* Top Bar: Number and Actions */}
-                  <div className="flex items-center justify-between border-b border-[#C9A85C]/20 pb-3 mb-4">
+                  <div className="flex items-center justify-between border-b border-[#CBD5E1]/20 pb-3 mb-4">
                     <div className="flex items-center gap-2">
-                      <span className="font-mono text-xs font-bold text-[#C9A85C] px-2 py-0.5 rounded bg-[#0C1421] border border-[#C9A85C]/40">
+                      <span className="font-mono text-xs font-bold text-[#CBD5E1] px-2 py-0.5 rounded bg-[#0C1421]/90 border border-[#CBD5E1]/30">
                         <EditableText
                           value={title.number}
                           onSave={(val) => updateRoyalTitle(title.id, { number: val })}
                           label="№"
                         />
                       </span>
-                      <span className="text-[10px] uppercase tracking-widest text-[#D9DEE5]/60 font-serif">
+                      <span className="text-[10px] uppercase tracking-widest text-[#CBD5E1]/70 font-serif">
                         ROYAL TITLE
                       </span>
                     </div>
@@ -115,7 +116,7 @@ export const RoyalFamilyTitles: React.FC = () => {
                           <Trash2 className="w-3.5 h-3.5" />
                         </button>
                       )}
-                      <div className="p-1.5 rounded-full bg-[#142B4A] border border-[#C9A85C]/40">
+                      <div className="p-1.5 rounded-full bg-[#142B4A]/80 border border-[#CBD5E1]/30">
                         {getRankIcon(title.iconName)}
                       </div>
                     </div>
@@ -123,26 +124,28 @@ export const RoyalFamilyTitles: React.FC = () => {
 
                   {/* Titles */}
                   <div className="mb-4">
-                    <h3 className="text-lg font-royal font-bold text-[#FFF0CA] mb-1 leading-snug">
+                    <h3 className="text-2xl sm:text-[26px] font-royal font-semibold tracking-wide text-[#FFFFFF] mb-1.5 leading-snug drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
                       <EditableText
                         value={title.mongolianTitle}
                         onSave={(val) => updateRoyalTitle(title.id, { mongolianTitle: val })}
                         label="Хэргэмийн монгол нэр"
-                        className="text-lg font-royal font-bold text-[#FFF0CA]"
+                        className="text-2xl sm:text-[26px] font-royal font-semibold tracking-wide text-[#FFFFFF]"
                       />
                     </h3>
-                    <div className="text-xs font-serif italic text-[#D9DEE5]/80 tracking-wide">
+                    <div className="text-xs font-serif italic text-[#CBD5E1]/80 tracking-wide mb-2.5">
                       <EditableText
                         value={title.englishTitle}
                         onSave={(val) => updateRoyalTitle(title.id, { englishTitle: val })}
                         label="English Title"
-                        className="text-xs font-serif italic text-[#D9DEE5]/80"
+                        className="text-xs font-serif italic text-[#CBD5E1]/80"
                       />
                     </div>
+                    {/* Delicate horizontal line under title */}
+                    <div className="w-16 h-[1px] bg-gradient-to-r from-[#CBD5E1]/50 to-transparent" />
                   </div>
 
-                  {/* Description Box */}
-                  <div className="p-3 bg-[#0C1421]/70 rounded border border-[#1F4E79]/40 mb-4 text-xs text-[#D9DEE5]/80 leading-relaxed font-sans">
+                  {/* Description with Clean Left Accent Line */}
+                  <div className="pl-3.5 border-l border-[#CBD5E1]/25 py-1 mb-4 text-xs text-[#D9DEE5]/80 leading-relaxed font-sans">
                     <EditableText
                       value={title.description}
                       onSave={(val) => updateRoyalTitle(title.id, { description: val })}
@@ -153,21 +156,21 @@ export const RoyalFamilyTitles: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Lower Right Section: Title Dignity & Classification (Pure Title Names) */}
-                <div className="pt-3 border-t border-[#C9A85C]/20 flex items-center justify-between text-xs">
-                  <span className="text-[#C9A85C] font-serif uppercase tracking-wider text-[10px]">
+                {/* Lower Right Section: Title Dignity & Classification */}
+                <div className="pt-3 border-t border-[#CBD5E1]/15 flex items-center justify-between text-xs">
+                  <span className="text-[#CBD5E1] font-serif uppercase tracking-wider text-[10px]">
                     Хэргэмийн Зэрэг:
                   </span>
-                  <div className="font-royal text-[#FFF0CA] text-right font-medium">
+                  <div className="font-royal text-[#FFFFFF] text-right font-medium">
                     <EditableText
                       value={title.holder || 'Хаан ширээний дээд хэргэм'}
                       onSave={(val) => updateRoyalTitle(title.id, { holder: val })}
                       label="Хэргэмийн зэрэг / Төлөв"
-                      className="font-royal text-[#FFF0CA] text-right font-medium text-xs"
+                      className="font-royal text-[#FFFFFF] text-right font-medium text-xs"
                     />
                   </div>
                 </div>
-              </OrnateFrame>
+              </ElegantLineCard>
             </div>
           );
         })}

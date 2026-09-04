@@ -6,9 +6,13 @@
     --color-deep-sapphire: #142B4A;
     --color-royal-sapphire: #1F4E79;
     --color-silver: #D9DEE5;
-    --color-antique-gold: #C9A85C;
-    --color-bright-gold: #E8C87A;
-    --color-cream-gold: #FFF0CA;
+    /* Pure Platinum Palette (replaces all yellow tones) */
+    --color-platinum: #CBD5E1;
+    --color-bright-platinum: #FFFFFF;
+    --color-cool-platinum: #E2E8F0;
+    --color-antique-gold: #CBD5E1;
+    --color-bright-gold: #FFFFFF;
+    --color-cream-gold: #E2E8F0;
     --color-sapphire-glow: #4A7BA7;
   }
 
@@ -25,6 +29,13 @@
     letter-spacing: 0.025em;
     text-rendering: optimizeLegibility;
     font-feature-settings: "liga" 1, "dlig" 1;
+  }
+
+  .font-cinzel-decorative,
+  .font-chamin-royal {
+    font-family: 'Cinzel Decorative', 'Almendra Display', 'Yeseva One', 'Cormorant Garamond', serif;
+    font-feature-settings: "swsh" 1, "calt" 1, "liga" 1, "dlig" 1;
+    text-rendering: optimizeLegibility;
   }
 
   .font-cormorant {
@@ -68,11 +79,16 @@
   }
 
   .body-font, .font-body, .font-serif {
-    font-family: 'Cormorant Garamond', 'Lora', 'EB Garamond', serif;
+    font-family: 'Cormorant Garamond', 'EB Garamond', 'Lora', serif;
   }
 
-  .font-script {
-    font-family: 'Cormorant Garamond', serif;
+  .font-script,
+  .font-cursive,
+  .font-cursive-royal,
+  .font-nobility-title,
+  .font-royal-title {
+    font-family: 'Cormorant Garamond', 'EB Garamond', serif;
+    letter-spacing: 0.025em;
   }
 }
 
@@ -83,16 +99,16 @@
 
 .ornate-heading {
   font-family: 'Cormorant Garamond', 'EB Garamond', 'Yeseva One', serif;
-  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 0 16px rgba(201, 168, 92, 0.12);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.85), 0 0 16px rgba(203, 213, 225, 0.16);
 }
 
 .royal-title-gradient {
-  background: linear-gradient(135deg, #FFF5DF 0%, #E8C87A 45%, #C9A85C 80%, #9B772A 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 45%, #CBD5E1 80%, #94A3B8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.royal-silver-gradient {
+.royal-silver-gradient, .royal-platinum-gradient {
   background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #94A3B8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -102,31 +118,43 @@
   font-family: 'Cormorant Garamond', 'Lora', serif;
 }
 
+/* Ensure monospace classes render as stately Victorian engraved numerals rather than sci-fi terminal text */
+.font-mono {
+  font-family: 'Cormorant Garamond', 'EB Garamond', 'Lora', serif;
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: 0.08em;
+}
+
+.font-code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace !important;
+}
+
 .sapphire-glow {
-  box-shadow: 0 0 20px rgba(20, 43, 74, 0.4);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8), 0 0 20px rgba(31, 78, 121, 0.35);
 }
 
-.gold-glow {
-  box-shadow: 0 0 25px rgba(201, 168, 92, 0.25);
+.platinum-glow, .gold-glow {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.85), 0 0 24px rgba(226, 232, 240, 0.2);
 }
 
-.gold-border {
-  border: 1px solid #C9A85C;
+.platinum-border, .gold-border {
+  border: 1px solid rgba(203, 213, 225, 0.6);
 }
 
-.gold-double-border {
-  border: 4px double #C9A85C;
+.platinum-double-border, .gold-double-border {
+  border: 3px double #CBD5E1;
+  box-shadow: inset 0 0 14px rgba(203, 213, 225, 0.15), 0 6px 20px rgba(0, 0, 0, 0.75);
 }
 
 .ornament {
-  color: #C9A85C;
+  color: #CBD5E1;
   opacity: 0.75;
   font-size: 20px;
   line-height: 1;
 }
 
 .edit-trigger {
-  color: #C9A85C;
+  color: #CBD5E1;
   font-size: 13px;
   margin-left: 6px;
   cursor: pointer;
@@ -137,7 +165,7 @@
 
 .edit-trigger:hover {
   opacity: 1;
-  color: #FFF0CA;
+  color: #FFFFFF;
   transform: scale(1.15);
 }
 
@@ -147,24 +175,24 @@
 
 .sidebar-item:hover {
   background: rgba(31, 78, 121, 0.35);
-  color: #C9A85C;
+  color: #CBD5E1;
 }
 
 .region-card {
   background: rgba(20, 43, 74, 0.6);
-  border: 1px solid rgba(201, 168, 92, 0.25);
+  border: 1px solid rgba(203, 213, 225, 0.25);
   box-shadow: 0 0 20px rgba(12, 20, 33, 0.6), inset 0 0 15px rgba(31, 78, 121, 0.15);
   backdrop-filter: blur(8px);
 }
 
 .region-card:hover {
-  border-color: rgba(201, 168, 92, 0.5);
+  border-color: rgba(203, 213, 225, 0.5);
   box-shadow: 0 0 25px rgba(31, 78, 121, 0.35);
 }
 
 /* Custom Royal Ornament & Filigree utilities */
-.gold-gradient-text {
-  background: linear-gradient(135deg, #FFF0CA 0%, #C9A85C 50%, #8A6D2B 100%);
+.gold-gradient-text, .platinum-gradient-text {
+  background: linear-gradient(135deg, #FFFFFF 0%, #CBD5E1 50%, #94A3B8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -180,16 +208,16 @@
 }
 
 .royal-box-border {
-  border: 1px solid rgba(201, 168, 92, 0.3);
-  box-shadow: 0 0 20px rgba(20, 43, 74, 0.5), inset 0 0 15px rgba(31, 78, 121, 0.15);
+  border: 1px solid rgba(203, 213, 225, 0.45);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.75), inset 0 0 16px rgba(20, 43, 74, 0.35);
 }
 
-.royal-box-border-gold {
-  border: 1px solid rgba(201, 168, 92, 0.6);
-  box-shadow: 0 0 25px rgba(201, 168, 92, 0.2), inset 0 0 20px rgba(20, 43, 74, 0.4);
+.royal-box-border-gold, .royal-box-border-platinum {
+  border: 1px solid rgba(203, 213, 225, 0.75);
+  box-shadow: 0 10px 32px rgba(0, 0, 0, 0.85), 0 0 20px rgba(226, 232, 240, 0.2), inset 0 0 18px rgba(203, 213, 225, 0.12);
 }
 
-/* Custom Scrollbar */
+/* Custom Scrollbar in Royal Platinum */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
@@ -199,11 +227,11 @@
 }
 ::-webkit-scrollbar-thumb {
   background: #1F4E79;
-  border: 1px solid #C9A85C;
+  border: 1px solid #CBD5E1;
   border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #C9A85C;
+  background: #CBD5E1;
 }
 
 /* Atmospheric Animations */
